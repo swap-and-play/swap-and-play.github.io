@@ -62,7 +62,7 @@ function page (cb) {
     <section class="announcement-bar">
       <a
         class="announcement-link"
-        href="https://swapandplaywharfedale.co.uk/trial/"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSe3HZA6pof7I7m4diGGWerDKkNo0uKZVCql5Szl741bPu2aIg/viewform"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -902,7 +902,7 @@ function page (cb) {
 
             <a
               class="button primary-button"
-              href="https://swapandplaywharfedale.co.uk/trial/"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSe3HZA6pof7I7m4diGGWerDKkNo0uKZVCql5Szl741bPu2aIg/viewform"
               target="_blank"
               rel="noopener noreferrer"
             >
