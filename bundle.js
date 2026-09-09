@@ -174,16 +174,16 @@ function page (cb) {
 
       <!-- SEPTEMBER ANNOUNCEMENT -->
 
-      <section class="announcement-bar">
-        <button
-          type="button"
-          class="announcement-link"
-          data-scroll-to="#passes"
-        >
-          September: Try Swap & Play for a whole week for £15 →
-        </button>
-      </section>
-
+    <section class="announcement-bar">
+      <a
+        class="announcement-link"
+        href="https://swapandplaywharfedale.co.uk/trial/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Try Swap & Play for your first week FREE →
+      </a>
+    </section>
 
       <!-- HERO -->
 
@@ -999,8 +999,31 @@ function page (cb) {
               Come for a single day, try a whole week, or make Swap & Play part
               of your routine with unlimited monthly access.
             </p>
-
           </div>
+
+          <div class="free-trial-callout">
+            <p class="free-trial-eyebrow">
+              NEW HERE?
+            </p>
+
+            <h3>
+              Your first week is FREE
+            </h3>
+
+            <p>
+              Try Swap & Play properly with unlimited visits for 7 days.
+              No payment details. No commitment.
+            </p>
+
+            <a
+              class="button primary-button"
+              href="https://swapandplaywharfedale.co.uk/trial/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apply for your free week →
+            </a>
+          </div>          
 
           <div class="pass-options-grid">
 
@@ -1783,6 +1806,42 @@ function get_theme () {
 
     .announcement-link:hover {
       color: var(--heather);
+    }
+
+    .free-trial-callout {
+      max-width: 900px;
+      margin: 2.5rem auto 3rem;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      background: #d1ece6;
+      border-radius: 18px;
+      border: 1px solid rgba(47, 79, 79, 0.12);
+    }
+
+    .free-trial-eyebrow {
+      margin: 0 0 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8c5ba8;
+    }
+
+    .free-trial-callout h3 {
+      margin: 0 0 0.75rem;
+      font-size: 2rem;
+      line-height: 1.15;
+      color: #2f4f4f;
+    }
+
+    .free-trial-callout > p:not(.free-trial-eyebrow) {
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      color: #536d6d;
+    }
+
+    .free-trial-callout .button {
+      display: inline-flex;
     }
 
 
@@ -3809,6 +3868,24 @@ function get_theme () {
 
       .playdate-price strong {
         font-size: 3.5rem;
+      }
+
+      .free-trial-callout {
+        margin: 2rem 1rem 2.5rem;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .free-trial-callout h3 {
+        font-size: 1.6rem;
+      }
+
+      .free-trial-callout > p:not(.free-trial-eyebrow) {
+        font-size: 1rem;
+      }
+
+      .free-trial-callout .button {
+        width: 100%;
+        justify-content: center;
       }
 
       .pass-options-grid {

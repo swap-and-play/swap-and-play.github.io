@@ -59,16 +59,16 @@ function page (cb) {
 
       <!-- SEPTEMBER ANNOUNCEMENT -->
 
-      <section class="announcement-bar">
-        <button
-          type="button"
-          class="announcement-link"
-          data-scroll-to="#passes"
-        >
-          September: Try Swap & Play for a whole week for £15 →
-        </button>
-      </section>
-
+    <section class="announcement-bar">
+      <a
+        class="announcement-link"
+        href="https://swapandplaywharfedale.co.uk/trial/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Try Swap & Play for your first week FREE →
+      </a>
+    </section>
 
       <!-- HERO -->
 
@@ -884,8 +884,31 @@ function page (cb) {
               Come for a single day, try a whole week, or make Swap & Play part
               of your routine with unlimited monthly access.
             </p>
-
           </div>
+
+          <div class="free-trial-callout">
+            <p class="free-trial-eyebrow">
+              NEW HERE?
+            </p>
+
+            <h3>
+              Your first week is FREE
+            </h3>
+
+            <p>
+              Try Swap & Play properly with unlimited visits for 7 days.
+              No payment details. No commitment.
+            </p>
+
+            <a
+              class="button primary-button"
+              href="https://swapandplaywharfedale.co.uk/trial/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apply for your free week →
+            </a>
+          </div>          
 
           <div class="pass-options-grid">
 
