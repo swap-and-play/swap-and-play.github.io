@@ -888,7 +888,7 @@ function page (cb) {
 
           <div class="free-trial-callout">
             <p class="free-trial-eyebrow">
-              NEW HERE?
+             TRY SWAP & PLAY
             </p>
 
             <h3>
@@ -896,8 +896,18 @@ function page (cb) {
             </h3>
 
             <p>
-              Try Swap & Play properly with unlimited visits for 7 days.
-              No payment details. No commitment.
+              Get your access code and try Swap & Play for 7 days.
+              <br>
+              <br>Come whenever you want.
+              <br>Stay as long as you want.
+              <br>Come back as often as you like.
+              <br>
+              <br>🧸 Play & explore
+              <br>♻️ Browse the community wardrobe
+              <br>Tea & coffee included
+            </p>
+            <p>
+              No booking. No payment details. No commitment.
             </p>
 
             <a
