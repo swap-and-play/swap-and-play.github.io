@@ -1001,7 +1001,7 @@ function page (cb) {
             </p>
           </div>
 
-          <div class="free-trial-callout">
+          <div class="free-trial-callout" id="trial">
             <p class="free-trial-eyebrow">
              TRY SWAP & PLAY
             </p>
@@ -1441,15 +1441,21 @@ function page (cb) {
     const hash = window.location.hash
 
     if (
-      path.endsWith('/trial') ||
       path.endsWith('/passes') ||
-      hash === '#trial' ||
-      hash === '#apply' ||
       hash === '#membership' ||
       hash === '#pricing' ||
       hash === '#passes'
     ) {
       scroll_to_target('#passes')
+      return
+    }
+    
+    if (
+      path.endsWith('/trial') ||
+      hash === '#trial' ||
+      hash === '#apply'
+    ) {
+      scroll_to_target('#trial')
       return
     }
 
