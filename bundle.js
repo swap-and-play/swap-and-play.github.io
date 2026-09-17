@@ -1011,28 +1011,29 @@ function page (cb) {
             </h3>
 
             <p>
-              Get your access code and try Swap & Play for 7 days.
-              <br>
-              <br>Come whenever you want.
-              <br>Stay as long as you want.
-              <br>Come back as often as you like.
+              Come and try our family space for 0–5 year olds in Ilkley — your first 7 days are completely free.
               <br>
               <br>🧸 Play & explore
               <br>♻️ Browse the community wardrobe
-              <br>Tea & coffee included
+              <br>Free tea & coffee 
             </p>
-            <p>
-              No booking. No payment details. No commitment.
-            </p>
-
             <a
               class="button primary-button"
               href="https://docs.google.com/forms/d/e/1FAIpQLSe3HZA6pof7I7m4diGGWerDKkNo0uKZVCql5Szl741bPu2aIg/viewform"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Apply for your free week →
-            </a>
+              Get my free week →
+            </a>             
+            <p style="font-style: italic; color: light-grey; font-size: 0.7em; padding-top: 0.8rem;">
+              No booking · No payment details · No commitment
+            </p>
+            <p>
+              Come whenever you want.
+              <br>Stay as long as you want.
+              <br>Come back as often as you like.
+              <br>
+            </p>
           </div>          
 
           <div class="pass-options-grid">
