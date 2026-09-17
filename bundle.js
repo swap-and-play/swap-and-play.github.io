@@ -123,7 +123,7 @@ const MEMBERSHIP_PAYMENT_URL = 'https://buy.stripe.com/cNi9AS3ZU9jj4Fzewl0Ba08'
 const GIFT_MONTH_PAYMENT_URL = 'https://buy.stripe.com/cNifZg0NI7bb0pjag50Ba09'
 
 const ILKLEY_GAZETTE_ARTICLE_URL = 'https://www.ilkleygazette.co.uk/news/26265760.new-family-play-swap-space-opens-wharfedale'
-const WHARFEDALE_OBSERVER_ARTICLE_URL = 'https://www.wharfedaleobserver.co.uk/news/26265760.new-family-play-swap-space-opens-wharfedale'
+const ILKLEYCHAT_ARTICLE_URL = 'https://www.ilkleychat.co.uk/post/families-invited-to-the-big-swap?fbclid=IwY2xjawUZWrFwZG9mAWV4dG4DYWVtAjExAHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5Cwm7yfgcSY5KtgJyMtsjTcXVqw2EGWwKpTmxzid04QdANdGuxfbLZ4LukWQ_aem_m4p88iiFBmPrwClMb-0z3w'
 const SWAP_ROOM_ITEMS = require('../data/swap-room-items.json')
 
 function render_swap_room_items() {
@@ -812,16 +812,16 @@ function page (cb) {
 
             <a
               class="press-link"
-              href="${WHARFEDALE_OBSERVER_ARTICLE_URL}"
+              href="${ILKLEYCHAT_ARTICLE_URL}"
               target="_blank"
               rel="noopener noreferrer"
             >
               <span class="press-publication">
-                Wharfedale Observer
+                IlkleyChat
               </span>
 
               <span class="press-read">
-                Read about Swap & Play →
+                Read about The Big Swap event →
               </span>
             </a>
 
