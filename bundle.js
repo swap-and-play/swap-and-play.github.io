@@ -904,7 +904,12 @@ function page (cb) {
               </span>
 
               <small>
-                Open to everyone
+                Open to everyone. 
+                <a 
+                  href="https://forms.gle/sJrwmUrMyaMpSViZ7"
+                  target="_blank"
+                  > Register here
+                </a>
               </small>
             </article>
 
