@@ -749,12 +749,14 @@ function page (cb) {
             </p>
 
             <h2>
-              Come at a social time
+              Come along at a social time
             </h2>
 
             <p class="section-intro">
-              You never need an event to use Swap & Play. These are simply
-              regular times when other local families are more likely to be here.
+              You can visit Swap & Play anytime during our opening hours.
+              These are regular times when other local families are more
+              likely to be here, so you can enjoy some company while the
+              little ones play.            
             </p>
 
           </div>
@@ -765,14 +767,28 @@ function page (cb) {
               <span class="social-day">
                 Monday
               </span>
+              <span class="social-open">
+                Open play
+              </span>
 
+              <span>
+               Flexible access for 
+                <a href="#passes"> members and pass holders </a>
+              </span>
             </article>
 
             <article class="social-time">
               <span class="social-day">
                 Tuesday
               </span>
+              <span class="social-open">
+                Open play
+              </span>
 
+              <span>
+               Flexible access for 
+                <a href="#passes"> members and pass holders </a>
+              </span>
             </article>
 
             <article class="social-time public-social-time">
@@ -781,40 +797,66 @@ function page (cb) {
               </span>
 
               <strong>
-                Open Play
+                Family Play
               </strong>
+              <span>
+                A relaxed, social play morning for families with children aged 0–5.
+              </span>
+              <br>
 
               <span>
-                10am–12pm
+                10am - 12pm
               </span>
 
-              <small>
-                Open to everyone. 
+              <span>
+                <br> £10 per family
+                <br>
                 <a 
-                  href="https://forms.gle/sJrwmUrMyaMpSViZ7"
+                  href="https://buy.stripe.com/28EeVcdAugLLgoh3RH0Ba0b"
                   target="_blank"
-                  > Register here
+                  > Book here
                 </a>
-              </small>
+              </span>
             </article>
 
             <article class="social-time">
               <span class="social-day">
                 Thursday
               </span>
+              <span class="social-open">
+                Open play
+              </span>
+
+              <span>
+               Flexible access for 
+                <a href="#passes"> members and pass holders </a>
+              </span>              
             </article>
 
-            <article class="social-time">
+            <article class="social-time public-social-time">
               <span class="social-day">
                 Friday
               </span>
 
               <strong>
-                Afternoon Playdate
+                Family Play
               </strong>
 
               <span>
-                2–5pm
+              A relaxed, social play morning for families with children aged 0–5.
+              </span>
+              <br>
+              <span>
+                9.30am - 11.30am
+              </span>
+              <span>
+                <br> £10 per family
+                <br>
+                <a 
+                  href="https://buy.stripe.com/28EeVcdAugLLgoh3RH0Ba0b"
+                  target="_blank"
+                  > Book here
+                </a>
               </span>
             </article>
 
@@ -822,27 +864,46 @@ function page (cb) {
               <span class="social-day">
                 Saturday
               </span>
+              <span class="social-open">
+                Open play
+              </span>
 
+              <span>
+               Flexible access for 
+                <a href="#passes"> members and pass holders </a>
+              </span>
             </article>
 
-            <article class="social-time">
+            <article class="social-time public-social-time">
               <span class="social-day">
                 Sunday
               </span>
 
               <strong>
-                Coffee & Cake
+                Social & Swap
               </strong>
-
               <span>
-                2-4pm
+               Relaxed play, a chance to meet other families, and a clothes and toy swap.
+              </span>
+              <br>
+              <span>
+                2pm - 4.30pm
+              </span>
+              <span>
+                <br> £10 per family
+                <br>
+                <a 
+                  href="https://buy.stripe.com/dRm28q0NI1QRdc54VL0Ba0c"
+                  target="_blank"
+                  > Book here
+                </a>
               </span>
             </article>
 
           </div>
 
           <p class="social-note center">
-            Outside these times, the space is often much quieter.
+            With a day pass, week pass or membership, you can visit anytime between 6am and 9pm.        
           </p>
 
         </div>
@@ -1148,21 +1209,21 @@ function page (cb) {
           </p>
 
           <h2>
-            Come and have a look on Wednesday
+            Come along to a social session
           </h2>
 
           <p>
-            Wednesday Open Play from 10am–12pm is open to everyone.
-            No pass is required, so you can see the space, let your child
-            explore and get a feel for how Swap & Play works.
+            Meet other local families, enjoy relaxed play and discover
+            Swap & Play. No membership needed — just book a session
+            and come along.
           </p>
 
           <button
             type="button"
             class="button secondary-button"
-            data-scroll-to="#location"
+            data-scroll-to="#calendar"
           >
-            Find us
+            See social times
           </button>
 
         </div>
