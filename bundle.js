@@ -883,7 +883,7 @@ function page (cb) {
                 Monday
               </span>
               <span class="social-open">
-                Open play
+                Play & Swap
               </span>
 
               <span>
@@ -897,7 +897,7 @@ function page (cb) {
                 Tuesday
               </span>
               <span class="social-open">
-                Open play
+                Play & Swap
               </span>
 
               <span>
@@ -912,7 +912,7 @@ function page (cb) {
               </span>
 
               <strong>
-                Family Play
+                Wednesday Open Play
               </strong>
               <span>
                 A relaxed, social play morning for families with children aged 0–5.
@@ -924,12 +924,12 @@ function page (cb) {
               </span>
 
               <span>
-                <br> £10 per family
+                <br> FREE
                 <br>
                 <a 
-                  href="https://buy.stripe.com/28EeVcdAugLLgoh3RH0Ba0b"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfuaX71bQ4iPYYRQMssdbGB-m38A7gmJbiBqiI6l55NwMIX3w/viewform?usp=header"
                   target="_blank"
-                  > Book here
+                  > Register here
                 </a>
               </span>
             </article>
@@ -939,7 +939,7 @@ function page (cb) {
                 Thursday
               </span>
               <span class="social-open">
-                Open play
+                Play & Swap
               </span>
 
               <span>
@@ -948,31 +948,19 @@ function page (cb) {
               </span>              
             </article>
 
-            <article class="social-time public-social-time">
+
+            <article class="social-time">
               <span class="social-day">
                 Friday
               </span>
+              <span class="social-open">
+                Play & Swap
+              </span>
 
-              <strong>
-                Family Play
-              </strong>
-
               <span>
-              A relaxed, social play morning for families with children aged 0–5.
-              </span>
-              <br>
-              <span>
-                9.30am - 11.30am
-              </span>
-              <span>
-                <br> £10 per family
-                <br>
-                <a 
-                  href="https://buy.stripe.com/28EeVcdAugLLgoh3RH0Ba0b"
-                  target="_blank"
-                  > Book here
-                </a>
-              </span>
+               Flexible access for 
+                <a href="#passes"> members and pass holders </a>
+              </span>              
             </article>
 
             <article class="social-time">
@@ -980,7 +968,7 @@ function page (cb) {
                 Saturday
               </span>
               <span class="social-open">
-                Open play
+                Play & Swap
               </span>
 
               <span>
@@ -1005,7 +993,7 @@ function page (cb) {
                 2pm - 4.30pm
               </span>
               <span>
-                <br> £10 per family
+                <br> £10 per family (tea/coffee on us)
                 <br>
                 <a 
                   href="https://buy.stripe.com/dRm28q0NI1QRdc54VL0Ba0c"
