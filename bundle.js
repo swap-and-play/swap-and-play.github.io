@@ -696,8 +696,8 @@ function page (cb) {
             >
 
             <img
-              src="./assets/focused-play.jpg"
-              alt="A child concentrating on a puzzle"
+              src="./assets/trains.jpg"
+              alt="A child and her grandma"
               class="photo"
             >
             <img
@@ -711,10 +711,6 @@ function page (cb) {
               alt="A cup of coffee beside the play space"
               class="photo"
             >
-
-
-
-
 
           </div>
 
@@ -1011,7 +1007,6 @@ function page (cb) {
 
         </div>
       </section>
-
 
       <!-- WAVE -->
 
@@ -1347,6 +1342,75 @@ function page (cb) {
             d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
             fill="#fbfaf6">
           </path>
+        </svg>  
+      </div>
+
+      <!-- BIRTHDAY PARTY HIRE -->
+
+      <section class="section birthday-party-section" id="party">
+        <div class="content content-wide">
+
+          <div class="section-heading center">
+
+          <img
+            src="./assets/party.jpg"
+            alt="Pepa the ping with a party hat on the shelf at Swap & Play"
+            class="closing-photo photo"
+          >
+            <p class="eyebrow dark">
+              A little something to celebrate
+            </p>
+
+            <h2>
+              A birthday party of your own
+            </h2>
+
+            <p class="section-intro">
+              Make their special day one to remember. Hire our welcoming
+              play space in Ilkley for a relaxed birthday celebration
+              with friends and family.
+            </p>
+
+            <p>
+              Bring your own food, cake and decorations, and let the
+              little ones enjoy the toys, play areas and space to explore.
+            </p>
+
+            <p>
+              <strong>
+                Private venue hire · 2-hour party · 3-hour booking
+              </strong>
+            </p>
+            <p>
+              More information at nina@swapandplaywharfedale.co.uk
+            </p>
+
+            <a
+              class="button primary-button"
+              href="mailto:nina@swapandplaywharfedale.co.uk"
+            >
+              Send us a message
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- WAVE -->
+
+      <div class="wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <rect
+            width="1200"
+            height="120"
+            fill="#fbfaf6">
+          </rect>
+
+          <path
+            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+            fill="#d1ece6">
+          </path>
         </svg>
       </div>
 
@@ -1357,8 +1421,8 @@ function page (cb) {
         <div class="content center">
 
           <img
-            src="./assets/shoes-at-door.jpg"
-            alt="Children's shoes at the entrance to Swap & Play"
+            src="./assets/meet.jpg"
+            alt="Parents chatting while children are playing at Swap & Play"
             class="closing-photo photo"
           >
 
@@ -1368,9 +1432,11 @@ function page (cb) {
 
           <h2>
             Come when your child is ready.<br>
-            Stay while it works.<br>
-            Leave when it doesn't.
           </h2>
+
+          <p>
+            No booking slots. You can come at any time between 6am and 9pm and stay while it works or leave when it doesn't.
+          </p>
 
           <button
             type="button"
@@ -1391,7 +1457,7 @@ function page (cb) {
           <rect
             width="1200"
             height="120"
-            fill="#fbfaf6">
+            fill="#d1ece6">
           </rect>
 
           <path
@@ -3470,8 +3536,7 @@ function get_theme () {
     .closing-section {
       padding-top: 7rem;
       padding-bottom: 8rem;
-
-      background: var(--cream);
+      background: var(--green);
     }
 
     .closing-photo {
