@@ -1,16 +1,4 @@
 [
-    {
-    "image": "./assets/swap-items/purple-soft-jacket.jpg",
-    "title": "Purple soft bear jacket",
-    "details": "6-12 months",
-    "added": "2026-08-18"
-  },
-  {
-    "image": "./assets/swap-items/complet-trousers-blouse.jpg",
-    "title": "Overalls with a butterfly",
-    "details": "6-12 months",
-    "added": "2026-08-18"
-  },
   {
     "image": "./assets/swap-items/blade.jpg",
     "title": "Blade & Rose knitted leggins",
@@ -64,5 +52,17 @@
     "title": "Jumper with cars",
     "details": "2-3 years",
     "added": "2026-09-03"
+  },
+  {
+    "image": "./assets/swap-items/brown-first-walker.jpg",
+    "title": "Brown first walker flexible shoes",
+    "details": "6-12 months",
+    "added": "2026-09-29"
+  },
+  {
+    "image": "./assets/swap-items/nike-black.jpg",
+    "title": "Black Nike trainers",
+    "details": "12-18 months",
+    "added": "2026-09-29"
   }
 ]

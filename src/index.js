@@ -58,7 +58,7 @@ function page (cb) {
     <div class="page">
 
       <!-- SEPTEMBER ANNOUNCEMENT -->
-
+ <!-- 
     <section class="announcement-bar">
       <a
         class="announcement-link"
@@ -69,7 +69,7 @@ function page (cb) {
         Try Swap & Play for your first week FREE →
       </a>
     </section>
-
+-->
       <!-- HERO -->
 
       <section class="hero">
@@ -514,8 +514,8 @@ function page (cb) {
           ${render_swap_room_items()}
 
           <p class="swap-stock-note">
-            These are some of the recent arrivals rather than live stock, so some items may
-            already have found a new home.
+            These are just some of the recent arrivals rather than live stock, so some items may
+            already have found a new home and many more are in the Swap shop but not listed here.
           </p>
 
         </div>

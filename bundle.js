@@ -1,17 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 module.exports=[
-    {
-    "image": "./assets/swap-items/purple-soft-jacket.jpg",
-    "title": "Purple soft bear jacket",
-    "details": "6-12 months",
-    "added": "2026-08-18"
-  },
-  {
-    "image": "./assets/swap-items/complet-trousers-blouse.jpg",
-    "title": "Overalls with a butterfly",
-    "details": "6-12 months",
-    "added": "2026-08-18"
-  },
   {
     "image": "./assets/swap-items/blade.jpg",
     "title": "Blade & Rose knitted leggins",
@@ -65,6 +53,18 @@ module.exports=[
     "title": "Jumper with cars",
     "details": "2-3 years",
     "added": "2026-09-03"
+  },
+  {
+    "image": "./assets/swap-items/brown-first-walker.jpg",
+    "title": "Brown first walker flexible shoes",
+    "details": "6-12 months",
+    "added": "2026-09-29"
+  },
+  {
+    "image": "./assets/swap-items/nike-black.jpg",
+    "title": "Black Nike trainers",
+    "details": "12-18 months",
+    "added": "2026-09-29"
   }
 ]
 },{}],2:[function(require,module,exports){
@@ -173,7 +173,7 @@ function page (cb) {
     <div class="page">
 
       <!-- SEPTEMBER ANNOUNCEMENT -->
-
+ <!-- 
     <section class="announcement-bar">
       <a
         class="announcement-link"
@@ -184,7 +184,7 @@ function page (cb) {
         Try Swap & Play for your first week FREE →
       </a>
     </section>
-
+-->
       <!-- HERO -->
 
       <section class="hero">
@@ -629,8 +629,8 @@ function page (cb) {
           ${render_swap_room_items()}
 
           <p class="swap-stock-note">
-            These are some of the recent arrivals rather than live stock, so some items may
-            already have found a new home.
+            These are just some of the recent arrivals rather than live stock, so some items may
+            already have found a new home and many more are in the Swap shop but not listed here.
           </p>
 
         </div>
@@ -2565,12 +2565,8 @@ function get_theme () {
     }
 
     .swap-stock-note {
-      max-width: 700px;
-
       margin: 1.5rem 0 0;
-
       color: var(--muted);
-
       font-size: 0.84rem;
     }
 
