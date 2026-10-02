@@ -21,11 +21,15 @@ module.exports = [
       './assets/hartbeeps1.jpg',
       './assets/hartbeeps2.jpg',
       './assets/hartbeeps3.jpg',
-      './assets/hartbeeps4.jpg'
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg',
     ],
 
     description:
-      'One hour of Hartbeeps followed by one hour of stay & play at Swap & Play.',
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
 
     details: [
       '1 hour of professional Hartbeeps entertainment',
@@ -58,11 +62,15 @@ module.exports = [
       './assets/hartbeeps1.jpg',
       './assets/hartbeeps2.jpg',
       './assets/hartbeeps3.jpg',
-      './assets/hartbeeps4.jpg'
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg',
     ],
 
     description:
-      'One hour of Hartbeeps followed by one hour of stay & play at Swap & Play.',
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
 
     details: [
       '1 hour of professional Hartbeeps entertainment',
@@ -95,11 +103,15 @@ module.exports = [
       './assets/hartbeeps1.jpg',
       './assets/hartbeeps2.jpg',
       './assets/hartbeeps3.jpg',
-      './assets/hartbeeps4.jpg'
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg',
     ],
 
     description:
-      'One hour of Hartbeeps followed by one hour of stay & play at Swap & Play.',
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
 
     details: [
       '1 hour of professional Hartbeeps entertainment',
