@@ -109,42 +109,5 @@ module.exports = [
     ],
 
     bookingUrl: '#'
-  },
-  {
-    slug: 'hartbeeps-30-october',
-    title: 'Hartbeeps + Stay & Play',
-    date: '2026-10-30',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Members & pass holders',
-        price: '£8',
-        bookingUrl: 'https://buy.stripe.com/bJebJ0gMG9jj8VP3RH0Ba0j'
-      },
-      {
-        label: 'Non-members',
-        price: '£12',
-        bookingUrl: 'https://buy.stripe.com/4gMaEWdAu3YZ1tn2ND0Ba0k'
-      }
-    ],
-    images: [
-      './assets/hartbeeps1.jpg',
-      './assets/hartbeeps2.jpg',
-      './assets/hartbeeps3.jpg',
-      './assets/hartbeeps4.jpg'
-    ],
-
-    description:
-      'One hour of Hartbeeps followed by one hour of stay & play at Swap & Play.',
-
-    details: [
-      '1 hour of professional Hartbeeps entertainment',
-      '1 hour of stay & play afterwards',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-
-    bookingUrl: '#'
-  }  
+  }
 ]

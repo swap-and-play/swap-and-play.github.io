@@ -1,11 +1,11 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-const page = require('..')
+const page = require('../src/index.js')
 
 document.title = 'Events at Swap & Play'
 
 document.body.append(page())
 
-},{"..":4}],2:[function(require,module,exports){
+},{"../src/index.js":4}],2:[function(require,module,exports){
 module.exports = [
   {
     slug: 'hartbeeps-9-october',
@@ -117,44 +117,7 @@ module.exports = [
     ],
 
     bookingUrl: '#'
-  },
-  {
-    slug: 'hartbeeps-30-october',
-    title: 'Hartbeeps + Stay & Play',
-    date: '2026-10-30',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Members & pass holders',
-        price: '£8',
-        bookingUrl: 'https://buy.stripe.com/bJebJ0gMG9jj8VP3RH0Ba0j'
-      },
-      {
-        label: 'Non-members',
-        price: '£12',
-        bookingUrl: 'https://buy.stripe.com/4gMaEWdAu3YZ1tn2ND0Ba0k'
-      }
-    ],
-    images: [
-      './assets/hartbeeps1.jpg',
-      './assets/hartbeeps2.jpg',
-      './assets/hartbeeps3.jpg',
-      './assets/hartbeeps4.jpg'
-    ],
-
-    description:
-      'One hour of Hartbeeps followed by one hour of stay & play at Swap & Play.',
-
-    details: [
-      '1 hour of professional Hartbeeps entertainment',
-      '1 hour of stay & play afterwards',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-
-    bookingUrl: '#'
-  }  
+  }
 ]
 },{}],3:[function(require,module,exports){
 module.exports = get_theme
@@ -1484,11 +1447,12 @@ function page () {
             button.addEventListener(
               'click',
               function () {
-                window.location.hash =
-                  `event/${encodeURIComponent(event.slug)}`
+                const url =
+                  `${window.location.pathname}#event/${encodeURIComponent(event.slug)}`
+
+                window.open(url, '_blank')
               }
             )
-
 
             cell.append(button)
           })
@@ -1570,10 +1534,12 @@ function page () {
                 .map(function (event) {
 
                   return `
-                    <a
-                      class="mobile-event"
-                      href="#event/${encodeURIComponent(event.slug)}"
-                    >
+                      <a
+                        class="mobile-event"
+                        href="${window.location.pathname}#event/${encodeURIComponent(event.slug)}"
+                        target="_blank"
+                        rel="noopener"
+                      >
 
                       <strong>
                         ${esc(event.title)}

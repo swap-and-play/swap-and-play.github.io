@@ -266,11 +266,12 @@ function page () {
             button.addEventListener(
               'click',
               function () {
-                window.location.hash =
-                  `event/${encodeURIComponent(event.slug)}`
+                const url =
+                  `${window.location.pathname}#event/${encodeURIComponent(event.slug)}`
+
+                window.open(url, '_blank')
               }
             )
-
 
             cell.append(button)
           })
@@ -352,10 +353,12 @@ function page () {
                 .map(function (event) {
 
                   return `
-                    <a
-                      class="mobile-event"
-                      href="#event/${encodeURIComponent(event.slug)}"
-                    >
+                      <a
+                        class="mobile-event"
+                        href="${window.location.pathname}#event/${encodeURIComponent(event.slug)}"
+                        target="_blank"
+                        rel="noopener"
+                      >
 
                       <strong>
                         ${esc(event.title)}

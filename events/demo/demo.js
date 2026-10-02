@@ -1,4 +1,4 @@
-const page = require('..')
+const page = require('../src/index.js')
 
 document.title = 'Events at Swap & Play'
 

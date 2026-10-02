@@ -74,7 +74,7 @@ function page (cb) {
 
       <section class="hero">
         <div class="hero-inner">
-
+        
           <div class="hero-copy">
             <img
               src="./assets/logo.png"
@@ -117,6 +117,16 @@ function page (cb) {
               >
                 Find us
               </button>
+
+              <a
+                class="button secondary-button"
+                href="/events"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Events
+              </a>
+
             </div>
           </div>
 

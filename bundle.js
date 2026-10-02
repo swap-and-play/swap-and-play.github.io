@@ -189,7 +189,7 @@ function page (cb) {
 
       <section class="hero">
         <div class="hero-inner">
-
+        
           <div class="hero-copy">
             <img
               src="./assets/logo.png"
@@ -232,6 +232,16 @@ function page (cb) {
               >
                 Find us
               </button>
+
+              <a
+                class="button secondary-button"
+                href="/events"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Events
+              </a>
+
             </div>
           </div>
 
@@ -2001,20 +2011,17 @@ function get_theme () {
 
     .hero {
       padding: 5rem 1.5rem 6rem;
-
       background: var(--blue);
     }
 
     .hero-inner {
       display: grid;
-
+      position: relative;
       grid-template-columns:
         minmax(0, 1.12fr)
         minmax(340px, 0.88fr);
-
       max-width: 1240px;
       margin: 0 auto;
-
       align-items: center;
       gap: clamp(3rem, 6vw, 6rem);
     }
@@ -2144,7 +2151,6 @@ function get_theme () {
     .hero-photo:hover .photo {
       transform: scale(1.015);
     }
-
 
     /* ---------------------------------------------------------
        IDENTITY — PLAY / SHARE / BELONG
