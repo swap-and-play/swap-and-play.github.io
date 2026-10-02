@@ -830,18 +830,31 @@ function page (cb) {
             </article>
 
 
-            <article class="social-time">
+            <article class="social-time public-social-time">
               <span class="social-day">
                 Friday
               </span>
-              <span class="social-open">
-                Play & Swap
+
+              <strong>
+                Hartbeeps + Stay & Play
+              </strong>
+              <span>
+                One hour of Hartbeeps followed by one hour of Stay & Play. Coffee and Tea included.              </span>
+              <br>
+
+              <span>
+                9.30am - 11.30pm
               </span>
 
               <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>              
+                <br> £8/£12 
+                <br>
+                <a 
+                  href="/events"
+                  target="_blank"
+                  > Book here
+                </a>
+              </span>
             </article>
 
             <article class="social-time">
