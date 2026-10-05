@@ -1,5 +1,40 @@
 module.exports = [
   {
+    slug: 'wednesday-open-play-7-october',
+    title: 'Wednesday Open Play',
+    date: '2026-10-07',
+    start: '10:00',
+    end: '12:00',
+    prices: [
+      {
+        label: 'Limited availability',
+        price: 'FREE',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfuaX71bQ4iPYYRQMssdbGB-m38A7gmJbiBqiI6l55NwMIX3w/viewform?usp=header'
+      }
+    ],
+    images: [
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+
+    description:
+      'A relaxed, social play morning for families with children aged 0–5.',
+
+    details: [
+      'Free to attend',
+      'Registration required',
+      'Play and explore at your own pace',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+
+    buttonLabel: 'Register',
+    bookingUrl: '#'
+  },
+
+  {
     slug: 'hartbeeps-9-october',
     title: 'Hartbeeps + Stay & Play',
     date: '2026-10-09',
@@ -40,6 +75,42 @@ module.exports = [
 
     bookingUrl: '#'
   },
+
+  {
+    slug: 'wednesday-open-play-14-october',
+    title: 'Wednesday Open Play',
+    date: '2026-10-14',
+    start: '10:00',
+    end: '12:00',
+    prices: [
+      {
+        label: 'Limited availability',
+        price: 'FREE',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfuaX71bQ4iPYYRQMssdbGB-m38A7gmJbiBqiI6l55NwMIX3w/viewform?usp=header'
+      }
+    ],
+    images: [
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+
+    description:
+      'A relaxed, social play morning for families with children aged 0–5.',
+
+    details: [
+      'Free to attend',
+      'Registration required',
+      'Play and explore at your own pace',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+
+    buttonLabel: 'Register',
+    bookingUrl: '#'
+  },
+
   {
     slug: 'hartbeeps-16-october',
     title: 'Hartbeeps + Stay & Play',
@@ -81,6 +152,42 @@ module.exports = [
 
     bookingUrl: '#'
   },
+
+  {
+    slug: 'wednesday-open-play-21-october',
+    title: 'Wednesday Open Play',
+    date: '2026-10-21',
+    start: '10:00',
+    end: '12:00',
+    prices: [
+      {
+        label: 'Limited availability',
+        price: 'FREE',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfuaX71bQ4iPYYRQMssdbGB-m38A7gmJbiBqiI6l55NwMIX3w/viewform?usp=header'
+      }
+    ],
+    images: [
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+
+    description:
+      'A relaxed, social play morning for families with children aged 0–5.',
+
+    details: [
+      'Free to attend',
+      'Registration required',
+      'Play and explore at your own pace',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+
+    buttonLabel: 'Register',
+    bookingUrl: '#'
+  },
+
   {
     slug: 'hartbeeps-23-october',
     title: 'Hartbeeps + Stay & Play',
@@ -120,6 +227,41 @@ module.exports = [
       'Suitable for babies, toddlers and preschoolers'
     ],
 
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'wednesday-open-play-28-october',
+    title: 'Wednesday Open Play',
+    date: '2026-10-28',
+    start: '10:00',
+    end: '12:00',
+    prices: [
+      {
+        label: 'Limited availability',
+        price: 'FREE',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfuaX71bQ4iPYYRQMssdbGB-m38A7gmJbiBqiI6l55NwMIX3w/viewform?usp=header'
+      }
+    ],
+    images: [
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+
+    description:
+      'A relaxed, social play morning for families with children aged 0–5.',
+
+    details: [
+      'Free to attend',
+      'Registration required',
+      'Play and explore at your own pace',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+
+    buttonLabel: 'Register',
     bookingUrl: '#'
   }
 ]

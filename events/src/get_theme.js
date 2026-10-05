@@ -794,19 +794,22 @@ function get_theme () {
 
       background: rgba(255, 255, 255, 0.48);
     }
+      
+    .booking-prices {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
 
+    .booking-prices:has(.booking-option:only-child) {
+      grid-template-columns: 1fr;
+    }
 
-      .booking-option {
-        display: grid;
-        justify-items: center;
-        text-align: center;
-      }
-
-      .booking-prices {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-      }
+    .booking-prices:has(.booking-option:only-child) .booking-option {
+      justify-self: center;
+      width: 100%;
+      max-width: 400px;
+    }
 
       .booking-option {
         display: grid;

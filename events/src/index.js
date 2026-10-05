@@ -629,8 +629,10 @@ function page () {
                         <a
                           class="primary-button"
                           href="${attr(item.bookingUrl)}"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          Book
+                          ${event.buttonLabel || 'Book'}
                         </a>
 
                       </div>
