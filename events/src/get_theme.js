@@ -405,15 +405,6 @@ function get_theme () {
     }
 
 
-    .event:nth-child(3n) {
-      background: #fbd8d9;
-    }
-
-
-    .event:nth-child(4n) {
-      background: #fff0c7;
-    }
-
 
     /* =========================================================
        MOBILE EVENT LIST
