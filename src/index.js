@@ -91,8 +91,8 @@ function page (cb) {
             </h1>
 
             <p class="hero-subtitle">
-              Play rooms for little ones, a Community Wardrobe for everything
-              they outgrow, and a place for local families to meet, share and belong.
+            Play rooms for little ones, a Community Wardrobe for everything they outgrow, and a welcoming place to meet, play, have a coffee or simply spend some time together.
+            Clean, calm and shoe-free, with plenty of space for babies, toddlers and preschoolers to explore.
             </p>
 
             <div class="hero-details">
@@ -107,7 +107,7 @@ function page (cb) {
                 class="button primary-button"
                 data-scroll-to="#passes"
               >
-                View Pass Options
+                Come and Visit
               </button>
 
               <button
@@ -972,7 +972,7 @@ function page (cb) {
               <br>
               <br>🧸 Play & explore
               <br>♻️ Browse the community wardrobe
-              <br>Free tea & coffee 
+              <br> Tea & coffee included 
             </p>
             <a
               class="button primary-button"
