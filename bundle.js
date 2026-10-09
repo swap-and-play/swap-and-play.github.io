@@ -920,7 +920,8 @@ module.exports = function get_theme () {
     }
 
     p {
-      line-height: 1.65;
+      font-size: 18px;
+      line-height: 1.7;
     }
 
     .eyebrow {
@@ -1140,7 +1141,7 @@ module.exports = function get_theme () {
       border-radius: 999px;
       background: var(--green);
       color: var(--teal);
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
     }
 
@@ -1413,8 +1414,8 @@ module.exports = function get_theme () {
     .visit-card > p {
       margin-bottom: 18px;
       color: rgba(48, 79, 79, 0.82);
-      font-size: 15.5px;
-      line-height: 1.55;
+      font-size: 17px;
+      line-height: 1.65;
     }
 
     .visit-card-photo {
@@ -1477,7 +1478,7 @@ module.exports = function get_theme () {
       justify-content: center;
       gap: 7px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 800;
       text-align: center;
       line-height: 1.25;
@@ -1712,7 +1713,7 @@ module.exports = function get_theme () {
 
     .map-image {
       width: 100%;
-      max-height: 300px;
+      max-height: 379px;
       object-fit: contain;
       object-position: center;
       margin-bottom: 26px;
@@ -1736,12 +1737,12 @@ module.exports = function get_theme () {
     }
 
     .location-detail strong {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .location-detail span {
       color: rgba(48, 79, 79, 0.7);
-      font-size: 14px;
+      font-size: 16px;
     }
 
     /* GALLERY */
@@ -2143,7 +2144,7 @@ module.exports = function get_theme () {
       /* Buttons */
       .visit-button,
       .button {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.4;
       }
     }
@@ -2177,8 +2178,8 @@ module.exports = function get_theme () {
       }
 
       .section-intro {
-        font-size: 17px;
-        line-height: 1.65;
+        font-size: 20px;
+        line-height: 1.7;
       }
 
       /* Header */
@@ -2193,10 +2194,11 @@ module.exports = function get_theme () {
 
       .main-nav {
         gap: 12px;
+        font-size: 17px;
       }
 
       .main-nav a {
-        font-size: 13px;
+        font-size: 17px;
       }
 
       .main-nav a:nth-child(3) {
@@ -2215,7 +2217,7 @@ module.exports = function get_theme () {
       }
 
       .hero-subtitle {
-        font-size: 18px;
+        font-size: 21px;
         line-height: 1.65;
       }
 
