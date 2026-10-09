@@ -2,53 +2,20 @@ module.exports = page
 
 const get_theme = require('get_theme')
 
-const DAY_PASS_PAYMENT_URL = 'https://buy.stripe.com/5kQ14m8ga9jj0pjdsh0Ba05'
-const WEEK_PASS_PAYMENT_URL = "https://buy.stripe.com/4gM9ASbsmeDDeg95ZP0Ba00"
-const MEMBERSHIP_PAYMENT_URL = 'https://buy.stripe.com/cNi9AS3ZU9jj4Fzewl0Ba08'
-const GIFT_MONTH_PAYMENT_URL = 'https://buy.stripe.com/cNifZg0NI7bb0pjag50Ba09'
+const DAY_PASS_PAYMENT_URL =
+  'https://buy.stripe.com/5kQ14m8ga9jj0pjdsh0Ba05'
 
-const ILKLEY_GAZETTE_ARTICLE_URL = 'https://www.ilkleygazette.co.uk/news/26265760.new-family-play-swap-space-opens-wharfedale'
-const ILKLEYCHAT_ARTICLE_URL = 'https://www.ilkleychat.co.uk/post/families-invited-to-the-big-swap?fbclid=IwY2xjawUZWrFwZG9mAWV4dG4DYWVtAjExAHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5Cwm7yfgcSY5KtgJyMtsjTcXVqw2EGWwKpTmxzid04QdANdGuxfbLZ4LukWQ_aem_m4p88iiFBmPrwClMb-0z3w'
-const SWAP_ROOM_ITEMS = require('../data/swap-room-items.json')
+const WEEK_PASS_PAYMENT_URL =
+  'https://buy.stripe.com/4gM9ASbsmeDDeg95ZP0Ba00'
 
-function render_swap_room_items() {
-  if (!SWAP_ROOM_ITEMS.length) {
-    return `
-      <div class="swap-preview-empty">
-        <img
-          src="./assets/swap-room.jpg"
-          alt="Clothes, books and toys in the Swap Room"
-          class="swap-preview-room-photo"
-        >
-        <div class="swap-preview-empty-copy">
-          <span class="swap-preview-kicker">The rails and shelves change all the time</span>
-          <h3>Fresh finds are arriving now</h3>
-          <p>
-            We are starting to photograph recent arrivals so you can have a quick look before you visit.
-            Clothes, books, toys and useful little family items are all first come, first swapped.
-          </p>
-        </div>
-      </div>
-    `
-  }
+const MEMBERSHIP_PAYMENT_URL =
+  'https://buy.stripe.com/cNi9AS3ZU9jj4Fzewl0Ba08'
 
-  return `
-    <div class="swap-items-scroll" aria-label="Recently added Swap Room items">
-      ${SWAP_ROOM_ITEMS.map(item => `
-        <article class="swap-item-card">
-          <div class="swap-item-image-wrap">
-            <img src="${item.image}" alt="${item.title}" class="swap-item-image">
-          </div>
-          <div class="swap-item-copy">
-            <h3>${item.title}</h3>
-            ${item.details ? `<p class="swap-item-details">${item.details}</p>` : ''}
-            ${item.added ? `<p class="swap-item-added">${item.added}</p>` : ''}
-          </div>
-        </article>
-      `).join('')}
-    </div>
-  `
-}
+const GOOGLE_MAPS_URL =
+  'https://maps.app.goo.gl/xPGPfSGdbXFYjEog6'
+
+const GIFT_A_MONTH_URL = 
+  'https://buy.stripe.com/cNifZg0NI7bb0pjag50Ba09'
 
 function page (cb) {
   const el = document.createElement('div')
@@ -57,1480 +24,767 @@ function page (cb) {
   shadow.innerHTML = `
     <div class="page">
 
-      <!-- SEPTEMBER ANNOUNCEMENT -->
- <!-- 
-    <section class="announcement-bar">
-      <a
-        class="announcement-link"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSe3HZA6pof7I7m4diGGWerDKkNo0uKZVCql5Szl741bPu2aIg/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Try Swap & Play for your first week FREE →
-      </a>
-    </section>
--->
+      <!-- HEADER -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a href="/" class="brand"
+             aria-label="Swap & Play Wharfedale home">
+            <img src="./assets/swapnplay_symbol_mono_dark.png"
+                 alt="Swap & Play Wharfedale"
+                 class="brand-logo">
+          </a>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#how-to-visit">How to visit</a>
+            <a href="#location">Find us</a>
+            <a 
+              href="/events"
+              target="_blank"
+              rel="noopener noreferrer">
+              Events
+            </a>
+            <a href="#gallery">Gallery</a>
+            <a href="https://www.instagram.com/swap_and_play_wharfedale/"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"
+              fill="none" stroke="currentColor" stroke-width="2" />
+              <circle cx="12" cy="12" r="4"
+              fill="none" stroke="currentColor" stroke-width="2" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/swapandplaywharfedale/"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+              d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8z" />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </header>
+
       <!-- HERO -->
+      <main>
+        <section class="hero">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">Play · swap · belong</p>
 
-      <section class="hero">
-        <div class="hero-inner">
-        
-          <div class="hero-copy">
-            <img
-              src="./assets/logo.png"
-              alt="Swap & Play Wharfedale"
-              class="hero-logo"
-            >
+              <h1>A shared space for family life in Ilkley</h1>
 
-            <p class="eyebrow">
-              Play · swap · belong
-            </p>
+              <p class="hero-subtitle">
+                A calm, welcoming place for babies, toddlers and preschoolers
+                to play, explore and meet other local families.
+              </p>
 
-            <h1>
-              A shared space for family life in Ilkley
-            </h1>
+              <div class="hero-details">
+                <span>0–5 years</span>
+                <span>Open every day</span>
+                <span>6am–9pm</span>
+                <span>Just behind Booths</span>
+              </div>
 
-            <p class="hero-subtitle">
-            Play rooms for little ones, a Community Wardrobe for everything they outgrow, and a welcoming place to meet, play, have a coffee or simply spend some time together.
-            Clean, calm and shoe-free, with plenty of space for babies, toddlers and preschoolers to explore.
-            </p>
-
-            <div class="hero-details">
-              <span>Open every day</span>
-              <span>6am–9pm</span>
-              <span>Just behind Booths, Ilkley</span>
+              <div class="hero-actions">
+                <a class="button primary-button" href="#how-to-visit">
+                  How to visit
+                </a>
+                <a class="button secondary-button" href="#location">
+                  Find us
+                </a>
+              </div>
             </div>
 
-            <div class="hero-actions">
-              <button
-                type="button"
-                class="button primary-button"
-                data-scroll-to="#passes"
-              >
-                Come and Visit
-              </button>
-
-              <button
-                type="button"
-                class="button secondary-button"
-                data-scroll-to="#location"
-              >
-                Find us
-              </button>
-
-              <a
-                class="button secondary-button"
-                href="/events"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Events
-              </a>
-
+            <div class="hero-photo">
+              <img src="./assets/mums-chat.jpg"
+                   alt="Families spending time together at Swap & Play"
+                   class="photo">
             </div>
           </div>
+        </section>
 
-          <div class="hero-photo">
-            <img
-              src="./assets/swap.png"
-              alt="Local families spending time together at Swap & Play"
-              class="photo"
-            >
-          </div>
+        <!-- WAVE -->
 
+        <div class="wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <rect
+              width="1200"
+              height="120"
+              fill="#6fa8dc">
+            </rect>
+
+            <path
+              d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+              fill="#fbfaf6">
+            </path>
+          </svg>
         </div>
-      </section>
 
+        <!-- HOW TO VISIT -->
+        <section class="section how-to-visit-section"
+                 id="how-to-visit">
+          <div class="content content-wide">
 
-      <!-- WAVE -->
+            <div class="section-heading center">
+              <p class="eyebrow dark">How to visit</p>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#6fa8dc">
-          </rect>
+              <h2>Choose what works for your family</h2>
 
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- WHAT SWAP & PLAY IS -->
-
-      <section class="section identity-section">
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-            <p class="eyebrow dark">
-              More than somewhere to pass an hour
-            </p>
-
-            <h2>
-              A little piece of family infrastructure
-            </h2>
-
-            <p class="section-intro">
-              Swap & Play is a shared local space designed around ordinary life
-              with babies and young children.
-            </p>
-          </div>
-
-          <div class="identity-grid">
-
-            <article class="identity-card">
-
-              <h3>Play</h3>
-
-              <p>
-                Calm, thoughtfully prepared rooms where babies and young children
-                can explore, move, pretend, build, read and play.
+              <p class="section-intro">
+                You can book a particular session, come whenever it suits you,
+                or become a member if you find yourself coming regularly. All prices are for the family, not per child.
               </p>
-            </article>
-
-            <article class="identity-card">
-
-              <h3>Share</h3>
-
-              <p>
-                Bring the good clothes, books and toys your children have outgrown,
-                and take home things another local family no longer needs.
-              </p>
-            </article>
-
-            <article class="identity-card">
-
-              <h3>Belong</h3>
-
-              <p>
-                Come independently when you want somewhere calm, or overlap with
-                other local families when you would like company.
-              </p>
-            </article>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#f4efe6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- LOCATION -->
-
-      <section
-        class="section location-section"
-        id="location"
-      >
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              Right in the middle of Ilkley
-            </p>
-
-            <h2>
-              Easy to find. Easy to drop into.
-            </h2>
-
-            <p class="section-intro">
-              We are on Leeds Road, just behind Booths — close to Riverside,
-              the playground and the centre of town.
-            </p>
-
-          </div>
-
-          <div class="location-visuals">
-
-            <div class="location-card building-card">
-              <img
-                src="./assets/building.png"
-                alt="The entrance to Swap & Play on Leeds Road in Ilkley"
-                class="photo"
-              >
             </div>
-
-            <div class="location-card map-card">
-              <img
-                src="./assets/map.png"
-                alt="Map showing Swap & Play behind Booths in Ilkley"
-                class="photo"
-              >
-            </div>
-
-          </div>
-
-          <div class="location-details">
-
-            <div class="location-detail">
-              <strong>Swap & Play Wharfedale</strong>
-              <span>Leeds Road, Ilkley</span>
-            </div>
-
-            <div class="location-detail">
-              <strong>Parking</strong>
-              <span>Booths car park is just around the corner</span>
-            </div>
-
-            <div class="location-detail">
-              <strong>Opening hours</strong>
-              <span>Every day, 6am–9pm</span>
-            </div>
-
-          </div>
-
-          <div class="center">
-            <a
-              class="button primary-button"
-              href="https://maps.app.goo.gl/xPGPfSGdbXFYjEog6"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open in Google Maps
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#f4efe6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- HOW IT WORKS -->
-
-      <section class="section how-it-works-section">
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              No booking. No timetable to organise around.
-            </p>
-
-            <h2>
-              Come when your family is ready
-            </h2>
-
-          </div>
-
-          <div class="steps-grid">
-
-            <article class="step-card">
-              <span class="step-number">1</span>
-
-              <h3>Choose your access</h3>
-
-              <p>
-                Pick the visit option that works for your family.
-              </p>
-            </article>
-
-            <article class="step-card">
-              <span class="step-number">2</span>
-
-              <h3>Get your own door code</h3>
-
-              <p>
-                There is no reception or formal check-in. Your household gets
-                its own access code.
-              </p>
-            </article>
-
-            <article class="step-card">
-              <span class="step-number">3</span>
-
-              <h3>Just arrive</h3>
-
-              <p>
-                Come anytime between 6am and 9pm while your access is active.
-              </p>
-            </article>
-
-          </div>
-
-          <p class="big-statement center">
-            Come for 30 minutes or stay for three hours.<br>
-            No booking. No rushing. Just arrive.
-          </p>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#d1ece6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- COMMUNITY WARDROBE -->
-
-      <section
-        class="section swap-section"
-        id="swap-room"
-      >
-        <div class="content content-wide">
-
-          <div class="swap-story-grid">
-
-            <div class="swap-story-copy">
-
-              <p class="eyebrow dark">
-                The Community Wardrobe
-              </p>
-
-              <h2>
-                What do you do with everything they outgrow?
-              </h2>
-
-              <p class="large-copy">
-                Babies and young children move through clothes, books and toys
-                astonishingly quickly.
-              </p>
-
-              <p>
-                Instead of every family buying, storing, photographing and
-                reselling the same things separately, we can keep useful things
-                moving through our local community.
-              </p>
-
-              <p>
-                Bring good-quality clothes, books, toys and useful family items
-                that you no longer need. Browse what other families have brought.
-                Take home something your family can genuinely use.
-              </p>
-
-              <p class="swap-principle">
-                <strong>
-                  No credits. No selling. No one-for-one exchange.
-                </strong>
-              </p>
-
-              <p class="swap-principle-large">
-                Give when you can.<br>
-                Take what you need.
-              </p>
-
-            </div>
-
-            <div class="swap-story-photo">
-              <img
-                src="./assets/swap-room.jpg"
-                alt="Children's clothes, books and toys in the Swap Room"
-                class="photo"
-              >
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#d1ece6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- RECENT SWAP ITEMS -->
-
-      <section
-        class="section swap-preview-section"
-        id="swap-new"
-      >
-        <div class="content content-wide">
-
-          <div class="swap-preview-heading">
-
-            <div>
-              <p class="eyebrow dark">
-                Recently added
-              </p>
-
-              <h2>
-                Have a look before you come
-              </h2>
-            </div>
-
-            <p class="swap-preview-intro">
-              The Community Wardrobe changes constantly as local families bring
-              in good things their children have outgrown.
-            </p>
-
-          </div>
-
-          ${render_swap_room_items()}
-
-          <p class="swap-stock-note">
-            These are just some of the recent arrivals rather than live stock, so some items may
-            already have found a new home and many more are in the Swap shop but not listed here.
-          </p>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#f4efe6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- LIFE AT SWAP & PLAY -->
-
-      <section class="section life-section">
-        <div class="content content-xl">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              Life at Swap & Play
-            </p>
-
-            <h2>
-              Somewhere that can become part of your week
-            </h2>
-
-            <p class="section-intro">
-              Come after breakfast, between errands, after nursery, on a rainy
-              afternoon or when home has simply started to feel too small.
-            </p>
-
-          </div>
-
-          <div class="life-photo-grid">
-            <img
-              src="./assets/role-play.jpg"
-              alt="Children playing together in the role play room"
-              class="photo"
-            >
-
-            <img
-              src="./assets/mum-and-son.jpg"
-              alt="Mother and son playing together"
-              class="photo"
-            >
-            <img
-              src="./assets/girls-playing.jpeg"
-              alt="Children playing together on the floor"
-              class="photo"
-            >
-
-            <img
-              src="./assets/trains.jpg"
-              alt="A child and her grandma"
-              class="photo"
-            >
-            <img
-              src="./assets/children-playing.jpg"
-              alt="A child playing"
-              class="photo"
-            >            
-
-            <img
-              src="./assets/quiet-coffee.jpg"
-              alt="A cup of coffee beside the play space"
-              class="photo"
-            >
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#f4efe6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- REVIEWS -->
-
-      <section class="section reviews-section">
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              From local families
-            </p>
-
-            <h2>
-              What it feels like to use the space
-            </h2>
-
-          </div>
-
-          <div class="reviews-grid">
-
-            <blockquote class="review-card">
-              <p>
-                “Amazing set up, absolutely everything has been thought about.
-                The space is clean and well equipped with great resources for
-                all ages.”
-              </p>
-
-              <footer>Mel A</footer>
-            </blockquote>
-
-
-            <blockquote class="review-card">
-              <p>
-                “We love the swap room. We can just take whatever clothes we need, 
-                and when they outgrow them, bring them back for someone else to use. 
-                It's perfect. Although it feels like a subscription to a play space, 
-                the best part is actually having a subscription to a community wardrobe."
-              </p>
-
-              <footer>Eleanor M</footer>
-            </blockquote>
             
-            <blockquote class="review-card">
-              <p>
-                “I loved the toys, the space is clean and fresh, and you have
-                thought of nearly everything. We brought the girls dinner and
-                had a play session before bed — it was brilliant.”
-              </p>
 
-              <footer>Nancy M</footer>
-            </blockquote>
+            <div class="visit-grid">
 
-          </div>
+              <!-- EVENTS -->
+              <article class="visit-card visit-card-events">
+                <div class="visit-card-top">
+                  <span class="visit-illustration"
+                        aria-hidden="true">▦</span>
+                  <span class="visit-label">For a planned visit</span>
+                </div>
 
-          <div class="press-links">
+                <h3>Book an event</h3>
 
-            <a
-              class="press-link"
-              href="${ILKLEY_GAZETTE_ARTICLE_URL}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="press-publication">
-                Ilkley Gazette
-              </span>
+                <p>
+                  Join a relaxed Social Play session, or book a special
+                  class or activity led by a local professional.
+                </p>
 
-              <span class="press-read">
-                Read about Swap & Play →
-              </span>
-            </a>
+                <img class="visit-card-photo"
+                     src="events/assets/hartbeeps4.jpg"
+                     alt="A little one enjoying play at Swap & Play">
 
-            <a
-              class="press-link"
-              href="${ILKLEYCHAT_ARTICLE_URL}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="press-publication">
-                IlkleyChat
-              </span>
-
-              <span class="press-read">
-                Read about The Big Swap event →
-              </span>
-            </a>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#d1ece6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- SOCIAL TIMES -->
-
-      <section
-        class="section social-section"
-        id="calendar"
-      >
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              Want some company?
-            </p>
-
-            <h2>
-              Come along at a social time
-            </h2>
-
-            <p class="section-intro">
-              You can visit Swap & Play anytime during our opening hours.
-              These are regular times when other local families are more
-              likely to be here, so you can enjoy some company while the
-              little ones play.            
-            </p>
-
-          </div>
-
-          <div class="social-times-grid">
-
-            <article class="social-time">
-              <span class="social-day">
-                Monday
-              </span>
-              <span class="social-open">
-                Play & Swap
-              </span>
-
-              <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>
-            </article>
-
-            <article class="social-time">
-              <span class="social-day">
-                Tuesday
-              </span>
-              <span class="social-open">
-                Play & Swap
-              </span>
-
-              <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>
-            </article>
-
-            <article class="social-time public-social-time">
-              <span class="social-day">
-                Wednesday
-              </span>
-
-              <strong>
-                Wednesday Open Play
-              </strong>
-              <span>
-                A relaxed, social play morning for families with children aged 0–5.
-              </span>
-              <br>
-
-              <span>
-                10am - 12pm
-              </span>
-
-              <span>
-                <br> FREE
-                <br>
-                <a 
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfuaX71bQ4iPYYRQMssdbGB-m38A7gmJbiBqiI6l55NwMIX3w/viewform?usp=header"
-                  target="_blank"
-                  > Register here
+                <a class="visit-button visit-button-blue" href="/events">
+                  See what's on <span>→</span>
                 </a>
-              </span>
-            </article>
+              </article>
 
-            <article class="social-time">
-              <span class="social-day">
-                Thursday
-              </span>
-              <span class="social-open">
-                Play & Swap
-              </span>
+              <!-- PASSES -->
+              <article class="visit-card visit-card-passes">
+                <div class="visit-card-top">
+                  <span class="visit-illustration"
+                        aria-hidden="true">♧</span>
+                  <span class="visit-label">For flexibility</span>
+                </div>
 
-              <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>              
-            </article>
+                <h3>Get a pass</h3>
+
+                <p>
+                  Prefer to keep things flexible? Choose a pass and drop
+                  in when it suits your family.
+                </p>
+
+                <img class="visit-card-photo pass-photo"
+                src="./assets/dad-toddler.jpg"
+                alt="A welcoming play space for little ones">
 
 
-            <article class="social-time public-social-time">
-              <span class="social-day">
-                Friday
-              </span>
+                <div class="pass-options">
+                  <a class="mini-pass"
+                    href="${DAY_PASS_PAYMENT_URL}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <strong>Day Pass</strong>
+                    <span>£10</span>
+                  </a>
 
-              <strong>
-                Hartbeeps + Stay & Play
-              </strong>
-              <span>
-                One hour of Hartbeeps followed by one hour of Stay & Play. Coffee and Tea included.              </span>
-              <br>
+                  <a class="mini-pass"
+                    href="${WEEK_PASS_PAYMENT_URL}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <strong>7-Day Pass</strong>
+                    <span>£15</span>
+                  </a>
 
-              <span>
-                9.30am - 11.30pm
-              </span>
+              </article>
 
-              <span>
-                <br> £8/£12 
-                <br>
-                <a 
-                  href="/events"
-                  target="_blank"
-                  > Book here
+              <!-- MEMBERSHIP -->
+              <article class="visit-card visit-card-membership">
+                <div class="visit-card-top">
+                  <span class="visit-illustration"
+                        aria-hidden="true">♡</span>
+                  <span class="visit-label">For regular families</span>
+                </div>
+
+                <h3>Become a member</h3>
+
+                <p>
+                  If you think you'll come regularly, membership gives
+                  your household unlimited access without having to
+                  think about individual visits.
+                </p>
+
+                <div class="membership-price">
+                  <strong>£35</strong>
+                  <span>/ month</span>
+                </div>
+
+                <ul class="visit-list">
+                  <li>Unlimited visits for your household</li>
+                  <li>Open every day, 6am–9pm</li>
+                  <li>One free guest family each month</li>
+                  <li>Community Wardrobe included</li>
+                </ul>
+
+                <a class="visit-button visit-button-pink"
+                   href="${MEMBERSHIP_PAYMENT_URL}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Become a member <span>→</span>
                 </a>
-              </span>
-            </article>
-
-            <article class="social-time">
-              <span class="social-day">
-                Saturday
-              </span>
-              <span class="social-open">
-                Play & Swap
-              </span>
-
-              <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>
-            </article>
-
-            <article class="social-time public-social-time">
-              <span class="social-day">
-                Sunday
-              </span>
-
-              <strong>
-                Social & Swap
-              </strong>
-              <span>
-               Relaxed play, a chance to meet other families, and a clothes and toy swap.
-              </span>
-              <br>
-              <span>
-                2pm - 4.30pm
-              </span>
-              <span>
-                <br> £10 per family (tea/coffee on us)
-                <br>
-                <a 
-                  href="https://buy.stripe.com/dRm28q0NI1QRdc54VL0Ba0c"
-                  target="_blank"
-                  > Book here
-                </a>
-              </span>
-            </article>
-
-          </div>
-
-          <p class="social-note center">
-            With a day pass, week pass or membership, you can visit anytime between 6am and 9pm.        
-          </p>
-
-        </div>
-      </section>
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#d1ece6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#f4efe6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- VISIT OPTIONS -->
-
-      <section
-        class="section pricing-section"
-        id="passes"
-      >
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              Visit Swap & Play
-            </p>
-
-            <h2>
-              Choose what works for your family
-            </h2>
-
-            <p class="section-intro">
-              Come for a single day, try a whole week, or make Swap & Play part
-              of your routine with unlimited monthly access.
-            </p>
-          </div>
-
-          <div class="free-trial-callout" id="trial">
-            <p class="free-trial-eyebrow">
-             TRY SWAP & PLAY
-            </p>
-
-            <h3>
-              Your first week is FREE
-            </h3>
-
-            <p>
-              Come and try our family space for 0–5 year olds in Ilkley — your first 7 days are completely free.
-              <br>
-              <br>🧸 Play & explore
-              <br>♻️ Browse the community wardrobe
-              <br> Tea & coffee included 
-            </p>
-            <a
-              class="button primary-button"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe3HZA6pof7I7m4diGGWerDKkNo0uKZVCql5Szl741bPu2aIg/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get my free week →
-            </a>             
-            <p style="font-style: italic; color: light-grey; font-size: 0.7em; padding-top: 0.8rem;">
-              No booking · No payment details · No commitment
-            </p>
-            <p>
-              Come whenever you want.
-              <br>Stay as long as you want.
-              <br>Come back as often as you like.
-              <br>
-            </p>
-          </div>          
-
-          <div class="pass-options-grid">
-
-
-            <!-- DAY PASS -->
-
-            <article class="price-card">
-
-              <p class="price-card-label">
-                One visit
-              </p>
-
-              <h3>
-                Day Pass
-              </h3>
-
-              <div class="price">
-                <strong>£10</strong>
-                <span>per household</span>
-              </div>
-
-              <p>
-                For a spontaneous day when you simply need somewhere easy to go.
-              </p>
-
-              <ul>
-                <li>Access from 6am–9pm</li>
-                <li>Stay as long as you like</li>
-                <li>Play spaces included</li>
-                <li>Community Wardrobe included</li>
-                <li>Tea and coffee included</li>
-              </ul>
-
-              <a
-                class="button secondary-button"
-                href="${DAY_PASS_PAYMENT_URL}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buy Day Pass
-              </a>
-
-            </article>
-
-
-            <!-- WEEK PASS -->
-
-            <article class="price-card">
-
-              <p class="price-card-label">
-                Try a whole week
-              </p>
-
-              <h3>
-                7-Day Pass
-              </h3>
-
-              <div class="price">
-                <strong>£15</strong>
-                <span>per household</span>
-              </div>
-
-              <p>
-                Unlimited visits for 7 days — a simple way to see how Swap & Play fits into your week.
-              </p>
-
-              <ul>
-                <li>Unlimited visits for 7 days</li>
-                <li>Come anytime from 6am–9pm</li>
-                <li>Play spaces included</li>
-                <li>Community Wardrobe included</li>
-                <li>Tea and coffee included</li>
-                <li>No subscription</li>
-              </ul>
-
-              <a
-                class="button secondary-button"
-                href="${WEEK_PASS_PAYMENT_URL}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buy 7-Day Pass
-              </a>
-
-            </article>
-
-
-            <!-- MEMBERSHIP -->
-
-            <article class="price-card featured">
-
-              <p class="price-card-label">
-                UNLIMITED ACCESS
-              </p>
-
-              <h3>
-                Monthly Membership
-              </h3>
-
-              <div class="price">
-                <strong>£35</strong>
-                <span>per month</span>
-              </div>
-
-              <p>
-                Unlimited visits for your household, whenever it works for you.
-              </p>
-
-              <ul>
-                <li>Unlimited visits every month</li>
-                <li>Come anytime from 6am–9pm</li>
-                <li>Stay as long as you like</li>
-                <li>Play spaces and Community Wardrobe included</li>
-                <li>Tea and coffee included</li>
-                <li>1 guest family per month included</li>
-                <li>Cancel anytime.</li>
-              </ul>
-
-              <div class="pricing-details">
-                <strong>Founding member rate</strong>
-                <span>
-                  £35/month for as long as you remain a member.
-                </span>
-              </div>
-
-              <a
-                class="button primary-button"
-                href="${MEMBERSHIP_PAYMENT_URL}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Become a Founding Member
-              </a>
-
-            </article>
-
-          </div>
-
-
-          <!-- GIFT -->
-
-          <div class="gift-card">
-
-            <div class="gift-decoration gift-decoration-top">
-              <span>✦</span>
-            </div>
-
-            <div class="gift-content">
-
-              <p class="gift-eyebrow">
-                Gift Voucher
-              </p>
-
-              <h2>
-                Give One Month of<br>
-                Swap &amp; Play
-              </h2>
-
-              <p class="gift-description">
-                Know a family who would love Swap &amp; Play?
-                Give them a whole month to play, swap, explore
-                and enjoy the space.
-              </p>
-
-              <div class="gift-price">
-                <strong>£35</strong>
-              </div>
-
-              <p class="gift-message">
-                A little gift for a family you love.
-              </p>
-
-              <p class="gift-validity">
-                This voucher is valid for one year
-              </p>
-
-              <a
-                href="${GIFT_MONTH_PAYMENT_URL}"
-                class="button primary-button gift-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Gift a Month
-              </a>
+              </article>
 
             </div>
 
-            <div class="gift-decoration gift-decoration-bottom">
-              <span>✦</span>
+            <div class="visit-note">
+              <div class="visit-note-icon" aria-hidden="true">♡</div>
+
+              <div>
+                <p class="gift-note">
+                  <strong>Looking for a gift?</strong>
+                  You can gift a month of Swap &amp; Play
+                  <a class="gift-inline-link"
+                    href="${GIFT_A_MONTH_URL}"
+                    target="_blank"
+                    rel="noopener noreferrer">for another family →</a>
+                </p>
+              </div>
+              </div>
             </div>
 
           </div>
-      </section>
+        </section>
 
+        <!-- WAVE -->
 
-      <!-- WAVE -->
+        <div class="wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <rect
+              width="1200"
+              height="120"
+              fill="#fbfaf6">
+            </rect>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#f4efe6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#6fa8dc">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- FIRST VISIT -->
-
-      <section class="section first-visit-section">
-        <div class="content center">
-
-          <p class="eyebrow dark">
-            Never been before?
-          </p>
-
-          <h2>
-            Come along to a social session
-          </h2>
-
-          <p>
-            Meet other local families, enjoy relaxed play and discover
-            Swap & Play. No membership needed — just book a session
-            and come along.
-          </p>
-
-          <button
-            type="button"
-            class="button secondary-button"
-            data-scroll-to="#calendar"
-          >
-            See social times
-          </button>
-
+            <path
+              d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+              fill="#f4efe6">
+            </path>
+          </svg>
         </div>
-      </section>
 
+        <!-- WHAT YOU'LL FIND HERE -->
+        <section class="section features-section">
+          <div class="content content-wide">
+            <div class="section-heading center">
+              <p class="eyebrow dark">The space</p>
 
-      <!-- WAVE -->
+              <h2>Designed for real life with little ones</h2>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#6fa8dc">
-          </rect>
+              <p class="section-intro">
+                A small, calm community space with room to play,
+                have a coffee, meet another parent or simply get out
+                of the house for a while.
+              </p>
+            </div>
 
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>  
-      </div>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <img src="./assets/girls-playing.jpeg"
+                     alt="Children playing at Swap & Play">
 
-      <!-- BIRTHDAY PARTY HIRE -->
+                <div class="feature-copy">
+                  <h3>Play</h3>
+                  <p>
+                    Spaces for babies, toddlers and preschoolers to
+                    move, explore, build, pretend and read.
+                  </p>
+                </div>
+              </article>
 
-      <section class="section birthday-party-section" id="party">
-        <div class="content content-wide">
+              <article class="feature-card">
+                <img src="./assets/swap-rail.jpg"
+                     alt="The Community Wardrobe at Swap & Play">
 
-          <div class="section-heading center">
+                <div class="feature-copy">
+                  <h3>Swap</h3>
+                  <p>
+                    A Community Wardrobe for clothes, books, toys and
+                    useful family things that have been outgrown.
+                  </p>
+                </div>
+              </article>
 
-          <img
-            src="./assets/party.jpg"
-            alt="Pepa the ping with a party hat on the shelf at Swap & Play"
-            class="closing-photo photo"
-          >
-            <p class="eyebrow dark">
-              A little something to celebrate
-            </p>
+              <article class="feature-card">
+                <img src="./assets/quiet-coffee.jpg"
+                     alt="A quiet corner at Swap & Play">
 
-            <h2>
-              A birthday party of your own
-            </h2>
-
-            <p class="section-intro">
-              Make their special day one to remember. Hire our welcoming
-              play space in Ilkley for a relaxed birthday celebration
-              with friends and family.
-            </p>
-
-            <p>
-              Bring your own food, cake and decorations, and let the
-              little ones enjoy the toys, play areas and space to explore.
-            </p>
-
-            <p>
-              <strong>
-                Private venue hire · 2-hour party · 3-hour booking
-              </strong>
-            </p>
-            <p>
-              More information at nina@swapandplaywharfedale.co.uk
-            </p>
-
-            <a
-              class="button primary-button"
-              href="mailto:nina@swapandplaywharfedale.co.uk"
-            >
-              Send us a message
-            </a>
-
+                <div class="feature-copy">
+                  <h3>Belong</h3>
+                  <p>
+                    Tea and coffee, a place to sit, and the chance to
+                    meet other local families without needing to organise anything.
+                  </p>
+                </div>
+              </article>
+            </div>
           </div>
+        </section>
 
+
+        <!-- WAVE -->
+
+        <div class="wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <rect
+              width="1200"
+              height="120"
+              fill="#f4efe6">
+            </rect>
+
+            <path
+              d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+              fill="#fbfaf6">
+            </path>
+          </svg>
         </div>
-      </section>
 
-      <!-- WAVE -->
+        <!-- LOCATION -->
+        <section class="section location-section" id="location">
+          <div class="content content-wide">
+            <div class="section-heading center">
+              <p class="eyebrow dark">Find us</p>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
+              <h2>Just behind Booths in Ilkley</h2>
 
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#d1ece6">
-          </path>
-        </svg>
-      </div>
+              <p class="section-intro">
+                We're on Leeds Road, close to the centre of town,
+                Riverside and the playground.
+              </p>
+            </div>
 
+            <div class="location-grid">
+              <div class="location-image-card">
+                <img src="./assets/entrance-outside.jpg"
+                     alt="Swap & Play entrance on Leeds Road in Ilkley"
+                     class="photo">
+              </div>
 
-      <!-- FINAL STATEMENT -->
+              <div class="location-info">
+                <img src="./assets/map.png"
+                     alt="Map showing Swap & Play behind Booths in Ilkley"
+                     class="map-image">
 
-      <section class="section closing-section">
-        <div class="content center">
+                <div class="location-details">
+                  <div class="location-detail">
+                    <strong>Swap & Play Wharfedale</strong>
+                    <span>Leeds Road, Ilkley</span>
+                  </div>
 
-          <img
-            src="./assets/meet.jpg"
-            alt="Parents chatting while children are playing at Swap & Play"
-            class="closing-photo photo"
-          >
+                  <div class="location-detail">
+                    <strong>Parking</strong>
+                    <span>Two free parking spaces right by our entrance. If those are taken, Booths car park is just around the corner, with 2 hours of free parking.</span>
+                  </div>
 
-          <p class="eyebrow dark">
-            A place to keep coming back to
-          </p>
+                  <div class="location-detail">
+                    <strong>Opening hours</strong>
+                    <span>Every day, 6am–9pm</span>
+                  </div>
+                </div>
 
-          <h2>
-            Come when your child is ready.<br>
-          </h2>
+                <a class="button primary-button"
+                   href="${GOOGLE_MAPS_URL}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <p>
-            No booking slots. You can come at any time between 6am and 9pm and stay while it works or leave when it doesn't.
-          </p>
+        <!-- WAVE -->
 
-          <button
-            type="button"
-            class="button primary-button"
-            data-scroll-to="#passes"
-          >
-            Visit Swap & Play
-          </button>
+        <div class="wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <rect
+              width="1200"
+              height="120"
+              fill="#fbfaf6">
+            </rect>
 
-        </div>
-      </section>
+            <path
+              d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+              fill="#fffdf8">
+            </path>
+          </svg>
+        </div>        
 
+        <!-- GALLERY -->
+        <section class="section gallery-section" id="gallery">
+          <div class="content content-wide">
 
-      <!-- WAVE -->
+            <div class="section-heading center">
+              <p class="eyebrow dark">Take a look around</p>
+              <h2>Explore our little space</h2>
+              <p class="section-intro">
+                From little adventures to quiet corners, there is a bit of
+                everything to make family life that little bit easier.
+                Have a look around!
+              </p>
+            </div>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#d1ece6">
-          </rect>
+            <div class="gallery-carousel" aria-label="Explore our space">
 
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#2f4f4f">
-          </path>
-        </svg>
-      </div>
+              <div class="gallery-carousel-track">
 
+                <article class="gallery-slide active">
+                  <img src="./assets/shoe-free.jpg"
+                      alt="Our clean, shoe-free play space">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">01 / 12</span>
+                    <h3>A clean, shoe-free space</h3>
+                    <p>
+                      We are a shoe-free space, helping keep the floors clean
+                      for little ones who are crawling, rolling and exploring.
+                      Just leave your shoes at the entrance and make yourselves
+                      at home.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/kitchenette-1.jpg"
+                      alt="Kitchenette at Swap & Play">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">02 / 12</span>
+                    <h3>A little kitchenette</h3>
+                    <p>
+                      Make yourself a cup of tea or coffee while the little ones
+                      play. A simple way to make your visit feel more like a
+                      relaxed catch-up than another activity to organise.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/kitchen-role.jpg"
+                      alt="Children's role-play area">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">03 / 12</span>
+                    <h3>Little worlds of their own</h3>
+                    <p>
+                      Our role-play area gives little imaginations room to run
+                      wild. Children can pretend, make up stories and explore
+                      everyday life through play.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/changing-table.jpg"
+                      alt="Baby changing station">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">04 / 12</span>
+                    <h3>Baby changing station</h3>
+                    <p>
+                      Because outings with little ones come with enough
+                      logistics already. We have a dedicated changing area
+                      to make nappy changes a little easier.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/swap-shop.jpg"
+                      alt="Community Wardrobe and swap shop">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">05 / 12</span>
+                    <h3>The Community Wardrobe</h3>
+                    <p>
+                      Children grow out of things so quickly. Our swap shop
+                      gives families a place to pass on and discover pre-loved
+                      clothes and other useful things for little ones.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/baby-corner.jpg"
+                      alt="Baby play corner">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">06 / 12</span>
+                    <h3>A corner for the tiniest visitors</h3>
+                    <p>
+                      A dedicated baby corner for little ones who are not quite
+                      ready for toddler-speed adventures. A place to explore
+                      at their own pace while grown-ups stay close.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/reading-nook.jpg"
+                      alt="Cosy reading nook">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">07 / 12</span>
+                    <h3>A cosy reading nook</h3>
+                    <p>
+                      Sometimes the best part of play is slowing down.
+                      Curl up with a book, share a story or enjoy a quieter
+                      moment together.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/table.jpg"
+                      alt="Table for eating, drawing or working">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">08 / 12</span>
+                    <h3>Space for grown-ups, too</h3>
+                    <p>
+                      Bring a snack or lunch from home and enjoy it at our
+                      table. There is also space to open your laptop, catch up
+                      on a few things or simply sit down for a moment.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/grandma.jpg"
+                      alt="Toy library">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">09 / 12</span>
+                    <h3>A little toy library</h3>
+                    <p>
+                      Discover different toys, try something new and find
+                      inspiration for play without having to bring a whole
+                      bag of toys from home.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/children-playing.jpg"
+                      alt="Movement area with a Montessori climbing frame">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">10 / 12</span>
+                    <h3>Room to climb and move</h3>
+                    <p>
+                      Our movement area includes a Montessori climbing frame
+                      for little ones to practise balancing, climbing and
+                      building confidence as they explore their abilities.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/art-corner.jpg"
+                      alt="Creative art and drawing area">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">11 / 12</span>
+                    <h3>A little space for creativity</h3>
+                    <p>
+                      A place for drawing, making and experimenting.
+                      Because not every adventure needs to involve climbing
+                      or running around.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/birthday-food.jpg"
+                      alt="Birthday party food at Swap & Play">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">12 / 12</span>
+                    <h3>Private parties</h3>
+                    <p>
+                      Celebrate your little one's birthday in a relaxed,
+                      child-friendly space. A lovely setting for little
+                      guests to play while grown-ups catch up.
+                    </p>
+                  </div>
+                </article>
+
+              </div>
+
+              <div class="gallery-carousel-controls">
+                <button class="gallery-arrow gallery-prev"
+                        type="button"
+                        aria-label="Previous photo">
+                  ←
+                </button>
+
+                <div class="gallery-dots"
+                    role="group"
+                    aria-label="Choose a gallery photo">
+                </div>
+
+                <button class="gallery-arrow gallery-next"
+                        type="button"
+                        aria-label="Next photo">
+                  →
+                </button>
+              </div>
+
+              <p class="gallery-counter" aria-live="polite">
+                1 of 12
+              </p>
+
+            </div>
+          </div>
+        </section>
+      </main>
 
       <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img src="./assets/swapnplay_symbol_mono_dark.png"
+                 alt="Swap & Play Wharfedale">
 
-      <footer class="footer">
-        <div class="content center">
+            <p>A shared space for family life in Ilkley.</p>
+          </div>
 
-          <img
-            src="./assets/logo.png"
-            alt="Swap & Play Wharfedale"
-            class="footer-logo"
-          >
-
-          <p>
-            Swap & Play Wharfedale<br>
-            A shared space for family life in Ilkley
-          </p>
-
-          <p>
-            Open every day · 6am–9pm
-          </p>
-
-          <p>
-            <a href="mailto:nina@swapandplaywharfedale.co.uk">
-              nina@swapandplaywharfedale.co.uk
-            </a>
-          </p>
-
-          <p>
-            <a
-              href="https://www.instagram.com/swap_and_play_wharfedale/"
+          <div class="footer-links">
+            <a href="#how-to-visit">How to visit</a>
+            <a 
+              href="/events" 
               target="_blank"
-              rel="noopener noreferrer"
-            >
-              @swap_and_play_wharfedale
+              rel="noopener noreferrer">
+              Events
             </a>
-          </p>
+            <a href="#location">Find us</a>
+            <a href="#gallery">Gallery</a>
+          </div>
 
-          <p>
-            <a
-              href="https://maps.app.goo.gl/xPGPfSGdbXFYjEog6"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Find us on Google Maps
-            </a>
-          </p>
-
+          <div class="footer-meta">
+            <span>0–5 years</span>
+            <span>Open every day · 6am–9pm</span>
+            <span>Ilkley, West Yorkshire</span>
+          </div>
         </div>
       </footer>
 
     </div>
   `
+  
+  /* INTERACTIONS */
+  shadow.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const targetId = link.getAttribute('href')
+      if (!targetId || targetId === '#') return
 
+      const target = shadow.querySelector(targetId)
+      if (!target) return
 
-  // INTERNAL PAGE LINKS
+      event.preventDefault()
 
-  shadow.querySelectorAll('[data-scroll-to]').forEach(button => {
-    button.addEventListener('click', () => {
-      const selector = button.dataset.scrollTo
-
-      if (!selector) return
-
-      history.replaceState(null, '', selector)
-      scroll_to_target(selector)
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
     })
   })
 
+  // CAROUSEL
 
-  // EXTERNAL THEME / CSS
+  const gallery = shadow.querySelector('.gallery-carousel')
+
+  if (gallery) {
+    const slides = Array.from(
+      gallery.querySelectorAll('.gallery-slide')
+    )
+
+    const dotsContainer = gallery.querySelector('.gallery-dots')
+    const prevButton = gallery.querySelector('.gallery-prev')
+    const nextButton = gallery.querySelector('.gallery-next')
+    const counter = gallery.querySelector('.gallery-counter')
+
+    let currentIndex = 0
+
+    slides.forEach((slide, index) => {
+      const dot = document.createElement('button')
+
+      dot.type = 'button'
+      dot.className = 'gallery-dot'
+      dot.setAttribute('aria-label', `Show photo ${index + 1}`)
+
+      dot.addEventListener('click', () => showSlide(index))
+
+      dotsContainer.appendChild(dot)
+    })
+
+    const dots = Array.from(
+      dotsContainer.querySelectorAll('.gallery-dot')
+    )
+
+    function showSlide(index) {
+      currentIndex = (index + slides.length) % slides.length
+
+      slides.forEach((slide, i) => {
+        const isActive = i === currentIndex
+
+        slide.classList.toggle('active', isActive)
+        slide.setAttribute('aria-hidden', String(!isActive))
+      })
+
+      dots.forEach((dot, i) => {
+        const isActive = i === currentIndex
+
+        dot.classList.toggle('active', isActive)
+
+        if (isActive) {
+          dot.setAttribute('aria-current', 'true')
+        } else {
+          dot.removeAttribute('aria-current')
+        }
+      })
+
+      counter.textContent = `${currentIndex + 1} of ${slides.length}`
+    }
+
+    prevButton.addEventListener('click', () => {
+      showSlide(currentIndex - 1)
+    })
+
+    nextButton.addEventListener('click', () => {
+      showSlide(currentIndex + 1)
+    })
+
+    showSlide(0)
+  }
+
+  /* EXTERNAL THEME / CSS */
+  const fontLink = document.createElement('link')
+  fontLink.rel = 'stylesheet'
+  fontLink.href =
+  'https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap'
+
+  if (!document.querySelector('link[href*="family=Fredoka"]')) {
+  document.head.appendChild(fontLink)
+  }
 
   const style = document.createElement('style')
   style.textContent = get_theme()
   shadow.append(style)
 
 
-  // SHAREABLE URLS
-
-  window.addEventListener('hashchange', scroll_to_hash_target)
-  window.addEventListener('load', scroll_to_hash_target)
-
-  requestAnimationFrame(scroll_to_hash_target)
-  setTimeout(scroll_to_hash_target, 100)
-  setTimeout(scroll_to_hash_target, 600)
-
-
-  if (cb) cb()
+  /* CALLBACK */
+  if (typeof cb === 'function') {
+    cb(null, el)
+  }
 
   return el
-
-
-  function scroll_to_hash_target () {
-    const path = window.location.pathname.replace(/\/$/, '')
-    const hash = window.location.hash
-
-    if (
-      path.endsWith('/passes') ||
-      hash === '#membership' ||
-      hash === '#pricing' ||
-      hash === '#passes'
-    ) {
-      scroll_to_target('#passes')
-      return
-    }
-    
-    if (
-      path.endsWith('/trial') ||
-      hash === '#trial' ||
-      hash === '#apply'
-    ) {
-      scroll_to_target('#trial')
-      return
-    }
-
-    if (
-      hash === '#calendar' ||
-      hash === '#events' ||
-      hash === '#social'
-    ) {
-      scroll_to_target('#calendar')
-      return
-    }
-
-    if (
-      hash === '#swap' ||
-      hash === '#swap-new'
-    ) {
-      scroll_to_target('#swap-new')
-      return
-    }
-
-    if (
-      hash === '#swap-room' ||
-      hash === '#wardrobe' ||
-      hash === '#community-wardrobe'
-    ) {
-      scroll_to_target('#swap-room')
-      return
-    }
-
-    if (
-      hash === '#location' ||
-      hash === '#find-us'
-    ) {
-      scroll_to_target('#location')
-    }
-  }
-
-
-  function scroll_to_target (selector) {
-    const target = shadow.querySelector(selector)
-
-    if (!target) return
-
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  }
 }

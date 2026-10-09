@@ -1,73 +1,4 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-module.exports=[
-  {
-    "image": "./assets/swap-items/blade.jpg",
-    "title": "Blade & Rose knitted leggins",
-    "details": "9-12 months",
-    "added": "2026-08-08"
-  },
-  {
-    "image": "./assets/swap-items/tracksuit-set-grey.jpg",
-    "title": "Cotton tracksuit set",
-    "details": "3-4 years",
-    "added": "2026-08-08"
-  },
-  {
-    "image": "./assets/swap-items/baby-polo-shirt.jpg",
-    "title": "Baby Polo Shirt",
-    "details": "9-12 months",
-    "added": "2026-08-08"
-  },
-  {
-    "image": "./assets/swap-items/linen-dungarees-with-elephant.jpg",
-    "title": "Linen dungarees with elephant",
-    "details": "9-12 months",
-    "added": "2026-08-08"
-  },
-  {
-    "image": "./assets/swap-items/vest-blue.jpg",
-    "title": "Blue vest",
-    "details": "12-18 months",
-    "added": "2026-09-03"
-  },
-  {
-    "image": "./assets/swap-items/dress-dots-blue.jpg",
-    "title": "Blue dress with dots",
-    "details": "3-4 years months",
-    "added": "2026-09-03"
-  },
-  {
-    "image": "./assets/swap-items/yellow-thinkpink.jpg",
-    "title": "Yellow ThinkPink fleece",
-    "details": "2-3 years",
-    "added": "2026-09-03"
-  },
-  {
-    "image": "./assets/swap-items/floral-sleepsuit.jpg",
-    "title": "Floral sleepsuit",
-    "details": "2-3 years",
-    "added": "2026-09-03"
-  },
-  {
-    "image": "./assets/swap-items/jumper-with-cars.jpg",
-    "title": "Jumper with cars",
-    "details": "2-3 years",
-    "added": "2026-09-03"
-  },
-  {
-    "image": "./assets/swap-items/brown-first-walker.jpg",
-    "title": "Brown first walker flexible shoes",
-    "details": "6-12 months",
-    "added": "2026-09-29"
-  },
-  {
-    "image": "./assets/swap-items/nike-black.jpg",
-    "title": "Black Nike trainers",
-    "details": "12-18 months",
-    "added": "2026-09-29"
-  }
-]
-},{}],2:[function(require,module,exports){
 const page = require('..')
 
 function demo (cb) {
@@ -112,58 +43,25 @@ const el = demo(async () => {
   document.body.append(style, el)
 })
 
-},{"..":3}],3:[function(require,module,exports){
+},{"..":2}],2:[function(require,module,exports){
 module.exports = page
 
 const get_theme = require('get_theme')
 
-const DAY_PASS_PAYMENT_URL = 'https://buy.stripe.com/5kQ14m8ga9jj0pjdsh0Ba05'
-const WEEK_PASS_PAYMENT_URL = "https://buy.stripe.com/4gM9ASbsmeDDeg95ZP0Ba00"
-const MEMBERSHIP_PAYMENT_URL = 'https://buy.stripe.com/cNi9AS3ZU9jj4Fzewl0Ba08'
-const GIFT_MONTH_PAYMENT_URL = 'https://buy.stripe.com/cNifZg0NI7bb0pjag50Ba09'
+const DAY_PASS_PAYMENT_URL =
+  'https://buy.stripe.com/5kQ14m8ga9jj0pjdsh0Ba05'
 
-const ILKLEY_GAZETTE_ARTICLE_URL = 'https://www.ilkleygazette.co.uk/news/26265760.new-family-play-swap-space-opens-wharfedale'
-const ILKLEYCHAT_ARTICLE_URL = 'https://www.ilkleychat.co.uk/post/families-invited-to-the-big-swap?fbclid=IwY2xjawUZWrFwZG9mAWV4dG4DYWVtAjExAHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR5Cwm7yfgcSY5KtgJyMtsjTcXVqw2EGWwKpTmxzid04QdANdGuxfbLZ4LukWQ_aem_m4p88iiFBmPrwClMb-0z3w'
-const SWAP_ROOM_ITEMS = require('../data/swap-room-items.json')
+const WEEK_PASS_PAYMENT_URL =
+  'https://buy.stripe.com/4gM9ASbsmeDDeg95ZP0Ba00'
 
-function render_swap_room_items() {
-  if (!SWAP_ROOM_ITEMS.length) {
-    return `
-      <div class="swap-preview-empty">
-        <img
-          src="./assets/swap-room.jpg"
-          alt="Clothes, books and toys in the Swap Room"
-          class="swap-preview-room-photo"
-        >
-        <div class="swap-preview-empty-copy">
-          <span class="swap-preview-kicker">The rails and shelves change all the time</span>
-          <h3>Fresh finds are arriving now</h3>
-          <p>
-            We are starting to photograph recent arrivals so you can have a quick look before you visit.
-            Clothes, books, toys and useful little family items are all first come, first swapped.
-          </p>
-        </div>
-      </div>
-    `
-  }
+const MEMBERSHIP_PAYMENT_URL =
+  'https://buy.stripe.com/cNi9AS3ZU9jj4Fzewl0Ba08'
 
-  return `
-    <div class="swap-items-scroll" aria-label="Recently added Swap Room items">
-      ${SWAP_ROOM_ITEMS.map(item => `
-        <article class="swap-item-card">
-          <div class="swap-item-image-wrap">
-            <img src="${item.image}" alt="${item.title}" class="swap-item-image">
-          </div>
-          <div class="swap-item-copy">
-            <h3>${item.title}</h3>
-            ${item.details ? `<p class="swap-item-details">${item.details}</p>` : ''}
-            ${item.added ? `<p class="swap-item-added">${item.added}</p>` : ''}
-          </div>
-        </article>
-      `).join('')}
-    </div>
-  `
-}
+const GOOGLE_MAPS_URL =
+  'https://maps.app.goo.gl/xPGPfSGdbXFYjEog6'
+
+const GIFT_A_MONTH_URL = 
+  'https://buy.stripe.com/cNifZg0NI7bb0pjag50Ba09'
 
 function page (cb) {
   const el = document.createElement('div')
@@ -172,1732 +70,1148 @@ function page (cb) {
   shadow.innerHTML = `
     <div class="page">
 
-      <!-- SEPTEMBER ANNOUNCEMENT -->
- <!-- 
-    <section class="announcement-bar">
-      <a
-        class="announcement-link"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSe3HZA6pof7I7m4diGGWerDKkNo0uKZVCql5Szl741bPu2aIg/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Try Swap & Play for your first week FREE →
-      </a>
-    </section>
--->
+      <!-- HEADER -->
+      <header class="site-header">
+        <div class="header-inner">
+          <a href="/" class="brand"
+             aria-label="Swap & Play Wharfedale home">
+            <img src="./assets/swapnplay_symbol_mono_dark.png"
+                 alt="Swap & Play Wharfedale"
+                 class="brand-logo">
+          </a>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#how-to-visit">How to visit</a>
+            <a href="#location">Find us</a>
+            <a 
+              href="/events"
+              target="_blank"
+              rel="noopener noreferrer">
+              Events
+            </a>
+            <a href="#gallery">Gallery</a>
+            <a href="https://www.instagram.com/swap_and_play_wharfedale/"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"
+              fill="none" stroke="currentColor" stroke-width="2" />
+              <circle cx="12" cy="12" r="4"
+              fill="none" stroke="currentColor" stroke-width="2" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/swapandplaywharfedale/"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor"
+              d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8z" />
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </header>
+
       <!-- HERO -->
+      <main>
+        <section class="hero">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <p class="eyebrow">Play · swap · belong</p>
 
-      <section class="hero">
-        <div class="hero-inner">
-        
-          <div class="hero-copy">
-            <img
-              src="./assets/logo.png"
-              alt="Swap & Play Wharfedale"
-              class="hero-logo"
-            >
+              <h1>A shared space for family life in Ilkley</h1>
 
-            <p class="eyebrow">
-              Play · swap · belong
-            </p>
+              <p class="hero-subtitle">
+                A calm, welcoming place for babies, toddlers and preschoolers
+                to play, explore and meet other local families.
+              </p>
 
-            <h1>
-              A shared space for family life in Ilkley
-            </h1>
+              <div class="hero-details">
+                <span>0–5 years</span>
+                <span>Open every day</span>
+                <span>6am–9pm</span>
+                <span>Just behind Booths</span>
+              </div>
 
-            <p class="hero-subtitle">
-            Play rooms for little ones, a Community Wardrobe for everything they outgrow, and a welcoming place to meet, play, have a coffee or simply spend some time together.
-            Clean, calm and shoe-free, with plenty of space for babies, toddlers and preschoolers to explore.
-            </p>
-
-            <div class="hero-details">
-              <span>Open every day</span>
-              <span>6am–9pm</span>
-              <span>Just behind Booths, Ilkley</span>
+              <div class="hero-actions">
+                <a class="button primary-button" href="#how-to-visit">
+                  How to visit
+                </a>
+                <a class="button secondary-button" href="#location">
+                  Find us
+                </a>
+              </div>
             </div>
 
-            <div class="hero-actions">
-              <button
-                type="button"
-                class="button primary-button"
-                data-scroll-to="#passes"
-              >
-                Come and Visit
-              </button>
-
-              <button
-                type="button"
-                class="button secondary-button"
-                data-scroll-to="#location"
-              >
-                Find us
-              </button>
-
-              <a
-                class="button secondary-button"
-                href="/events"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Events
-              </a>
-
+            <div class="hero-photo">
+              <img src="./assets/mums-chat.jpg"
+                   alt="Families spending time together at Swap & Play"
+                   class="photo">
             </div>
           </div>
+        </section>
 
-          <div class="hero-photo">
-            <img
-              src="./assets/swap.png"
-              alt="Local families spending time together at Swap & Play"
-              class="photo"
-            >
-          </div>
+        <!-- WAVE -->
 
+        <div class="wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <rect
+              width="1200"
+              height="120"
+              fill="#6fa8dc">
+            </rect>
+
+            <path
+              d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+              fill="#fbfaf6">
+            </path>
+          </svg>
         </div>
-      </section>
 
+        <!-- HOW TO VISIT -->
+        <section class="section how-to-visit-section"
+                 id="how-to-visit">
+          <div class="content content-wide">
 
-      <!-- WAVE -->
+            <div class="section-heading center">
+              <p class="eyebrow dark">How to visit</p>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#6fa8dc">
-          </rect>
+              <h2>Choose what works for your family</h2>
 
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- WHAT SWAP & PLAY IS -->
-
-      <section class="section identity-section">
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-            <p class="eyebrow dark">
-              More than somewhere to pass an hour
-            </p>
-
-            <h2>
-              A little piece of family infrastructure
-            </h2>
-
-            <p class="section-intro">
-              Swap & Play is a shared local space designed around ordinary life
-              with babies and young children.
-            </p>
-          </div>
-
-          <div class="identity-grid">
-
-            <article class="identity-card">
-
-              <h3>Play</h3>
-
-              <p>
-                Calm, thoughtfully prepared rooms where babies and young children
-                can explore, move, pretend, build, read and play.
+              <p class="section-intro">
+                You can book a particular session, come whenever it suits you,
+                or become a member if you find yourself coming regularly. All prices are for the family, not per child.
               </p>
-            </article>
-
-            <article class="identity-card">
-
-              <h3>Share</h3>
-
-              <p>
-                Bring the good clothes, books and toys your children have outgrown,
-                and take home things another local family no longer needs.
-              </p>
-            </article>
-
-            <article class="identity-card">
-
-              <h3>Belong</h3>
-
-              <p>
-                Come independently when you want somewhere calm, or overlap with
-                other local families when you would like company.
-              </p>
-            </article>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#f4efe6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- LOCATION -->
-
-      <section
-        class="section location-section"
-        id="location"
-      >
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              Right in the middle of Ilkley
-            </p>
-
-            <h2>
-              Easy to find. Easy to drop into.
-            </h2>
-
-            <p class="section-intro">
-              We are on Leeds Road, just behind Booths — close to Riverside,
-              the playground and the centre of town.
-            </p>
-
-          </div>
-
-          <div class="location-visuals">
-
-            <div class="location-card building-card">
-              <img
-                src="./assets/building.png"
-                alt="The entrance to Swap & Play on Leeds Road in Ilkley"
-                class="photo"
-              >
             </div>
-
-            <div class="location-card map-card">
-              <img
-                src="./assets/map.png"
-                alt="Map showing Swap & Play behind Booths in Ilkley"
-                class="photo"
-              >
-            </div>
-
-          </div>
-
-          <div class="location-details">
-
-            <div class="location-detail">
-              <strong>Swap & Play Wharfedale</strong>
-              <span>Leeds Road, Ilkley</span>
-            </div>
-
-            <div class="location-detail">
-              <strong>Parking</strong>
-              <span>Booths car park is just around the corner</span>
-            </div>
-
-            <div class="location-detail">
-              <strong>Opening hours</strong>
-              <span>Every day, 6am–9pm</span>
-            </div>
-
-          </div>
-
-          <div class="center">
-            <a
-              class="button primary-button"
-              href="https://maps.app.goo.gl/xPGPfSGdbXFYjEog6"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open in Google Maps
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#f4efe6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- HOW IT WORKS -->
-
-      <section class="section how-it-works-section">
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              No booking. No timetable to organise around.
-            </p>
-
-            <h2>
-              Come when your family is ready
-            </h2>
-
-          </div>
-
-          <div class="steps-grid">
-
-            <article class="step-card">
-              <span class="step-number">1</span>
-
-              <h3>Choose your access</h3>
-
-              <p>
-                Pick the visit option that works for your family.
-              </p>
-            </article>
-
-            <article class="step-card">
-              <span class="step-number">2</span>
-
-              <h3>Get your own door code</h3>
-
-              <p>
-                There is no reception or formal check-in. Your household gets
-                its own access code.
-              </p>
-            </article>
-
-            <article class="step-card">
-              <span class="step-number">3</span>
-
-              <h3>Just arrive</h3>
-
-              <p>
-                Come anytime between 6am and 9pm while your access is active.
-              </p>
-            </article>
-
-          </div>
-
-          <p class="big-statement center">
-            Come for 30 minutes or stay for three hours.<br>
-            No booking. No rushing. Just arrive.
-          </p>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#d1ece6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- COMMUNITY WARDROBE -->
-
-      <section
-        class="section swap-section"
-        id="swap-room"
-      >
-        <div class="content content-wide">
-
-          <div class="swap-story-grid">
-
-            <div class="swap-story-copy">
-
-              <p class="eyebrow dark">
-                The Community Wardrobe
-              </p>
-
-              <h2>
-                What do you do with everything they outgrow?
-              </h2>
-
-              <p class="large-copy">
-                Babies and young children move through clothes, books and toys
-                astonishingly quickly.
-              </p>
-
-              <p>
-                Instead of every family buying, storing, photographing and
-                reselling the same things separately, we can keep useful things
-                moving through our local community.
-              </p>
-
-              <p>
-                Bring good-quality clothes, books, toys and useful family items
-                that you no longer need. Browse what other families have brought.
-                Take home something your family can genuinely use.
-              </p>
-
-              <p class="swap-principle">
-                <strong>
-                  No credits. No selling. No one-for-one exchange.
-                </strong>
-              </p>
-
-              <p class="swap-principle-large">
-                Give when you can.<br>
-                Take what you need.
-              </p>
-
-            </div>
-
-            <div class="swap-story-photo">
-              <img
-                src="./assets/swap-room.jpg"
-                alt="Children's clothes, books and toys in the Swap Room"
-                class="photo"
-              >
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#d1ece6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- RECENT SWAP ITEMS -->
-
-      <section
-        class="section swap-preview-section"
-        id="swap-new"
-      >
-        <div class="content content-wide">
-
-          <div class="swap-preview-heading">
-
-            <div>
-              <p class="eyebrow dark">
-                Recently added
-              </p>
-
-              <h2>
-                Have a look before you come
-              </h2>
-            </div>
-
-            <p class="swap-preview-intro">
-              The Community Wardrobe changes constantly as local families bring
-              in good things their children have outgrown.
-            </p>
-
-          </div>
-
-          ${render_swap_room_items()}
-
-          <p class="swap-stock-note">
-            These are just some of the recent arrivals rather than live stock, so some items may
-            already have found a new home and many more are in the Swap shop but not listed here.
-          </p>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#f4efe6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- LIFE AT SWAP & PLAY -->
-
-      <section class="section life-section">
-        <div class="content content-xl">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              Life at Swap & Play
-            </p>
-
-            <h2>
-              Somewhere that can become part of your week
-            </h2>
-
-            <p class="section-intro">
-              Come after breakfast, between errands, after nursery, on a rainy
-              afternoon or when home has simply started to feel too small.
-            </p>
-
-          </div>
-
-          <div class="life-photo-grid">
-            <img
-              src="./assets/role-play.jpg"
-              alt="Children playing together in the role play room"
-              class="photo"
-            >
-
-            <img
-              src="./assets/mum-and-son.jpg"
-              alt="Mother and son playing together"
-              class="photo"
-            >
-            <img
-              src="./assets/girls-playing.jpeg"
-              alt="Children playing together on the floor"
-              class="photo"
-            >
-
-            <img
-              src="./assets/trains.jpg"
-              alt="A child and her grandma"
-              class="photo"
-            >
-            <img
-              src="./assets/children-playing.jpg"
-              alt="A child playing"
-              class="photo"
-            >            
-
-            <img
-              src="./assets/quiet-coffee.jpg"
-              alt="A cup of coffee beside the play space"
-              class="photo"
-            >
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#f4efe6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- REVIEWS -->
-
-      <section class="section reviews-section">
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              From local families
-            </p>
-
-            <h2>
-              What it feels like to use the space
-            </h2>
-
-          </div>
-
-          <div class="reviews-grid">
-
-            <blockquote class="review-card">
-              <p>
-                “Amazing set up, absolutely everything has been thought about.
-                The space is clean and well equipped with great resources for
-                all ages.”
-              </p>
-
-              <footer>Mel A</footer>
-            </blockquote>
-
-
-            <blockquote class="review-card">
-              <p>
-                “We love the swap room. We can just take whatever clothes we need, 
-                and when they outgrow them, bring them back for someone else to use. 
-                It's perfect. Although it feels like a subscription to a play space, 
-                the best part is actually having a subscription to a community wardrobe."
-              </p>
-
-              <footer>Eleanor M</footer>
-            </blockquote>
             
-            <blockquote class="review-card">
-              <p>
-                “I loved the toys, the space is clean and fresh, and you have
-                thought of nearly everything. We brought the girls dinner and
-                had a play session before bed — it was brilliant.”
-              </p>
 
-              <footer>Nancy M</footer>
-            </blockquote>
+            <div class="visit-grid">
 
-          </div>
+              <!-- EVENTS -->
+              <article class="visit-card visit-card-events">
+                <div class="visit-card-top">
+                  <span class="visit-illustration"
+                        aria-hidden="true">▦</span>
+                  <span class="visit-label">For a planned visit</span>
+                </div>
 
-          <div class="press-links">
+                <h3>Book an event</h3>
 
-            <a
-              class="press-link"
-              href="${ILKLEY_GAZETTE_ARTICLE_URL}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="press-publication">
-                Ilkley Gazette
-              </span>
+                <p>
+                  Join a relaxed Social Play session, or book a special
+                  class or activity led by a local professional.
+                </p>
 
-              <span class="press-read">
-                Read about Swap & Play →
-              </span>
-            </a>
+                <img class="visit-card-photo"
+                     src="events/assets/hartbeeps4.jpg"
+                     alt="A little one enjoying play at Swap & Play">
 
-            <a
-              class="press-link"
-              href="${ILKLEYCHAT_ARTICLE_URL}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="press-publication">
-                IlkleyChat
-              </span>
-
-              <span class="press-read">
-                Read about The Big Swap event →
-              </span>
-            </a>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#d1ece6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- SOCIAL TIMES -->
-
-      <section
-        class="section social-section"
-        id="calendar"
-      >
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              Want some company?
-            </p>
-
-            <h2>
-              Come along at a social time
-            </h2>
-
-            <p class="section-intro">
-              You can visit Swap & Play anytime during our opening hours.
-              These are regular times when other local families are more
-              likely to be here, so you can enjoy some company while the
-              little ones play.            
-            </p>
-
-          </div>
-
-          <div class="social-times-grid">
-
-            <article class="social-time">
-              <span class="social-day">
-                Monday
-              </span>
-              <span class="social-open">
-                Play & Swap
-              </span>
-
-              <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>
-            </article>
-
-            <article class="social-time">
-              <span class="social-day">
-                Tuesday
-              </span>
-              <span class="social-open">
-                Play & Swap
-              </span>
-
-              <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>
-            </article>
-
-            <article class="social-time public-social-time">
-              <span class="social-day">
-                Wednesday
-              </span>
-
-              <strong>
-                Wednesday Open Play
-              </strong>
-              <span>
-                A relaxed, social play morning for families with children aged 0–5.
-              </span>
-              <br>
-
-              <span>
-                10am - 12pm
-              </span>
-
-              <span>
-                <br> FREE
-                <br>
-                <a 
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfuaX71bQ4iPYYRQMssdbGB-m38A7gmJbiBqiI6l55NwMIX3w/viewform?usp=header"
-                  target="_blank"
-                  > Register here
+                <a class="visit-button visit-button-blue" href="/events">
+                  See what's on <span>→</span>
                 </a>
-              </span>
-            </article>
+              </article>
 
-            <article class="social-time">
-              <span class="social-day">
-                Thursday
-              </span>
-              <span class="social-open">
-                Play & Swap
-              </span>
+              <!-- PASSES -->
+              <article class="visit-card visit-card-passes">
+                <div class="visit-card-top">
+                  <span class="visit-illustration"
+                        aria-hidden="true">♧</span>
+                  <span class="visit-label">For flexibility</span>
+                </div>
 
-              <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>              
-            </article>
+                <h3>Get a pass</h3>
+
+                <p>
+                  Prefer to keep things flexible? Choose a pass and drop
+                  in when it suits your family.
+                </p>
+
+                <img class="visit-card-photo pass-photo"
+                src="./assets/dad-toddler.jpg"
+                alt="A welcoming play space for little ones">
 
 
-            <article class="social-time public-social-time">
-              <span class="social-day">
-                Friday
-              </span>
+                <div class="pass-options">
+                  <a class="mini-pass"
+                    href="${DAY_PASS_PAYMENT_URL}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <strong>Day Pass</strong>
+                    <span>£10</span>
+                  </a>
 
-              <strong>
-                Hartbeeps + Stay & Play
-              </strong>
-              <span>
-                One hour of Hartbeeps followed by one hour of Stay & Play. Coffee and Tea included.              </span>
-              <br>
+                  <a class="mini-pass"
+                    href="${WEEK_PASS_PAYMENT_URL}"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <strong>7-Day Pass</strong>
+                    <span>£15</span>
+                  </a>
 
-              <span>
-                9.30am - 11.30pm
-              </span>
+              </article>
 
-              <span>
-                <br> £8/£12 
-                <br>
-                <a 
-                  href="/events"
-                  target="_blank"
-                  > Book here
+              <!-- MEMBERSHIP -->
+              <article class="visit-card visit-card-membership">
+                <div class="visit-card-top">
+                  <span class="visit-illustration"
+                        aria-hidden="true">♡</span>
+                  <span class="visit-label">For regular families</span>
+                </div>
+
+                <h3>Become a member</h3>
+
+                <p>
+                  If you think you'll come regularly, membership gives
+                  your household unlimited access without having to
+                  think about individual visits.
+                </p>
+
+                <div class="membership-price">
+                  <strong>£35</strong>
+                  <span>/ month</span>
+                </div>
+
+                <ul class="visit-list">
+                  <li>Unlimited visits for your household</li>
+                  <li>Open every day, 6am–9pm</li>
+                  <li>One free guest family each month</li>
+                  <li>Community Wardrobe included</li>
+                </ul>
+
+                <a class="visit-button visit-button-pink"
+                   href="${MEMBERSHIP_PAYMENT_URL}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Become a member <span>→</span>
                 </a>
-              </span>
-            </article>
-
-            <article class="social-time">
-              <span class="social-day">
-                Saturday
-              </span>
-              <span class="social-open">
-                Play & Swap
-              </span>
-
-              <span>
-               Flexible access for 
-                <a href="#passes"> members and pass holders </a>
-              </span>
-            </article>
-
-            <article class="social-time public-social-time">
-              <span class="social-day">
-                Sunday
-              </span>
-
-              <strong>
-                Social & Swap
-              </strong>
-              <span>
-               Relaxed play, a chance to meet other families, and a clothes and toy swap.
-              </span>
-              <br>
-              <span>
-                2pm - 4.30pm
-              </span>
-              <span>
-                <br> £10 per family (tea/coffee on us)
-                <br>
-                <a 
-                  href="https://buy.stripe.com/dRm28q0NI1QRdc54VL0Ba0c"
-                  target="_blank"
-                  > Book here
-                </a>
-              </span>
-            </article>
-
-          </div>
-
-          <p class="social-note center">
-            With a day pass, week pass or membership, you can visit anytime between 6am and 9pm.        
-          </p>
-
-        </div>
-      </section>
-
-      <!-- WAVE -->
-
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#d1ece6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#f4efe6">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- VISIT OPTIONS -->
-
-      <section
-        class="section pricing-section"
-        id="passes"
-      >
-        <div class="content content-wide">
-
-          <div class="section-heading center">
-
-            <p class="eyebrow dark">
-              Visit Swap & Play
-            </p>
-
-            <h2>
-              Choose what works for your family
-            </h2>
-
-            <p class="section-intro">
-              Come for a single day, try a whole week, or make Swap & Play part
-              of your routine with unlimited monthly access.
-            </p>
-          </div>
-
-          <div class="free-trial-callout" id="trial">
-            <p class="free-trial-eyebrow">
-             TRY SWAP & PLAY
-            </p>
-
-            <h3>
-              Your first week is FREE
-            </h3>
-
-            <p>
-              Come and try our family space for 0–5 year olds in Ilkley — your first 7 days are completely free.
-              <br>
-              <br>🧸 Play & explore
-              <br>♻️ Browse the community wardrobe
-              <br> Tea & coffee included 
-            </p>
-            <a
-              class="button primary-button"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSe3HZA6pof7I7m4diGGWerDKkNo0uKZVCql5Szl741bPu2aIg/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get my free week →
-            </a>             
-            <p style="font-style: italic; color: light-grey; font-size: 0.7em; padding-top: 0.8rem;">
-              No booking · No payment details · No commitment
-            </p>
-            <p>
-              Come whenever you want.
-              <br>Stay as long as you want.
-              <br>Come back as often as you like.
-              <br>
-            </p>
-          </div>          
-
-          <div class="pass-options-grid">
-
-
-            <!-- DAY PASS -->
-
-            <article class="price-card">
-
-              <p class="price-card-label">
-                One visit
-              </p>
-
-              <h3>
-                Day Pass
-              </h3>
-
-              <div class="price">
-                <strong>£10</strong>
-                <span>per household</span>
-              </div>
-
-              <p>
-                For a spontaneous day when you simply need somewhere easy to go.
-              </p>
-
-              <ul>
-                <li>Access from 6am–9pm</li>
-                <li>Stay as long as you like</li>
-                <li>Play spaces included</li>
-                <li>Community Wardrobe included</li>
-                <li>Tea and coffee included</li>
-              </ul>
-
-              <a
-                class="button secondary-button"
-                href="${DAY_PASS_PAYMENT_URL}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buy Day Pass
-              </a>
-
-            </article>
-
-
-            <!-- WEEK PASS -->
-
-            <article class="price-card">
-
-              <p class="price-card-label">
-                Try a whole week
-              </p>
-
-              <h3>
-                7-Day Pass
-              </h3>
-
-              <div class="price">
-                <strong>£15</strong>
-                <span>per household</span>
-              </div>
-
-              <p>
-                Unlimited visits for 7 days — a simple way to see how Swap & Play fits into your week.
-              </p>
-
-              <ul>
-                <li>Unlimited visits for 7 days</li>
-                <li>Come anytime from 6am–9pm</li>
-                <li>Play spaces included</li>
-                <li>Community Wardrobe included</li>
-                <li>Tea and coffee included</li>
-                <li>No subscription</li>
-              </ul>
-
-              <a
-                class="button secondary-button"
-                href="${WEEK_PASS_PAYMENT_URL}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buy 7-Day Pass
-              </a>
-
-            </article>
-
-
-            <!-- MEMBERSHIP -->
-
-            <article class="price-card featured">
-
-              <p class="price-card-label">
-                UNLIMITED ACCESS
-              </p>
-
-              <h3>
-                Monthly Membership
-              </h3>
-
-              <div class="price">
-                <strong>£35</strong>
-                <span>per month</span>
-              </div>
-
-              <p>
-                Unlimited visits for your household, whenever it works for you.
-              </p>
-
-              <ul>
-                <li>Unlimited visits every month</li>
-                <li>Come anytime from 6am–9pm</li>
-                <li>Stay as long as you like</li>
-                <li>Play spaces and Community Wardrobe included</li>
-                <li>Tea and coffee included</li>
-                <li>1 guest family per month included</li>
-                <li>Cancel anytime.</li>
-              </ul>
-
-              <div class="pricing-details">
-                <strong>Founding member rate</strong>
-                <span>
-                  £35/month for as long as you remain a member.
-                </span>
-              </div>
-
-              <a
-                class="button primary-button"
-                href="${MEMBERSHIP_PAYMENT_URL}"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Become a Founding Member
-              </a>
-
-            </article>
-
-          </div>
-
-
-          <!-- GIFT -->
-
-          <div class="gift-card">
-
-            <div class="gift-decoration gift-decoration-top">
-              <span>✦</span>
-            </div>
-
-            <div class="gift-content">
-
-              <p class="gift-eyebrow">
-                Gift Voucher
-              </p>
-
-              <h2>
-                Give One Month of<br>
-                Swap &amp; Play
-              </h2>
-
-              <p class="gift-description">
-                Know a family who would love Swap &amp; Play?
-                Give them a whole month to play, swap, explore
-                and enjoy the space.
-              </p>
-
-              <div class="gift-price">
-                <strong>£35</strong>
-              </div>
-
-              <p class="gift-message">
-                A little gift for a family you love.
-              </p>
-
-              <p class="gift-validity">
-                This voucher is valid for one year
-              </p>
-
-              <a
-                href="${GIFT_MONTH_PAYMENT_URL}"
-                class="button primary-button gift-button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Gift a Month
-              </a>
+              </article>
 
             </div>
 
-            <div class="gift-decoration gift-decoration-bottom">
-              <span>✦</span>
+            <div class="visit-note">
+              <div class="visit-note-icon" aria-hidden="true">♡</div>
+
+              <div>
+                <p class="gift-note">
+                  <strong>Looking for a gift?</strong>
+                  You can gift a month of Swap &amp; Play
+                  <a class="gift-inline-link"
+                    href="${GIFT_A_MONTH_URL}"
+                    target="_blank"
+                    rel="noopener noreferrer">for another family →</a>
+                </p>
+              </div>
+              </div>
             </div>
 
           </div>
-      </section>
+        </section>
 
+        <!-- WAVE -->
 
-      <!-- WAVE -->
+        <div class="wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <rect
+              width="1200"
+              height="120"
+              fill="#fbfaf6">
+            </rect>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#f4efe6">
-          </rect>
-
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#6fa8dc">
-          </path>
-        </svg>
-      </div>
-
-
-      <!-- FIRST VISIT -->
-
-      <section class="section first-visit-section">
-        <div class="content center">
-
-          <p class="eyebrow dark">
-            Never been before?
-          </p>
-
-          <h2>
-            Come along to a social session
-          </h2>
-
-          <p>
-            Meet other local families, enjoy relaxed play and discover
-            Swap & Play. No membership needed — just book a session
-            and come along.
-          </p>
-
-          <button
-            type="button"
-            class="button secondary-button"
-            data-scroll-to="#calendar"
-          >
-            See social times
-          </button>
-
+            <path
+              d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+              fill="#f4efe6">
+            </path>
+          </svg>
         </div>
-      </section>
 
+        <!-- WHAT YOU'LL FIND HERE -->
+        <section class="section features-section">
+          <div class="content content-wide">
+            <div class="section-heading center">
+              <p class="eyebrow dark">The space</p>
 
-      <!-- WAVE -->
+              <h2>Designed for real life with little ones</h2>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#6fa8dc">
-          </rect>
+              <p class="section-intro">
+                A small, calm community space with room to play,
+                have a coffee, meet another parent or simply get out
+                of the house for a while.
+              </p>
+            </div>
 
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#fbfaf6">
-          </path>
-        </svg>  
-      </div>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <img src="./assets/girls-playing.jpeg"
+                     alt="Children playing at Swap & Play">
 
-      <!-- BIRTHDAY PARTY HIRE -->
+                <div class="feature-copy">
+                  <h3>Play</h3>
+                  <p>
+                    Spaces for babies, toddlers and preschoolers to
+                    move, explore, build, pretend and read.
+                  </p>
+                </div>
+              </article>
 
-      <section class="section birthday-party-section" id="party">
-        <div class="content content-wide">
+              <article class="feature-card">
+                <img src="./assets/swap-rail.jpg"
+                     alt="The Community Wardrobe at Swap & Play">
 
-          <div class="section-heading center">
+                <div class="feature-copy">
+                  <h3>Swap</h3>
+                  <p>
+                    A Community Wardrobe for clothes, books, toys and
+                    useful family things that have been outgrown.
+                  </p>
+                </div>
+              </article>
 
-          <img
-            src="./assets/party.jpg"
-            alt="Pepa the ping with a party hat on the shelf at Swap & Play"
-            class="closing-photo photo"
-          >
-            <p class="eyebrow dark">
-              A little something to celebrate
-            </p>
+              <article class="feature-card">
+                <img src="./assets/quiet-coffee.jpg"
+                     alt="A quiet corner at Swap & Play">
 
-            <h2>
-              A birthday party of your own
-            </h2>
-
-            <p class="section-intro">
-              Make their special day one to remember. Hire our welcoming
-              play space in Ilkley for a relaxed birthday celebration
-              with friends and family.
-            </p>
-
-            <p>
-              Bring your own food, cake and decorations, and let the
-              little ones enjoy the toys, play areas and space to explore.
-            </p>
-
-            <p>
-              <strong>
-                Private venue hire · 2-hour party · 3-hour booking
-              </strong>
-            </p>
-            <p>
-              More information at nina@swapandplaywharfedale.co.uk
-            </p>
-
-            <a
-              class="button primary-button"
-              href="mailto:nina@swapandplaywharfedale.co.uk"
-            >
-              Send us a message
-            </a>
-
+                <div class="feature-copy">
+                  <h3>Belong</h3>
+                  <p>
+                    Tea and coffee, a place to sit, and the chance to
+                    meet other local families without needing to organise anything.
+                  </p>
+                </div>
+              </article>
+            </div>
           </div>
+        </section>
 
+
+        <!-- WAVE -->
+
+        <div class="wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <rect
+              width="1200"
+              height="120"
+              fill="#f4efe6">
+            </rect>
+
+            <path
+              d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+              fill="#fbfaf6">
+            </path>
+          </svg>
         </div>
-      </section>
 
-      <!-- WAVE -->
+        <!-- LOCATION -->
+        <section class="section location-section" id="location">
+          <div class="content content-wide">
+            <div class="section-heading center">
+              <p class="eyebrow dark">Find us</p>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#fbfaf6">
-          </rect>
+              <h2>Just behind Booths in Ilkley</h2>
 
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#d1ece6">
-          </path>
-        </svg>
-      </div>
+              <p class="section-intro">
+                We're on Leeds Road, close to the centre of town,
+                Riverside and the playground.
+              </p>
+            </div>
 
+            <div class="location-grid">
+              <div class="location-image-card">
+                <img src="./assets/entrance-outside.jpg"
+                     alt="Swap & Play entrance on Leeds Road in Ilkley"
+                     class="photo">
+              </div>
 
-      <!-- FINAL STATEMENT -->
+              <div class="location-info">
+                <img src="./assets/map.png"
+                     alt="Map showing Swap & Play behind Booths in Ilkley"
+                     class="map-image">
 
-      <section class="section closing-section">
-        <div class="content center">
+                <div class="location-details">
+                  <div class="location-detail">
+                    <strong>Swap & Play Wharfedale</strong>
+                    <span>Leeds Road, Ilkley</span>
+                  </div>
 
-          <img
-            src="./assets/meet.jpg"
-            alt="Parents chatting while children are playing at Swap & Play"
-            class="closing-photo photo"
-          >
+                  <div class="location-detail">
+                    <strong>Parking</strong>
+                    <span>Two free parking spaces right by our entrance. If those are taken, Booths car park is just around the corner, with 2 hours of free parking.</span>
+                  </div>
 
-          <p class="eyebrow dark">
-            A place to keep coming back to
-          </p>
+                  <div class="location-detail">
+                    <strong>Opening hours</strong>
+                    <span>Every day, 6am–9pm</span>
+                  </div>
+                </div>
 
-          <h2>
-            Come when your child is ready.<br>
-          </h2>
+                <a class="button primary-button"
+                   href="${GOOGLE_MAPS_URL}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <p>
-            No booking slots. You can come at any time between 6am and 9pm and stay while it works or leave when it doesn't.
-          </p>
+        <!-- WAVE -->
 
-          <button
-            type="button"
-            class="button primary-button"
-            data-scroll-to="#passes"
-          >
-            Visit Swap & Play
-          </button>
+        <div class="wave">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <rect
+              width="1200"
+              height="120"
+              fill="#fbfaf6">
+            </rect>
 
-        </div>
-      </section>
+            <path
+              d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
+              fill="#fffdf8">
+            </path>
+          </svg>
+        </div>        
 
+        <!-- GALLERY -->
+        <section class="section gallery-section" id="gallery">
+          <div class="content content-wide">
 
-      <!-- WAVE -->
+            <div class="section-heading center">
+              <p class="eyebrow dark">Take a look around</p>
+              <h2>Explore our little space</h2>
+              <p class="section-intro">
+                From little adventures to quiet corners, there is a bit of
+                everything to make family life that little bit easier.
+                Have a look around!
+              </p>
+            </div>
 
-      <div class="wave">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <rect
-            width="1200"
-            height="120"
-            fill="#d1ece6">
-          </rect>
+            <div class="gallery-carousel" aria-label="Explore our space">
 
-          <path
-            d="M0,75 C220,35 420,95 640,60 C860,25 1030,80 1200,55 L1200,120 L0,120 Z"
-            fill="#2f4f4f">
-          </path>
-        </svg>
-      </div>
+              <div class="gallery-carousel-track">
 
+                <article class="gallery-slide active">
+                  <img src="./assets/shoe-free.jpg"
+                      alt="Our clean, shoe-free play space">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">01 / 12</span>
+                    <h3>A clean, shoe-free space</h3>
+                    <p>
+                      We are a shoe-free space, helping keep the floors clean
+                      for little ones who are crawling, rolling and exploring.
+                      Just leave your shoes at the entrance and make yourselves
+                      at home.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/kitchenette-1.jpg"
+                      alt="Kitchenette at Swap & Play">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">02 / 12</span>
+                    <h3>A little kitchenette</h3>
+                    <p>
+                      Make yourself a cup of tea or coffee while the little ones
+                      play. A simple way to make your visit feel more like a
+                      relaxed catch-up than another activity to organise.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/kitchen-role.jpg"
+                      alt="Children's role-play area">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">03 / 12</span>
+                    <h3>Little worlds of their own</h3>
+                    <p>
+                      Our role-play area gives little imaginations room to run
+                      wild. Children can pretend, make up stories and explore
+                      everyday life through play.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/changing-table.jpg"
+                      alt="Baby changing station">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">04 / 12</span>
+                    <h3>Baby changing station</h3>
+                    <p>
+                      Because outings with little ones come with enough
+                      logistics already. We have a dedicated changing area
+                      to make nappy changes a little easier.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/swap-shop.jpg"
+                      alt="Community Wardrobe and swap shop">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">05 / 12</span>
+                    <h3>The Community Wardrobe</h3>
+                    <p>
+                      Children grow out of things so quickly. Our swap shop
+                      gives families a place to pass on and discover pre-loved
+                      clothes and other useful things for little ones.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/baby-corner.jpg"
+                      alt="Baby play corner">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">06 / 12</span>
+                    <h3>A corner for the tiniest visitors</h3>
+                    <p>
+                      A dedicated baby corner for little ones who are not quite
+                      ready for toddler-speed adventures. A place to explore
+                      at their own pace while grown-ups stay close.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/reading-nook.jpg"
+                      alt="Cosy reading nook">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">07 / 12</span>
+                    <h3>A cosy reading nook</h3>
+                    <p>
+                      Sometimes the best part of play is slowing down.
+                      Curl up with a book, share a story or enjoy a quieter
+                      moment together.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/table.jpg"
+                      alt="Table for eating, drawing or working">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">08 / 12</span>
+                    <h3>Space for grown-ups, too</h3>
+                    <p>
+                      Bring a snack or lunch from home and enjoy it at our
+                      table. There is also space to open your laptop, catch up
+                      on a few things or simply sit down for a moment.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/grandma.jpg"
+                      alt="Toy library">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">09 / 12</span>
+                    <h3>A little toy library</h3>
+                    <p>
+                      Discover different toys, try something new and find
+                      inspiration for play without having to bring a whole
+                      bag of toys from home.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/children-playing.jpg"
+                      alt="Movement area with a Montessori climbing frame">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">10 / 12</span>
+                    <h3>Room to climb and move</h3>
+                    <p>
+                      Our movement area includes a Montessori climbing frame
+                      for little ones to practise balancing, climbing and
+                      building confidence as they explore their abilities.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/art-corner.jpg"
+                      alt="Creative art and drawing area">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">11 / 12</span>
+                    <h3>A little space for creativity</h3>
+                    <p>
+                      A place for drawing, making and experimenting.
+                      Because not every adventure needs to involve climbing
+                      or running around.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="gallery-slide">
+                  <img src="./assets/birthday-food.jpg"
+                      alt="Birthday party food at Swap & Play">
+                  <div class="gallery-caption">
+                    <span class="gallery-number">12 / 12</span>
+                    <h3>Private parties</h3>
+                    <p>
+                      Celebrate your little one's birthday in a relaxed,
+                      child-friendly space. A lovely setting for little
+                      guests to play while grown-ups catch up.
+                    </p>
+                  </div>
+                </article>
+
+              </div>
+
+              <div class="gallery-carousel-controls">
+                <button class="gallery-arrow gallery-prev"
+                        type="button"
+                        aria-label="Previous photo">
+                  ←
+                </button>
+
+                <div class="gallery-dots"
+                    role="group"
+                    aria-label="Choose a gallery photo">
+                </div>
+
+                <button class="gallery-arrow gallery-next"
+                        type="button"
+                        aria-label="Next photo">
+                  →
+                </button>
+              </div>
+
+              <p class="gallery-counter" aria-live="polite">
+                1 of 12
+              </p>
+
+            </div>
+          </div>
+        </section>
+      </main>
 
       <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <img src="./assets/swapnplay_symbol_mono_dark.png"
+                 alt="Swap & Play Wharfedale">
 
-      <footer class="footer">
-        <div class="content center">
+            <p>A shared space for family life in Ilkley.</p>
+          </div>
 
-          <img
-            src="./assets/logo.png"
-            alt="Swap & Play Wharfedale"
-            class="footer-logo"
-          >
-
-          <p>
-            Swap & Play Wharfedale<br>
-            A shared space for family life in Ilkley
-          </p>
-
-          <p>
-            Open every day · 6am–9pm
-          </p>
-
-          <p>
-            <a href="mailto:nina@swapandplaywharfedale.co.uk">
-              nina@swapandplaywharfedale.co.uk
-            </a>
-          </p>
-
-          <p>
-            <a
-              href="https://www.instagram.com/swap_and_play_wharfedale/"
+          <div class="footer-links">
+            <a href="#how-to-visit">How to visit</a>
+            <a 
+              href="/events" 
               target="_blank"
-              rel="noopener noreferrer"
-            >
-              @swap_and_play_wharfedale
+              rel="noopener noreferrer">
+              Events
             </a>
-          </p>
+            <a href="#location">Find us</a>
+            <a href="#gallery">Gallery</a>
+          </div>
 
-          <p>
-            <a
-              href="https://maps.app.goo.gl/xPGPfSGdbXFYjEog6"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Find us on Google Maps
-            </a>
-          </p>
-
+          <div class="footer-meta">
+            <span>0–5 years</span>
+            <span>Open every day · 6am–9pm</span>
+            <span>Ilkley, West Yorkshire</span>
+          </div>
         </div>
       </footer>
 
     </div>
   `
+  
+  /* INTERACTIONS */
+  shadow.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const targetId = link.getAttribute('href')
+      if (!targetId || targetId === '#') return
 
+      const target = shadow.querySelector(targetId)
+      if (!target) return
 
-  // INTERNAL PAGE LINKS
+      event.preventDefault()
 
-  shadow.querySelectorAll('[data-scroll-to]').forEach(button => {
-    button.addEventListener('click', () => {
-      const selector = button.dataset.scrollTo
-
-      if (!selector) return
-
-      history.replaceState(null, '', selector)
-      scroll_to_target(selector)
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
     })
   })
 
+  // CAROUSEL
 
-  // EXTERNAL THEME / CSS
+  const gallery = shadow.querySelector('.gallery-carousel')
+
+  if (gallery) {
+    const slides = Array.from(
+      gallery.querySelectorAll('.gallery-slide')
+    )
+
+    const dotsContainer = gallery.querySelector('.gallery-dots')
+    const prevButton = gallery.querySelector('.gallery-prev')
+    const nextButton = gallery.querySelector('.gallery-next')
+    const counter = gallery.querySelector('.gallery-counter')
+
+    let currentIndex = 0
+
+    slides.forEach((slide, index) => {
+      const dot = document.createElement('button')
+
+      dot.type = 'button'
+      dot.className = 'gallery-dot'
+      dot.setAttribute('aria-label', `Show photo ${index + 1}`)
+
+      dot.addEventListener('click', () => showSlide(index))
+
+      dotsContainer.appendChild(dot)
+    })
+
+    const dots = Array.from(
+      dotsContainer.querySelectorAll('.gallery-dot')
+    )
+
+    function showSlide(index) {
+      currentIndex = (index + slides.length) % slides.length
+
+      slides.forEach((slide, i) => {
+        const isActive = i === currentIndex
+
+        slide.classList.toggle('active', isActive)
+        slide.setAttribute('aria-hidden', String(!isActive))
+      })
+
+      dots.forEach((dot, i) => {
+        const isActive = i === currentIndex
+
+        dot.classList.toggle('active', isActive)
+
+        if (isActive) {
+          dot.setAttribute('aria-current', 'true')
+        } else {
+          dot.removeAttribute('aria-current')
+        }
+      })
+
+      counter.textContent = `${currentIndex + 1} of ${slides.length}`
+    }
+
+    prevButton.addEventListener('click', () => {
+      showSlide(currentIndex - 1)
+    })
+
+    nextButton.addEventListener('click', () => {
+      showSlide(currentIndex + 1)
+    })
+
+    showSlide(0)
+  }
+
+  /* EXTERNAL THEME / CSS */
+  const fontLink = document.createElement('link')
+  fontLink.rel = 'stylesheet'
+  fontLink.href =
+  'https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap'
+
+  if (!document.querySelector('link[href*="family=Fredoka"]')) {
+  document.head.appendChild(fontLink)
+  }
 
   const style = document.createElement('style')
   style.textContent = get_theme()
   shadow.append(style)
 
 
-  // SHAREABLE URLS
-
-  window.addEventListener('hashchange', scroll_to_hash_target)
-  window.addEventListener('load', scroll_to_hash_target)
-
-  requestAnimationFrame(scroll_to_hash_target)
-  setTimeout(scroll_to_hash_target, 100)
-  setTimeout(scroll_to_hash_target, 600)
-
-
-  if (cb) cb()
+  /* CALLBACK */
+  if (typeof cb === 'function') {
+    cb(null, el)
+  }
 
   return el
-
-
-  function scroll_to_hash_target () {
-    const path = window.location.pathname.replace(/\/$/, '')
-    const hash = window.location.hash
-
-    if (
-      path.endsWith('/passes') ||
-      hash === '#membership' ||
-      hash === '#pricing' ||
-      hash === '#passes'
-    ) {
-      scroll_to_target('#passes')
-      return
-    }
-    
-    if (
-      path.endsWith('/trial') ||
-      hash === '#trial' ||
-      hash === '#apply'
-    ) {
-      scroll_to_target('#trial')
-      return
-    }
-
-    if (
-      hash === '#calendar' ||
-      hash === '#events' ||
-      hash === '#social'
-    ) {
-      scroll_to_target('#calendar')
-      return
-    }
-
-    if (
-      hash === '#swap' ||
-      hash === '#swap-new'
-    ) {
-      scroll_to_target('#swap-new')
-      return
-    }
-
-    if (
-      hash === '#swap-room' ||
-      hash === '#wardrobe' ||
-      hash === '#community-wardrobe'
-    ) {
-      scroll_to_target('#swap-room')
-      return
-    }
-
-    if (
-      hash === '#location' ||
-      hash === '#find-us'
-    ) {
-      scroll_to_target('#location')
-    }
-  }
-
-
-  function scroll_to_target (selector) {
-    const target = shadow.querySelector(selector)
-
-    if (!target) return
-
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  }
 }
-},{"../data/swap-room-items.json":1,"get_theme":4}],4:[function(require,module,exports){
-module.exports = get_theme
-
-function get_theme () {
+},{"get_theme":3}],3:[function(require,module,exports){
+module.exports = function get_theme () {
   return `
-    :host {
-      font-family:
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Inter,
-        sans-serif;
 
+    :host {
+    --teal: #304f4f;
+    --blue: #6fa8dc;
+    --green: #c2e3d5;
+    --pink: #f38188;
+    --yellow: #fed366;
+    --cream: #fbfaf6;
+    --warm-white: #f4efe6;
+    --white: #ffffff;
+    --sand: #f4efe6;
+
+      display: block;
+      color: var(--teal);
+
+      font-family: 'Fredoka', Arial, Helvetica, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-
-      --blue: #6fa8dc;
-      --blue-dark: #4f82ae;
-
-      --pink: #f4a6c0;
-      --green: #d1ece6;
-
-      --sand: #f4efe6;
-      --cream: #fbfaf6;
-      --beige: #e9e6e1;
-
-      --heather: #8f64a4;
-
-      --ink: #2f4f4f;
-      --muted: #6f8079;
-
-      --white: #ffffff;
-
-      --line: rgba(47, 79, 79, 0.12);
-      --line-light: rgba(47, 79, 79, 0.07);
-
-      --shadow-small:
-        0 10px 30px rgba(47, 79, 79, 0.06);
-
-      --shadow:
-        0 20px 55px rgba(47, 79, 79, 0.09);
-
-      --shadow-large:
-        0 32px 90px rgba(47, 79, 79, 0.13);
     }
 
-
     * {
+      font-family: inherit;
+    }
+
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
 
-
     .page {
-      overflow-x: hidden;
+      width: 100%;
+      overflow: hidden;
       background: var(--cream);
-      color: var(--ink);
-      line-height: 1.65;
     }
 
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
+    img {
+      display: block;
+      max-width: 100%;
     }
-
-    h1 {
-      max-width: 720px;
-      margin: 0 0 1.25rem;
-      color: var(--white);
-      font-size: clamp(2.35rem, 5vw, 4.6rem);
-      font-weight: 750;
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-    }
-
-    h2 {
-      margin: 0 0 1.5rem;
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-    }
-
-    h3 {
-      margin: 0 0 0.55rem;
-      color: var(--ink);
-      font-size: 1.22rem;
-      line-height: 1.18;
-      letter-spacing: -0.02em;
-    }
-
-
-    p {
-      margin-bottom: 1.15rem;
-
-      font-size: 1.06rem;
-      line-height: 1.7;
-    }
-
 
     a {
-      color: var(--heather);
-      text-underline-offset: 0.2em;
-    }
-
-
-    button {
-      font: inherit;
-    }
-
-
-    button,
-    a {
+      color: inherit;
+      text-decoration: none;
       -webkit-tap-highlight-color: transparent;
     }
 
-
-    button:focus-visible,
-    .button:focus-visible,
-    a:focus-visible {
-      outline: 3px solid rgba(143, 100, 164, 0.36);
-      outline-offset: 4px;
+    h1, h2, h3, p {
+      margin-top: 0;
     }
 
-
-    /* ---------------------------------------------------------
-       LAYOUT
-       --------------------------------------------------------- */
-
-    .wave {
-      display: block;
-      width: 100%;
-      margin: -1px 0;
-      padding: 0;
-      font-size: 0;
-      line-height: 0;
+    h1, h2, h3 {
+      color: var(--teal);
+      font-weight: 800;
+      letter-spacing: -0.035em;
     }
 
-    .wave svg {
-      display: block;
-      width: 100%;
-      height: 70px;
+    h1 {
+      margin-bottom: 24px;
+      font-size: clamp(42px, 5vw, 72px);
+      letter-spacing: -0.8px;
+      line-height: 1.08;
     }
 
-    .section {
-      padding: 7rem 1.5rem;
+    h2 {
+      margin-bottom: 20px;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.04;
+      letter-spacing: -0.4px;
+      line-height: 1.15;  
     }
 
-    .content {
-      width: 100%;
-      max-width: 940px;
-      margin: 0 auto;
+    h3 {
+      margin-bottom: 12px;
+      font-size: 25px;
+      line-height: 1.12;
     }
 
-    .content-wide {
-      width: 100%;
-      max-width: 1240px;
-      margin: 0 auto;
+    body {
+      letter-spacing: 0.1px;
     }
 
-    .content-xl {
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
+    p {
+      line-height: 1.65;
+    }
+
+    .eyebrow {
+      margin-bottom: 18px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .eyebrow.dark {
+      color: var(--blue);
     }
 
     .center {
       text-align: center;
     }
 
-    .center p {
-      max-width: 720px;
-      margin-right: auto;
-      margin-left: auto;
+    .content {
+      width: min(1120px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .content-wide {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .content-narrow {
+      width: min(760px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 100px 0;
     }
 
     .section-heading {
-      max-width: 860px;
-      margin: 0 auto 3.6rem;
+      max-width: 760px;
+      margin: 0 auto 52px;
     }
 
     .section-heading h2 {
-      max-width: 820px;
-      margin-right: auto;
-      margin-left: auto;
+      margin-bottom: 18px;
     }
 
     .section-intro {
-      max-width: 720px;
-      margin-right: auto;
-      margin-bottom: 0;
-      margin-left: auto;
-
-      color: var(--muted);
-
-      font-size: 1.14rem;
+      max-width: 650px;
+      margin: 0 auto;
+      color: rgba(48, 79, 79, 0.78);
+      font-size: 18px;
       line-height: 1.65;
     }
 
-    .eyebrow {
-      margin-bottom: 1rem;
+    /* HEADER */
 
-      color: rgba(255, 255, 255, 0.84);
-
-      font-size: 0.73rem;
-      font-weight: 850;
-      line-height: 1.25;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+    .site-header {
+      position: relative;
+      z-index: 20;
+      background: var(--blue);
     }
 
-    .eyebrow.dark {
-      color: var(--heather);
+    .header-inner {
+      width: min(1180px, calc(100% - 48px));
+      min-height: 82px;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
     }
 
+    .brand-logo {
+      width: 150px;
+      height: auto;
+    }
 
-    /* ---------------------------------------------------------
-       BUTTONS
-       --------------------------------------------------------- */
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: var(--cream);
+    }
+
+    .main-nav a {
+      position: relative;
+      color: var(--teal);
+      font-size: 15px;
+      font-weight: 700;
+      transition: color 0.2s ease;
+      color: var(--sand);
+    }
+
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+      height: 2px;
+      background: var(--blue);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.2s ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--pink);
+    }
+
+    .main-nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      padding: 72px 0 100px;
+      background-color: var(--blue);
+      color: var(--sand);      
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 4vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+      max-width: 650px;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      line-height: 1.65;
+      letter-spacing: 0.1px;
+    }
+
+    .hero .eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+    }
+
+    .hero .badge {
+      font-size: 0.85rem;
+    }
+
+    .hero .button {
+      font-size: 1rem;
+    }
+
+    .hero h1,
+    .hero h2,
+    .hero p {
+      color: var(--sand);
+    }
+
+    .hero-content {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 4rem;
+    }
+
+    .hero-text {
+      max-width: 650px;
+    }
+
+    .hero .primary-button {
+      background-color: var(--pink);
+      color: #ffffff;
+    }
+
+    .hero .secondary-button {
+      background-color: transparent;
+      color: var(--sand);
+      border: 1px solid var(--sand);
+    }
+    .hero-inner {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      color: var(--sand);    
+    }
+
+    .hero-subtitle {
+      max-width: 620px;
+      margin-bottom: 28px;
+      color: rgba(48, 79, 79, 0.82);
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .hero-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 34px;
+    }
+
+    .hero-details span {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-actions,
+    .final-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-photo {
+      position: relative;
+    }
+
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: -20px;
+      right: -20px;
+      width: 130px;
+      height: 130px;
+      border-radius: 48% 52% 60% 40%;
+      background: var(--yellow);
+      transform: rotate(12deg);
+    }
+
+    .hero-photo .photo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 4 / 4.5;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+
+    /* WAVE */
+
+    .wave {
+      height: 120px;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+      overflow: hidden;
+    }
+
+    .wave svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* BUTTONS */
 
     .button {
       display: inline-flex;
-      min-height: 54px;
-
+      min-height: 48px;
+      padding: 13px 22px;
       align-items: center;
       justify-content: center;
-
-      padding: 0.92rem 1.75rem;
-
-      border: 1px solid transparent;
+      border: 2px solid transparent;
       border-radius: 999px;
-
-      cursor: pointer;
-
-      font-size: 0.96rem;
+      font-size: 15px;
       font-weight: 800;
       line-height: 1.2;
-      text-align: center;
-      text-decoration: none;
-
-      transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
+      cursor: pointer;
+      transition: transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease,
+        color 0.18s ease;
     }
 
     .button:hover {
@@ -1905,2312 +1219,1244 @@ function get_theme () {
     }
 
     .primary-button {
-      border-color: var(--heather);
-
-      background: var(--heather);
-      box-shadow: 0 12px 28px rgba(143, 100, 164, 0.18);
-
-      color: white;
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 8px 20px rgba(41, 117, 187, 0.18);
     }
 
     .primary-button:hover {
-      border-color: #79518d;
-      background: #79518d;
-
-      color: white;
+      background: var(--teal);
     }
 
     .secondary-button {
-      border-color: var(--ink);
-      background: var(--ink);
-      color: white;
-      transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
+      border-color: rgba(48, 79, 79, 0.22);
+      background: transparent;
+      color: var(--teal);
     }
 
     .secondary-button:hover {
-      transform: translateY(-2px);
+      border-color: var(--teal);
+      background: var(--white);
     }
 
-
-    /* ---------------------------------------------------------
-       ANNOUNCEMENT
-       --------------------------------------------------------- */
-
-    .announcement-bar {
-      padding: 0.7rem 1rem;
-
-      background: var(--green);
-
-      text-align: center;
+    .light-button {
+      background: var(--white);
+      color: var(--teal);
     }
 
-    .announcement-link {
-      margin: 0;
-      padding: 0.35rem 0.5rem;
-
-      border: 0;
-      background: transparent;
-
-      color: var(--ink);
-
-      cursor: pointer;
-
-      font-size: 0.87rem;
-      font-weight: 750;
-      line-height: 1.35;
+    .outline-light-button {
+      border-color: rgba(255, 255, 255, 0.65);
+      color: var(--white);
     }
 
-    .announcement-link:hover {
-      color: var(--heather);
+    .outline-light-button:hover {
+      background: rgba(255, 255, 255, 0.12);
     }
 
-    .free-trial-callout {
-      max-width: 900px;
-      margin: 2.5rem auto 3rem;
-      padding: 2rem 2.5rem;
-      text-align: center;
-      background: #d1ece6;
-      border-radius: 18px;
-      border: 1px solid rgba(47, 79, 79, 0.12);
-    }
+    /* HOW TO VISIT */
 
-    .free-trial-eyebrow {
-      margin: 0 0 0.5rem;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #8c5ba8;
-    }
-
-    .free-trial-callout h3 {
-      margin: 0 0 0.75rem;
-      font-size: 2rem;
-      line-height: 1.15;
-      color: #2f4f4f;
-    }
-
-    .free-trial-callout > p:not(.free-trial-eyebrow) {
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-      color: #536d6d;
-    }
-
-    .free-trial-callout .button {
-      display: inline-flex;
-    }
-
-
-    /* ---------------------------------------------------------
-       HERO
-       --------------------------------------------------------- */
-
-    .hero {
-      padding: 5rem 1.5rem 6rem;
-      background: var(--blue);
-    }
-
-    .hero-inner {
-      display: grid;
+    .how-to-visit-section {
       position: relative;
-      grid-template-columns:
-        minmax(0, 1.12fr)
-        minmax(340px, 0.88fr);
-      max-width: 1240px;
-      margin: 0 auto;
-      align-items: center;
-      gap: clamp(3rem, 6vw, 6rem);
+      isolation: isolate;
+      padding: 86px 0 78px;
+      background: #fffdf8;
     }
 
-    .hero-copy {
-      min-width: 0;
+    .how-to-visit-section::before,
+    .how-to-visit-section::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+      border-radius: 48% 52% 58% 42%;
+      opacity: 0.8;
     }
 
-    .hero-logo {
-      display: block;
+    .how-to-visit-section::before {
+      width: 250px;
+      height: 210px;
+      left: -95px;
+      top: -38px;
+      background: #ffdf77;
+      transform: rotate(-20deg);
+    }
 
+    .how-to-visit-section::after {
       width: 230px;
-      max-width: 55%;
-      height: auto;
-
-      margin-bottom: 2.5rem;
-
-      filter:
-        brightness(0)
-        invert(1)
-        drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+      height: 190px;
+      right: -85px;
+      top: 25px;
+      background: #d6eee4;
+      transform: rotate(22deg);
     }
 
-    .hero-subtitle {
-      max-width: 680px;
-      margin-bottom: 1.7rem;
+    .how-to-visit-section .section-heading {
+      position: relative;
+      max-width: 760px;
+      margin-bottom: 40px;
+    }
 
-      color: rgba(255, 255, 255, 0.93);
+    .how-to-visit-section .section-heading::after {
+      content: "♡";
+      position: absolute;
+      right: -35px;
+      top: 20px;
+      color: var(--pink);
+      font-size: 48px;
+      font-weight: 700;
+      transform: rotate(14deg);
+    }
 
-      font-size: clamp(1.18rem, 2vw, 1.42rem);
+    .how-to-visit-section .section-heading h2 {
+      max-width: 700px;
+      margin: 0 auto 18px;
+      font-size: clamp(36px, 4.3vw, 54px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 18px;
+    }
+
+    .visit-card {
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+      padding: 26px 26px 24px;
+      display: flex;
+      flex-direction: column;
+      border: 0;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(48, 79, 79, 0.06);
+      transition: transform 0.22s ease,
+        box-shadow 0.22s ease;
+    }
+
+    .visit-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px rgba(48, 79, 79, 0.10);
+    }
+
+    .visit-card-events {
+      background: #eaf4fc;
+    }
+
+    .visit-card-passes {
+      background: #eff6ec;
+    }
+
+    .visit-card-membership {
+      background: #fff0ed;
+    }
+
+    .visit-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 14px;
+      margin-bottom: 17px;
+    }
+
+    .visit-illustration {
+      width: 70px;
+      height: 70px;
+      flex: 0 0 70px;
+      display: grid;
+      place-items: center;
+      border-radius: 48% 52% 45% 55%;
+      background: rgba(41, 117, 187, 0.18);
+      color: var(--blue);
+      font-size: 43px;
+      line-height: 1;
+      transform: rotate(-7deg);
+    }
+
+    .visit-card-passes .visit-illustration {
+      background: rgba(194, 227, 213, 0.9);
+      color: #477d6a;
+    }
+
+    .visit-card-membership .visit-illustration {
+      background: rgba(243, 129, 136, 0.32);
+      color: var(--pink);
+      font-size: 50px;
+    }
+
+    .visit-label {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .visit-card-passes .visit-label {
+      color: #56856f;
+    }
+
+    .visit-card-membership .visit-label {
+      color: #d85f69;
+    }
+
+    .visit-card h3 {
+      margin-bottom: 12px;
+      font-size: clamp(25px, 2.2vw, 31px);
+      line-height: 1.08;
+    }
+
+    .visit-card > p {
+      margin-bottom: 18px;
+      color: rgba(48, 79, 79, 0.82);
+      font-size: 15.5px;
       line-height: 1.55;
     }
 
-    .hero-details {
+    .visit-card-photo {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 24px;
+      margin: auto 0 16px;
+    }
+
+    .pass-photo {
+      height: 230px;
+    }
+
+    /* PASS PRICES */
+
+    .pass-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 2px 0 12px;
+    }
+
+    .mini-pass {
+      min-width: 0;
+      min-height: 72px;
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.83);
       display: flex;
-      flex-wrap: wrap;
-
-      gap: 0.55rem 1.5rem;
-
-      margin: 1.7rem 0 1.2rem;
-
-      color: rgba(255, 255, 255, 0.9);
-
-      font-size: 0.9rem;
-      font-weight: 700;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
     }
 
-    .hero-details span {
-      position: relative;
+    .mini-pass strong {
+      font-size: 13px;
     }
 
-    .hero-details span + span::before {
-      position: absolute;
-      top: 50%;
-      left: -0.85rem;
-
-      width: 4px;
-      height: 4px;
-
-      border-radius: 50%;
-
-      background: rgba(255, 255, 255, 0.58);
-
-      content: "";
-      transform: translateY(-50%);
+    .mini-pass span {
+      color: var(--blue);
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 1.1;
     }
 
-    .hero-actions {
+        .mini-pass:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 16px rgba(48, 79, 79, 0.12);
+    }
+
+    /* VISIT CARD BUTTONS */
+
+    .visit-button {
+      min-width: 0;
+      min-height: 48px;
+      padding: 13px 12px;
       display: flex;
-      flex-wrap: wrap;
-
       align-items: center;
-      gap: 0.8rem;
-
-      margin-top: 1.1rem;
+      justify-content: center;
+      gap: 7px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+      line-height: 1.25;
+      transition: transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease;
     }
 
-    .hero .primary-button {
-      border-color: white;
-
-      background: white;
-      box-shadow: none;
-
-      color: var(--ink);
+    .visit-button span {
+      flex-shrink: 0;
     }
 
-    .hero .primary-button:hover {
-      background: var(--cream);
-
-      color: var(--heather);
+    .visit-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 16px rgba(48, 79, 79, 0.12);
     }
 
-    .hero .secondary-button {
-      border-color: rgba(255, 255, 255, 0.58);
-
+    .visit-button-blue {
+      margin-top: auto;
+      background: var(--blue);
       color: white;
     }
 
-    .hero .secondary-button:hover {
-      border-color: white;
-      background: white;
-
-      color: var(--ink);
+    .visit-button-blue:hover {
+      background: var(--teal);
     }
 
-    .hero-photo {
+    .visit-button-outline {
+      border: 1.5px solid var(--blue);
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--blue);
+      padding: 12px 8px;
+    }
+
+    .visit-button-pink {
+      margin-top: auto;
+      background: #f3656e;
+      color: white;
+    }
+
+    .visit-button-pink:hover {
+      background: #df515d;
+    }
+
+    /* MEMBERSHIP PRICE */
+
+    .membership-price {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      margin: 2px 0 17px;
+    }
+
+    .membership-price strong {
+      color: var(--blue);
+      font-size: 48px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .membership-price span {
+      color: rgba(48, 79, 79, 0.65);
+      font-size: 15px;
+    }
+
+    .visit-list {
+      margin: 0 0 22px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .visit-list li {
       position: relative;
-      overflow: hidden;
-      border-radius: 70px;
-      box-shadow: var(--shadow-large);
+      margin-bottom: 10px;
+      padding-left: 29px;
+      color: rgba(48, 79, 79, 0.82);
+      font-size: 14px;
+      line-height: 1.45;
     }
 
-    .hero-photo .photo {
-      display: block;
-
-      width: 100%;
-      height: clamp(480px, 52vw, 650px);
-
-      margin: 0;
-
-      object-fit: cover;
-      object-position: center;
-
-      transition: transform 0.8s ease;
-    }
-
-    .hero-photo:hover .photo {
-      transform: scale(1.015);
-    }
-
-    /* ---------------------------------------------------------
-       IDENTITY — PLAY / SHARE / BELONG
-       --------------------------------------------------------- */
-
-    .identity-section {
-      background: var(--cream);
-      padding-top: 2rem;
-    }
-
-    .identity-grid {
+    .visit-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      width: 20px;
+      height: 20px;
       display: grid;
-
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      place-items: center;
+      border-radius: 50%;
+      background: var(--pink);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
     }
 
-    .identity-card {
+    /* PRICING EXPLANATION */
+
+    .visit-note {
       position: relative;
-
-      min-height: 290px;
-
-      padding: 2.6rem 2.5rem 2.8rem;
-
-      border-right: 1px solid var(--line);
+      max-width: 950px;
+      margin: 24px auto 0;
+      padding: 20px 26px;
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 17px;
+      align-items: center;
+      border-radius: 28px;
+      background: #cce8d9;
     }
 
-    .identity-card:last-child {
-      border-right: 0;
+    .visit-note-icon {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #a9d8bd;
+      color: var(--teal);
+      font-size: 32px;
     }
 
-    .identity-number {
+    .visit-note strong {
       display: block;
-
-      margin-bottom: 2.2rem;
-
-      color: var(--heather);
-
-      font-family: inherit;
-      font-weight: 750;
+      margin-bottom: 5px;
+      font-size: 16px;
     }
 
-    .identity-card h3 {
-      font-family: inherit;
-      font-weight: 750;
+    .visit-note p {
+      margin: 0;
+      color: rgba(48, 79, 79, 0.78);
+      font-size: 14px;
+      line-height: 1.55;
     }
-
-    .identity-card p {
-      max-width: 330px;
+    
+    .visit-note .gift-note {
+      margin-top: 6px;
       margin-bottom: 0;
-
-      color: var(--muted);
-
-      font-size: 1rem;
     }
 
+    .visit-note .gift-inline-link {
+      color: #d85f69;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      transition: color 0.2s ease;
+    }
 
-    /* ---------------------------------------------------------
-       LOCATION
-       --------------------------------------------------------- */
+    .visit-note .gift-inline-link:hover {
+      color: var(--teal);
+    }
+
+    /* FEATURES */
+
+    .features-section {
+      background: var(--warm-white);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      overflow: hidden;
+      border-radius: 28px;
+      background: var(--white);
+      box-shadow: 0 10px 30px rgba(48, 79, 79, 0.055);
+      transition: transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(48, 79, 79, 0.09);
+    }
+
+    .feature-card > img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .feature-copy {
+      padding: 25px 26px 28px;
+    }
+
+    .feature-copy h3 {
+      margin-bottom: 9px;
+    }
+
+    .feature-copy p {
+      margin-bottom: 0;
+      color: rgba(48, 79, 79, 0.75);
+      font-size: 15px;
+    }
+
+    /* LOCATION */
 
     .location-section {
-      background: var(--sand);
+      background: var(--cream);
     }
 
-    .location-visuals {
+    .location-grid {
       display: grid;
-
-      grid-template-columns:
-        minmax(0, 1.3fr)
-        minmax(300px, 0.7fr);
-
-      max-width: 1040px;
-      margin: 0 auto 3rem;
-
-      align-items: center;
-      gap: 1.8rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      align-items: stretch;
     }
 
-    .location-card {
+    .location-image-card {
+      min-height: 520px;
       overflow: hidden;
-
-      border: 1px solid rgba(47, 79, 79, 0.08);
-      border-radius: 18px;
-
-      background: white;
-      box-shadow: var(--shadow-small);
+      border-radius: 30px;
     }
 
-    .location-card .photo {
-      display: block;
-
+    .location-image-card .photo {
       width: 100%;
-      max-width: none;
-      height: auto;
-
-      margin: 0;
-
-      border: 0;
-      border-radius: 0;
-      box-shadow: none;
-    }
-
-    .building-card {
-      aspect-ratio: 4 / 3;
-    }
-
-    .building-card img {
-      width: 100%;
-      height: 100% !important;
-
+      height: 100%;
       object-fit: cover;
     }
 
-    .map-card {
-      aspect-ratio: 4 / 4.2;
+    .location-info {
+      min-width: 0;
+      padding: 6px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .map-card img {
+    .map-image {
       width: 100%;
-      height: 100% !important;
-
+      max-height: 300px;
       object-fit: contain;
-
-      background: #f9f6ef;
+      object-position: center;
+      margin-bottom: 26px;
+      border-radius: 24px;
+      background: var(--white);
     }
 
     .location-details {
       display: grid;
-
-      grid-template-columns: repeat(3, 1fr);
-
-      max-width: 960px;
-      margin: 0 auto 2.4rem;
-
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      gap: 15px;
+      margin-bottom: 28px;
     }
 
     .location-detail {
+      padding: 15px 18px;
+      border-radius: 16px;
+      background: var(--white);
       display: flex;
-
-      min-height: 110px;
-
       flex-direction: column;
-      justify-content: center;
-
-      padding: 1.4rem 1.8rem;
-
-      border-right: 1px solid var(--line);
-
-      text-align: center;
-    }
-
-    .location-detail:last-child {
-      border-right: 0;
+      gap: 3px;
     }
 
     .location-detail strong {
-      display: block;
-
-      margin-bottom: 0.3rem;
-
-      font-size: 0.93rem;
+      font-size: 14px;
     }
 
     .location-detail span {
-      color: var(--muted);
-
-      font-size: 0.9rem;
-      line-height: 1.45;
+      color: rgba(48, 79, 79, 0.7);
+      font-size: 14px;
     }
 
+    /* GALLERY */
+    /* FEATURE GALLERY CAROUSEL */
 
-    /* ---------------------------------------------------------
-       HOW IT WORKS
-       --------------------------------------------------------- */
-
-    .how-it-works-section {
-      background: var(--cream);
-    }
-
-    .steps-grid {
-      display: grid;
-
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-
-      max-width: 1040px;
-      margin: 0 auto;
-
-      gap: 1rem;
-    }
-
-    .step-card {
-      padding: 2rem;
-
-      border: 1px solid var(--line);
-      border-radius: 16px;
-
-      background: white;
-    }
-
-    .step-number {
-      display: inline-flex;
-
-      width: 34px;
-      height: 34px;
-
-      align-items: center;
-      justify-content: center;
-
-      margin-bottom: 1.5rem;
-
-      border: 1px solid var(--line);
-      border-radius: 50%;
-
-      color: var(--heather);
-
-      font-family: inherit;
-      font-weight: 750;
-    }
-
-    .step-card p {
-      margin-bottom: 0;
-
-      color: var(--muted);
-
-      font-size: 0.98rem;
-    }
-
-    .big-statement {
-      max-width: 820px;
-
-      margin: 4rem auto 0 !important;
-
-      color: var(--ink);
-
-      font-family: inherit;
-      font-weight: 750;
-    }
-
-
-    /* ---------------------------------------------------------
-       COMMUNITY WARDROBE
-       --------------------------------------------------------- */
-
-    .swap-section {
-      background: var(--green);
-    }
-
-    .swap-story-grid {
-      display: grid;
-
-      grid-template-columns:
-        minmax(0, 0.95fr)
-        minmax(360px, 1.05fr);
-
-      align-items: center;
-      gap: clamp(3rem, 7vw, 6rem);
-    }
-
-    .swap-story-copy {
-      max-width: 590px;
-    }
-
-    .swap-story-copy h2 {
-      max-width: 580px;
-    }
-
-    .swap-story-copy p {
-      max-width: 570px;
-    }
-
-    .large-copy {
-      font-family: inherit;
-      font-weight: 750;
-    }
-
-    .swap-principle {
-      margin-top: 2rem;
-
-      font-size: 0.98rem !important;
-    }
-
-    .swap-principle-large {
-      margin-top: 1.5rem;
-
-      color: var(--heather);
-
-      font-family: inherit;
-      font-weight: 750;
-
-      font-size: clamp(2rem, 4vw, 3.2rem) !important;
-      line-height: 1.08 !important;
-      letter-spacing: -0.035em;
-    }
-
-    .swap-story-photo {
+    .gallery-section {
+      background: #fffdf8;
       overflow: hidden;
-
-      border-radius: 60px;
-
-      box-shadow: var(--shadow);
     }
 
-    .swap-story-photo .photo {
-      display: block;
-
-      width: 100%;
-      max-width: none;
-      height: 600px;
-
-      margin: 0;
-
-      object-fit: cover;
-      object-position: center;
-
-      border: 0;
-      border-radius: 0;
-      box-shadow: none;
-    }
-
-
-    /* ---------------------------------------------------------
-       RECENTLY ADDED SWAP ITEMS
-       --------------------------------------------------------- */
-
-    .swap-preview-section {
-      background: var(--cream);
-    }
-
-    .swap-preview-heading {
-      display: grid;
-
-      grid-template-columns:
-        minmax(0, 0.9fr)
-        minmax(320px, 0.65fr);
-
-      align-items: end;
-      justify-content: space-between;
-
-      gap: 3rem;
-
-      margin-bottom: 2.5rem;
-    }
-
-    .swap-preview-heading h2 {
-      max-width: 620px;
-      margin-bottom: 0;
-    }
-
-    .swap-preview-intro {
-      max-width: 550px;
-      margin: 0;
-
-      color: var(--muted);
-
-      font-size: 1rem;
-      line-height: 1.65;
-    }
-
-    .swap-items-scroll {
-      display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(180px, 1fr));
-
-      gap: 1rem;
-    }
-
-    .swap-item-card {
-      overflow: hidden;
-
-      border: 1px solid var(--line-light);
-      border-radius: 12px;
-
-      background: white;
-    }
-
-    .swap-item-image-wrap {
-      aspect-ratio: 4 / 5;
-
-      overflow: hidden;
-
-      background: var(--sand);
-    }
-
-    .swap-item-image {
-      display: block;
-
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      transition: transform 0.35s ease;
-    }
-
-    .swap-item-card:hover .swap-item-image {
-      transform: scale(1.025);
-    }
-
-    .swap-item-copy {
-      padding: 1rem 1rem 1.1rem;
-    }
-
-    .swap-item-copy h3 {
-      margin-bottom: 0.3rem;
-
-      font-size: 1rem;
-    }
-
-    .swap-item-details,
-    .swap-item-added {
-      margin: 0;
-
-      font-size: 0.84rem;
-      line-height: 1.45;
-    }
-
-    .swap-item-details {
-      color: var(--ink);
-    }
-
-    .swap-item-added {
-      margin-top: 0.3rem;
-
-      color: var(--muted);
-    }
-
-    .swap-stock-note {
-      margin: 1.5rem 0 0;
-      color: var(--muted);
-      font-size: 0.84rem;
-    }
-
-    .swap-preview-empty {
-      display: grid;
-
-      grid-template-columns:
-        minmax(300px, 1.15fr)
-        minmax(280px, 0.85fr);
-
-      overflow: hidden;
-
-      border: 1px solid var(--line);
-      border-radius: 18px;
-
-      background: var(--sand);
-    }
-
-    .swap-preview-room-photo {
-      display: block;
-
-      width: 100%;
-      height: 100%;
-      min-height: 420px;
-
-      object-fit: cover;
-    }
-
-    .swap-preview-empty-copy {
-      display: flex;
-
-      flex-direction: column;
-      justify-content: center;
-
-      padding: 3rem;
-    }
-
-    .swap-preview-kicker {
-      display: block;
-
-      margin-bottom: 0.8rem;
-
-      color: var(--heather);
-
-      font-size: 0.7rem;
-      font-weight: 850;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .swap-preview-empty-copy h3 {
-      font-family: inherit;
-      font-weight: 750;
-    }
-
-    .swap-preview-empty-copy p {
-      margin-bottom: 0;
-
-      color: var(--muted);
-
-      font-size: 0.98rem;
-    }
-
-
-    /* ---------------------------------------------------------
-       LIFE AT SWAP & PLAY
-       --------------------------------------------------------- */
-
-    .life-section {
-      padding-top: 7rem;
-      padding-bottom: 7rem;
-
-      background: var(--sand);
-    }
-
-    .life-photo-grid {
-      display: grid;
-
-      grid-template-columns: repeat(12, 1fr);
-      grid-auto-rows: 180px;
-
-      gap: 1rem;
-    }
-
-    .life-photo-grid .photo {
-      display: block;
-
-      width: 100%;
-      max-width: none;
-      height: 100%;
-
-      margin: 0;
-
-      border: 0;
-      border-radius: 8px;
-
-      box-shadow: none;
-
-      object-fit: cover;
-    }
-
-    .life-photo-grid .photo:nth-child(1) {
-      grid-column: 1 / 6;
-      grid-row: span 3;
-      object-position: center 46%;
-      height: auto;
-    }
-
-    .life-photo-grid .photo:nth-child(2) {
-      grid-column: 6 / 13;
-      grid-row: span 2;
-      object-position: center 45%;
-    }
-
-    .life-photo-grid .photo:nth-child(3) {
-      grid-column: 6 / 10;
-      grid-row: span 2;
-      object-position: center 50%;
-    }
-
-    .life-photo-grid .photo:nth-child(4) {
-      grid-column: 10 / 13;
-      grid-row: span 2;
-    }
-
-    .life-photo-grid .photo:nth-child(5) {
-      grid-column: 1 / 7;
-      grid-row: span 2;
-      object-position: center 67%;
-    }
-
-    .life-photo-grid .photo:nth-child(6) {
-      grid-column: 7 / 13;
-      grid-row: span 2;
-      object-position: center 59%;
-    }
-
-
-    /* ---------------------------------------------------------
-       REVIEWS
-       --------------------------------------------------------- */
-
-    .reviews-section {
-      background: var(--cream);
-    }
-
-    .reviews-grid {
-      display: grid;
-
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-
-      gap: 1px;
-
-      margin-top: 1rem;
-
-      background: var(--line);
-    }
-
-    .review-card {
-      min-width: 0;
-      margin: 0;
-
-      padding: 2.7rem 2.4rem;
-
-      border: 0;
-
-      background: var(--cream);
-    }
-
-    .review-card p {
-      margin-bottom: 2rem;
-
-      color: var(--ink);
-
-      font-family: inherit;
-      font-weight: 750;
-    }
-
-    .review-card footer {
-      color: var(--muted);
-
-      font-size: 0.72rem;
-      font-weight: 850;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .press-links {
-      display: grid;
-
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-
+    .gallery-carousel {
       max-width: 850px;
-      margin: 3.5rem auto 0;
-
-      gap: 1rem;
-    }
-
-    .press-link {
-      display: flex;
-
-      align-items: center;
-      justify-content: space-between;
-
-      gap: 1.5rem;
-
-      padding: 1.2rem 1.4rem;
-
-      border: 1px solid var(--line);
-      border-radius: 10px;
-
-      color: var(--ink);
-
-      text-decoration: none;
-
-      transition:
-        border-color 0.2s ease,
-        background 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .press-link:hover {
-      border-color: rgba(143, 100, 164, 0.35);
-
-      background: white;
-
-      transform: translateY(-1px);
-    }
-
-    .press-publication {
-      font-size: 0.77rem;
-      font-weight: 850;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
-    .press-read {
-      color: var(--heather);
-
-      font-size: 0.87rem;
-      font-weight: 750;
-    }
-
-
-    /* ---------------------------------------------------------
-       SOCIAL TIMES
-       --------------------------------------------------------- */
-
-    .social-section {
-      background: var(--green);
-    }
-
-    .social-times-grid {
-      display: grid;
-
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-
-      max-width: 1080px;
-      margin: 0 auto;
-
-      border-top: 1px solid rgba(47, 79, 79, 0.16);
-      border-left: 1px solid rgba(47, 79, 79, 0.16);
-    }
-
-    .social-time {
-      display: flex;
-
-      min-height: 175px;
-
-      flex-direction: column;
-
-      padding: 1.7rem;
-
-      border-right: 1px solid rgba(47, 79, 79, 0.16);
-      border-bottom: 1px solid rgba(47, 79, 79, 0.16);
-
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    .social-open {
-      display: block;
-      margin-top: 2rem;
-      font-size: 1rem;
-      color: #4f82ae;
-      font-weight: 600;
-    }
-
-    .social-time small {
-      display: block;
-      margin-top: 0.5rem;
-      color: #71817e;
-      font-size: 0.85rem;
-    }
-
-    .social-day {
-      margin-bottom: auto;
-
-      color: var(--muted);
-
-      font-size: 0.7rem;
-      font-weight: 850;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .social-time strong {
-      display: block;
-
-      margin-top: 1.8rem;
-      margin-bottom: 0.2rem;
-
-      font-size: 1.02rem;
-      line-height: 1.3;
-    }
-
-    .social-time > span:not(.social-day) {
-      color: var(--muted);
-
-      font-size: 0.9rem;
-    }
-
-    .social-time small {
-      display: inline-block;
-
-      margin-top: 0.7rem;
-
-      color: var(--blue-dark);
-
-      font-size: 0.72rem;
-      font-weight: 750;
-    }
-
-    .public-social-time {
-      background: rgba(255, 255, 255, 0.52);
-    }
-
-    .social-note {
-      margin-top: 2rem !important;
-      margin-bottom: 0 !important;
-
-      color: var(--muted);
-
-      font-size: 0.92rem;
-    }
-
-
-    /* ---------------------------------------------------------
-       PLAYDATE
-       --------------------------------------------------------- */
-
-    .playdate-section {
-      background: var(--cream);
-    }
-
-    .playdate-card {
-      max-width: 840px;
-      margin: 0 auto;
-
-      padding: 4.5rem;
-
-      border: 1px solid var(--line);
-      border-radius: 18px;
-
-      background: white;
-      box-shadow: var(--shadow-small);
-
-      text-align: center;
-    }
-
-    .playdate-copy {
-      max-width: 630px;
       margin: 0 auto;
     }
 
-    .playdate-copy h2 {
-      max-width: 600px;
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    .playdate-lead {
-      font-family: inherit;
-      font-weight: 750;
-    }
-
-    .playdate-price {
-      display: flex;
-
-      flex-direction: column;
-      align-items: center;
-
-      margin: 2rem 0 1.5rem;
-
-      gap: 0.25rem;
-    }
-
-    .playdate-price strong {
-      font-family: inherit;
-      font-weight: 500;
-
-      font-size: 4.2rem;
-      line-height: 1;
-      letter-spacing: -0.05em;
-    }
-
-    .playdate-price span {
-      color: var(--muted);
-
-      font-size: 0.9rem;
-    }
-
-    .playdate-benefits {
-      max-width: 430px;
-      margin: 2rem auto;
-
-      padding: 0;
-
-      list-style: none;
-
-      text-align: left;
-    }
-
-    .playdate-benefits li {
+    .gallery-carousel-track {
       position: relative;
-
-      margin-bottom: 0.7rem;
-
-      padding-left: 1.4rem;
-
-      color: var(--muted);
-
-      font-size: 0.95rem;
-      line-height: 1.45;
     }
 
-    .playdate-benefits li::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      color: var(--heather);
-
-      content: "•";
-    }
-
-    .small-note {
-      max-width: 550px;
-      margin: 1rem auto 0;
-
-      color: var(--muted);
-
-      font-size: 0.84rem;
-      line-height: 1.5;
-    }
-
-
-    /* ---------------------------------------------------------
-       PRICING
-       --------------------------------------------------------- */
-
-    .pricing-section {
-      background: var(--sand);
-    }
-
-    .pass-options-grid {
-      display: grid;
-
-      grid-template-columns: repeat(3, minmax(0, 2fr));
-
-      align-items: stretch;
-
-      margin: 0 auto;
-
-      gap: 1.2rem;
-    }
-
-    .price-card {
-      display: flex;
-
-      min-width: 0;
-      min-height: 540px;
-
-      flex-direction: column;
-
-      padding: 2.5rem;
-
-      border: 1px solid var(--line);
-      border-radius: 16px;
-
-      background: var(--cream);
-    }
-
-    .price-card.featured {
-      position: relative;
-
-      border-color: rgba(143, 100, 164, 0.45);
-
-      background: var(--cream);
-
-      box-shadow: var(--shadow);
-    }
-
-    .price-card.featured::before {
-      position: absolute;
-      top: -1px;
-      left: 2rem;
-      right: 2rem;
-
-      height: 4px;
-
-      border-radius: 0 0 6px 6px;
-
-      background: var(--heather);
-
-      content: "";
-    }
-
-    .price-card-label {
-      margin-bottom: 1.2rem;
-
-      color: var(--heather);
-
-      font-size: 0.68rem;
-      font-weight: 850;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .price-card h3 {
-      margin-bottom: 1.2rem;
-
-      font-family: inherit;
-      font-weight: 750;
-
-      font-size: 1.8rem;
-    }
-
-    .price {
-      display: flex;
-
-      min-height: 88px;
-
-      flex-direction: column;
-
-      margin-bottom: 1.5rem;
-    }
-
-    .price strong {
-      font-family: inherit;
-      font-weight: 750;
-
-      font-size: 3.3rem;
-      line-height: 1;
-      letter-spacing: -0.045em;
-    }
-
-    .price span {
-      margin-top: 0.3rem;
-
-      color: var(--muted);
-
-      font-size: 0.82rem;
-    }
-
-    .price-card > p:not(.price-card-label) {
-      color: var(--muted);
-
-      font-size: 0.96rem;
-    }
-
-    .price-card ul {
-      margin: 1.1rem 0 2rem;
-
-      padding: 0;
-
-      list-style: none;
-    }
-
-    .price-card li {
-      position: relative;
-
-      margin-bottom: 0.65rem;
-
-      padding-left: 1.35rem;
-
-      color: var(--ink);
-
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .price-card li::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      color: var(--heather);
-
-      content: "•";
-    }
-
-    .price-card .button {
-      width: 100%;
-
-      margin-top: auto;
-    }
-
-
-    /* ---------------------------------------------------------
-       MEMBERSHIP DETAILS
-       --------------------------------------------------------- */
-
-    .pricing-details {
-      display: flex;
-
-      flex-direction: column;
-
-      margin: 0 0 1.8rem;
-      padding: 1rem 1.1rem;
-
-      border-radius: 10px;
-
-      background: rgba(209, 236, 230, 0.62);
-    }
-
-    .pricing-details strong {
-      display: block;
-
-      margin-bottom: 0.25rem;
-
-      color: var(--ink);
-
-      font-size: 0.84rem;
-      font-weight: 850;
-    }
-
-    .pricing-details span {
-      color: var(--muted);
-
-      font-size: 0.82rem;
-      line-height: 1.45;
-    }
-
-    .pricing-details {
-      background: rgba(143, 100, 164, 0.08);
-    }
-
-    .pricing-details strong {
-      color: var(--heather);
-    }
-
-    .price-card .small-note {
-      margin-top: 0.9rem;
-      margin-bottom: 0;
-
-      text-align: center;
-    }
-
-
-    /* ---------------------------------------------------------
-      GIFT VOUCHER
-      --------------------------------------------------------- */
-
-    .gift-card {
-      position: relative;
-
-      width: 100%;
-      max-width: 820px;
-
-      margin: 3rem auto 0;
-
+    .gallery-slide {
+      display: none;
       overflow: hidden;
-
-      border: 1px solid rgba(143, 100, 164, 0.16);
-      border-radius: 24px;
-
-      background:
-        radial-gradient(
-          circle at 8% 18%,
-          rgba(244, 166, 192, 0.22) 0,
-          rgba(244, 166, 192, 0) 28%
-        ),
-        radial-gradient(
-          circle at 92% 82%,
-          rgba(209, 236, 230, 0.65) 0,
-          rgba(209, 236, 230, 0) 30%
-        ),
-        #fff4f0;
-
-      box-shadow:
-        0 18px 50px rgba(47, 79, 79, 0.08);
-
-      text-align: center;
+      border-radius: 30px;
+      background: #ffffff;
+      box-shadow: 0 14px 38px rgba(48, 79, 79, 0.09);
     }
 
-
-    /* Main content */
-
-    .gift-content {
-      position: relative;
-      z-index: 2;
-
-      max-width: 650px;
-
-      margin: 0 auto;
-
-      padding: 3.5rem 2rem 3.2rem;
+    .gallery-slide.active {
+      display: block;
+      animation: galleryFadeIn 0.3s ease;
     }
 
-
-    /* Eyebrow */
-
-    .gift-eyebrow {
-      margin: 0 0 1rem;
-
-      color: var(--heather);
-
-      font-size: 0.72rem;
-      font-weight: 850;
-      line-height: 1.2;
-
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+    .gallery-slide > img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      background: #f4efe6;
     }
 
-
-    /* Heading */
-
-    .gift-card h2 {
-      max-width: 620px;
-
-      margin: 0 auto 1.25rem;
-
-      color: var(--ink);
-
-      font-family: inherit;
-      font-size: clamp(2.15rem, 5vw, 3.3rem);
-      font-weight: 750;
-      line-height: 1.02;
-
-      letter-spacing: -0.045em;
+    .gallery-caption {
+      padding: 30px 36px 34px;
     }
 
-
-    /* Description */
-
-    .gift-description {
-      max-width: 590px;
-
-      margin: 0 auto;
-
-      color: var(--muted);
-
-      font-size: 1.05rem;
-      line-height: 1.65;
-    }
-
-
-    /* Price */
-
-    .gift-price {
-      display: inline-flex;
-
-      align-items: baseline;
-      gap: 0.55rem;
-
-      margin: 2rem auto 1.4rem;
-      padding: 0.7rem 1.25rem;
-    }
-
-    .gift-price strong {
-      color: var(--ink);
-      font-size: 3rem;
+    .gallery-number {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #2975bb;
+      font-size: 12px;
       font-weight: 800;
-      line-height: 1;
+      letter-spacing: 0.12em;
     }
 
-    .gift-price span {
-      color: var(--muted);
-
-      font-size: 0.8rem;
-      font-weight: 700;
+    .gallery-caption h3 {
+      margin-bottom: 12px;
+      font-size: clamp(27px, 3vw, 36px);
     }
 
-
-    /* Emotional line */
-
-    .gift-message {
-      margin: 0 auto 0.5rem;
-
-      color: var(--heather);
-
-      font-size: 1rem;
-      font-weight: 750;
+    .gallery-caption p {
+      max-width: 650px;
+      margin-bottom: 0;
+      color: rgba(48, 79, 79, 0.8);
+      font-size: 16px;
+      line-height: 1.75;
     }
 
-
-    /* Validity */
-
-    .gift-validity {
-      margin: 0;
-
-      color: var(--muted);
-
-      font-size: 0.82rem;
-    }
-
-
-    /* Button */
-
-    .gift-button {
-      display: inline-flex;
-
-      min-height: 54px;
-
+    .gallery-carousel-controls {
+      display: flex;
       align-items: center;
       justify-content: center;
+      gap: 22px;
+      margin-top: 24px;
+    }
 
-      margin-top: 1.7rem;
-      padding: 0.95rem 2rem;
-
-      border: 1px solid var(--heather);
-      border-radius: 999px;
-
-      background: var(--heather);
-
-      color: white !important;
-
-      font-size: 0.96rem;
-      font-weight: 800;
-      line-height: 1.2;
-
-      text-decoration: none;
-
-      box-shadow:
-        0 10px 24px rgba(143, 100, 164, 0.2);
-
-      transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
+    .gallery-arrow {
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: #eaf4fc;
+      color: #2975bb;
+      font-family: inherit;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background 0.2s ease,
+        color 0.2s ease,
         transform 0.2s ease;
     }
 
-    .gift-button:hover {
-      border-color: #79518d;
-
-      background: #79518d;
-
-      color: white !important;
-
-      transform: translateY(-2px);
-
-      box-shadow:
-        0 13px 28px rgba(143, 100, 164, 0.25);
+    .gallery-arrow:hover {
+      background: #2975bb;
+      color: #ffffff;
+      transform: scale(1.05);
     }
 
-
-    /* Decorative stars */
-
-    .gift-decoration {
-      position: absolute;
-
-      z-index: 1;
-
-      pointer-events: none;
-
-      color: var(--pink);
-
-      font-size: 1.7rem;
-      line-height: 1;
+    .gallery-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 400px;
     }
 
-    .gift-decoration-top {
-      top: 1.5rem;
-      left: 2rem;
-
-      transform: rotate(-12deg);
-    }
-
-    .gift-decoration-bottom {
-      right: 2rem;
-      bottom: 1.5rem;
-
-      color: var(--heather);
-
-      font-size: 1.35rem;
-
-      transform: rotate(14deg);
-    }
-
-
-    /* A couple of soft decorative circles */
-
-    .gift-card::before,
-    .gift-card::after {
-      position: absolute;
-
-      width: 90px;
-      height: 90px;
-
+    .gallery-dot {
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      border: 0;
       border-radius: 50%;
-
-      content: "";
-      pointer-events: none;
+      background: #c9d9d5;
+      cursor: pointer;
+      transition: background 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .gift-card::before {
-      top: -45px;
-      right: 15%;
-
-      background: rgba(244, 166, 192, 0.18);
+    .gallery-dot.active {
+      background: #2975bb;
+      transform: scale(1.35);
     }
 
-    .gift-card::after {
-      bottom: -50px;
-      left: 12%;
-
-      background: rgba(209, 236, 230, 0.5);
+    .gallery-counter {
+      margin: 12px 0 0;
+      color: rgba(48, 79, 79, 0.65);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
     }
 
-    /* ---------------------------------------------------------
-       FIRST VISIT
-       --------------------------------------------------------- */
+    @keyframes galleryFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
 
-    .first-visit-section {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-carousel {
+        width: 100%;
+      }
+
+      .gallery-slide {
+        border-radius: 23px;
+      }
+
+      .gallery-slide > img {
+        height: 270px;
+      }
+
+      .gallery-caption {
+        padding: 23px 22px 26px;
+      }
+
+      .gallery-caption h3 {
+        font-size: 27px;
+      }
+
+      .gallery-caption p {
+        font-size: 15px;
+      }
+
+      .gallery-carousel-controls {
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .gallery-arrow {
+        width: 40px;
+        height: 40px;
+      }
+
+      .gallery-dots {
+        gap: 7px;
+        max-width: 220px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-slide.active {
+        animation: none;
+      }
+    }
+
+    /* FOOTER */
+
+    .site-footer {
       background: var(--blue);
-
-      color: white;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--white);
     }
 
-    .first-visit-section h2 {
-      color: white;
+    .footer-inner {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 46px 0;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 50px;
+      align-items: center;
     }
 
-    .first-visit-section .eyebrow {
-      color: rgba(255, 255, 255, 0.78);
+    .footer-brand img {
+      width: 150px;
+      margin-bottom: 12px;
+      filter: brightness(0) invert(1);
     }
 
-    .first-visit-section p {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    .first-visit-section .secondary-button {
-      border-color: rgba(255, 255, 255, 0.65);
-
-      color: white;
-    }
-
-    .first-visit-section .secondary-button:hover {
-      border-color: white;
-
-      background: white;
-
-      color: var(--ink);
-    }
-
-
-    /* ---------------------------------------------------------
-       CLOSING
-       --------------------------------------------------------- */
-
-    .closing-section {
-      padding-top: 7rem;
-      padding-bottom: 8rem;
-      background: var(--green);
-    }
-
-    .closing-photo {
-      display: block;
-
-      width: min(740px, 100%);
-      height: auto;
-
-      margin: 0 auto 5rem;
-
-      border-radius: 4px;
-
-      box-shadow: none;
-
-      object-fit: cover;
-    }
-
-    .closing-section h2 {
-      max-width: 790px;
-
-      margin-right: auto;
-      margin-left: auto;
-
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      line-height: 1.08;
-    }
-
-
-    /* ---------------------------------------------------------
-       FOOTER
-       --------------------------------------------------------- */
-
-    .footer {
-      padding: 5rem 1.5rem;
-
-      background: var(--ink);
-
-      color: white;
-    }
-
-    .footer-logo {
-      display: block;
-
-      width: 230px;
-      max-width: 70%;
-      height: auto;
-
-      margin: 0 auto 2rem;
-
-      filter:
-        brightness(0)
-        invert(1);
-    }
-
-    .footer p {
-      margin-bottom: 0.75rem;
-
+    .footer-brand p {
+      max-width: 280px;
+      margin: 0;
       color: rgba(255, 255, 255, 0.75);
-
-      font-size: 0.9rem;
-      line-height: 1.55;
+      font-size: 14px;
     }
 
-    .footer a {
-      color: white;
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
 
+    .footer-links a {
+      width: fit-content;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
       font-weight: 700;
     }
 
-
-    /* ---------------------------------------------------------
-       SHAREABLE HASH TARGETS
-       --------------------------------------------------------- */
-
-    #location,
-    #swap-room,
-    #swap-new,
-    #calendar,
-    #playdate,
-    #passes {
-      scroll-margin-top: 2rem;
+    .footer-links a:hover {
+      color: var(--yellow);
     }
 
+    .footer-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+      line-height: 1.5;
+    }
 
-    /* ---------------------------------------------------------
-       TABLET
-       --------------------------------------------------------- */
+    /* TABLET */
 
-    @media (max-width: 1050px) {
-
-      .hero-inner,
-      .swap-story-grid {
+    @media (max-width: 900px) {
+      .hero-inner {
         grid-template-columns: 1fr;
+        gap: 45px;
       }
 
-      .hero {
-        padding-top: 4rem;
-
-        text-align: center;
-      }
-
-      .hero-logo {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      h1,
-      .hero-subtitle {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .hero-details,
-      .hero-actions {
-        justify-content: center;
+      .hero-copy {
+        max-width: 720px;
       }
 
       .hero-photo {
-        width: min(640px, 100%);
-        margin: 1rem auto 0;
-      }
-
-      .hero-photo .photo {
-        height: auto;
-        aspect-ratio: 4 / 4.3;
-      }
-
-      .swap-story-copy {
-        max-width: 760px;
-
-        margin: 0 auto;
-
-        text-align: center;
-      }
-
-      .swap-story-copy h2,
-      .swap-story-copy p {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .swap-story-photo {
-        max-width: 700px;
-
+        width: min(620px, 100%);
         margin: 0 auto;
       }
 
-      .swap-story-photo .photo {
-        height: auto;
-        aspect-ratio: 4 / 3;
+      .visit-grid {
+        grid-template-columns: 1fr;
+        max-width: 690px;
+        margin: 0 auto;
       }
 
-      .pass-options-grid {
+      .visit-card {
+        padding: 25px;
+      }
+
+      .visit-card-photo {
+        height: 210px;
+      }
+
+      .pass-photo {
+        height: 190px;
+      }
+
+      .feature-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .price-card {
-        width: 100%;
-        min-height: 0;
+      .feature-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 12px);
+        justify-self: center;
       }
 
-      .price-card .button {
-        max-width: 300px;
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .location-image-card {
+        min-height: 420px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .how-to-visit-section {
+        padding: 72px 0 64px;
       }
     }
 
+    /* Socials Instagram Facebook*/
 
-    @media (max-width: 900px) {
+    .main-nav a.social-link {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      color: #ffffff !important;
+      opacity: 1;
+    }
 
-      .section {
-        padding-top: 5.5rem;
-        padding-bottom: 5.5rem;
-      }
+    .main-nav a.social-link svg {
+      display: block !important;
+      width: 24px;
+      height: 24px;
+      visibility: visible;
+    }
 
-      .identity-grid,
-      .steps-grid {
-        grid-template-columns: 1fr;
-      }
+    .social-link {
+      color: #ffffff;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
 
-      .identity-card {
-        min-height: 0;
-
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .identity-card:last-child {
-        border-bottom: 0;
-      }
-
-      .identity-card p {
-        max-width: 620px;
-      }
-
-      .location-visuals {
-        grid-template-columns: 1fr;
-
-        max-width: 620px;
-      }
-
-      .location-details {
-        grid-template-columns: 1fr;
-
-        max-width: 620px;
-      }
-
-      .location-detail {
-        min-height: 0;
-
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .location-detail:last-child {
-        border-bottom: 0;
-      }
-
-      .reviews-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .review-card {
-        border-bottom: 1px solid var(--line);
-      }
-
-      .review-card:last-child {
-        border-bottom: 0;
-      }
-
-      .social-times-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .life-photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto;
-      }
-
-      .life-photo-grid .photo:nth-child(n) {
-        grid-column: auto;
-        grid-row: auto;
-
-        aspect-ratio: 4 / 3;
-      }
+    .social-link:hover {
+      opacity: 0.75;
+      transform: translateY(-3px);
     }
 
 
-    /* ---------------------------------------------------------
-       MOBILE
-       --------------------------------------------------------- */
+    /* DESKTOP TYPOGRAPHY */
 
-    @media (max-width: 700px) {
-
-      .section {
-        padding: 4.25rem 1rem;
-      }
-
-      h1 {
-        font-size: clamp(2.8rem, 13vw, 4rem);
-        line-height: 0.98;
-      }
-
-      h2 {
-        font-size: clamp(2.1rem, 10vw, 3rem);
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .section-heading {
-        margin-bottom: 2.6rem;
+    @media (min-width: 641px) {
+      /* Section headings */
+      .section-heading h2 {
+        font-size: clamp(38px, 3vw, 48px);
+        line-height: 1.15;
+        letter-spacing: 0;
       }
 
       .section-intro {
-        font-size: 1.02rem;
+        font-size: 19px;
+        line-height: 1.7;
       }
 
-      .hero {
-        padding: 3.2rem 1rem 4.2rem;
+      /* Visit cards */
+      .visit-card {
+        padding: 28px;
       }
 
-      .hero-inner {
-        gap: 2.5rem;
+      .visit-card h3 {
+        font-size: 28px;
+        line-height: 1.2;
+        letter-spacing: 0;
       }
 
-      .hero-logo {
-        width: 200px;
-
-        margin-bottom: 2rem;
+      .visit-card p {
+        font-size: 17px;
+        line-height: 1.65;
       }
 
-      .hero-subtitle {
-        font-size: 1.1rem;
+      .visit-label {
+        font-size: 13px;
+        line-height: 1.4;
       }
 
-      .hero-details {
-        display: grid;
-
-        gap: 0.35rem;
-
-        font-size: 0.83rem;
+      /* Pass prices */
+      .pass-price {
+        font-size: 20px;
       }
 
-      .hero-details span + span::before {
+      /* Membership price */
+      .membership-price {
+        font-size: 32px;
+      }
+
+      /* Membership benefits and supporting notes */
+      .visit-card li,
+      .visit-note p,
+      .visit-note strong {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      /* Buttons */
+      .visit-button,
+      .button {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+    }
+  
+
+    /* MOBILE */
+
+    @media (max-width: 640px) {
+      .content,
+      .content-wide,
+      .content-narrow,
+      .header-inner,
+      .hero-inner,
+      .footer-inner {
+        width: calc(100% - 32px);
+      }
+
+      /* General sections */
+      .section {
+        padding: 68px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 38px;
+      }
+
+      .section-heading h2 {
+        font-size: 34px;
+        line-height: 1.15;
+        letter-spacing: 0;
+      }
+
+      .section-intro {
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      /* Header */
+      .header-inner {
+        min-height: 70px;
+        gap: 12px;
+      }
+
+      .brand-logo {
+        width: 105px;
+      }
+
+      .main-nav {
+        gap: 12px;
+      }
+
+      .main-nav a {
+        font-size: 13px;
+      }
+
+      .main-nav a:nth-child(3) {
         display: none;
       }
 
+      /* Hero */
+      .hero {
+        padding: 44px 0 68px;
+      }
+
+      h1 {
+        font-size: clamp(40px, 11vw, 54px);
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      .hero-details {
+        gap: 8px;
+      }
+
+      .hero-details span {
+        padding: 8px 11px;
+        font-size: 13px;
+        line-height: 1.3;
+      }
+
       .hero-actions {
-        display: grid;
-
-        width: min(360px, 100%);
-
-        margin-right: auto;
-        margin-left: auto;
-
-        gap: 0.65rem;
+        flex-direction: column;
+        align-items: stretch;
       }
 
       .hero-actions .button {
         width: 100%;
       }
 
-      .hero-photo {
-        border-radius: 38px;
-      }
-
-      .identity-card {
-        padding: 2rem 0.5rem;
-      }
-
-      .identity-number {
-        margin-bottom: 1.2rem;
-      }
-
-      .location-visuals {
-        gap: 1rem;
-      }
-
-      .location-card {
-        border-radius: 10px;
-      }
-
-      .map-card {
-        aspect-ratio: 4 / 4.5;
-      }
-
-      .location-detail {
-        padding: 1.2rem;
-      }
-
-      .step-card {
-        padding: 1.5rem;
-      }
-
-      .big-statement {
-        margin-top: 3rem !important;
-
-        font-size: 1.55rem;
-      }
-
-      .swap-story-grid {
-        gap: 2.7rem;
-      }
-
-      .swap-story-photo {
-        border-radius: 32px;
-      }
-
-      .swap-preview-heading {
-        grid-template-columns: 1fr;
-
-        gap: 1rem;
-      }
-
-      .swap-preview-heading h2 {
-        margin-bottom: 0.5rem;
-      }
-
-      /*
-       * Swap arrivals become a horizontal shelf on phones.
-       */
-
-      .swap-preview-section {
-        padding-right: 0;
-        padding-left: 0;
-      }
-
-      .swap-preview-heading,
-      .swap-stock-note {
-        margin-right: 1rem;
-        margin-left: 1rem;
-      }
-
-      .swap-items-scroll {
-        display: flex;
-
-        gap: 0.8rem;
-
-        padding: 0 1rem 0.7rem;
-
-        overflow-x: auto;
-
-        scroll-snap-type: x proximity;
-
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: thin;
-      }
-
-      .swap-item-card {
-        width: min(68vw, 245px);
-
-        flex: 0 0 min(68vw, 245px);
-
-        scroll-snap-align: start;
-      }
-
-      .swap-preview-empty {
-        grid-template-columns: 1fr;
-
-        margin-right: 1rem;
-        margin-left: 1rem;
-      }
-
-      .swap-preview-room-photo {
-        min-height: 0;
-
-        aspect-ratio: 4 / 3;
-      }
-
-      .swap-preview-empty-copy {
-        padding: 1.5rem;
-      }
-
-      .life-photo-grid {
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 0.75rem;
-      }
-
-      .life-photo-grid .photo:nth-child(n) {
-        aspect-ratio: 4 / 3;
-      }
-
-      .review-card {
-        padding: 2rem 0.2rem;
-      }
-
-      .review-card p {
-        font-size: 1.12rem;
-      }
-
-      .press-links {
-        grid-template-columns: 1fr;
-
-        margin-top: 2.5rem;
-      }
-
-      .social-times-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .social-time {
-        min-height: 125px;
-
-        padding: 1.3rem;
-      }
-
-      .social-time strong {
-        margin-top: 1rem;
-      }
-
-      .playdate-card {
-        padding: 2.5rem 1.3rem;
-
-        border-radius: 12px;
-      }
-
-      .playdate-price strong {
-        font-size: 3.5rem;
-      }
-
-      .free-trial-callout {
-        margin: 2rem 1rem 2.5rem;
-        padding: 1.5rem 1.25rem;
-      }
-
-      .free-trial-callout h3 {
-        font-size: 1.6rem;
-      }
-
-      .free-trial-callout > p:not(.free-trial-eyebrow) {
-        font-size: 1rem;
-      }
-
-      .free-trial-callout .button {
-        width: 100%;
-        justify-content: center;
-      }
-
-      .pass-options-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .price-card {
-        width: 100%;
-        padding: 1.7rem;
-      }
-
-      .price-card.featured::before {
-        left: 1.5rem;
-        right: 1.5rem;
-      }
-
-      .price strong {
-        font-size: 3rem;
-      }
-
-      .pricing-details {
-        padding: 0.9rem 1rem;
-      }
-
-      .gift-card {
-        border-radius: 18px;
-      }
-
-      .gift-content {
-        padding: 2.7rem 1.25rem 2.5rem;
-      }
-
-      .gift-card h2 {
-        font-size: 2.25rem;
-      }
-
-      .gift-description {
-        font-size: 0.98rem;
-      }
-
-      .gift-price {
-        margin-top: 1.6rem;
-      }
-
-      .gift-button {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .gift-decoration-top {
-        top: 1rem;
-        left: 1rem;
-      }
-
-      .gift-decoration-bottom {
-        right: 1rem;
-        bottom: 1rem;
-      }
-
-      .price-card .button,
-      .button,
-      .first-visit-section .button,
-      .closing-section .button {
-        width: 100%;
-        max-width: 340px;
-      }
-
-      .closing-photo {
-        margin-bottom: 3.5rem;
-      }
-
-      .closing-section h2 {
-        font-size: 2.5rem;
-      }
-
-      .footer {
-        padding: 4rem 1rem;
-      }
-
-      .footer p {
-        max-width: 330px;
-
-        margin-right: auto;
-        margin-left: auto;
-
-        overflow-wrap: anywhere;
-      }
-    }
-
-
-    @media (max-width: 440px) {
-
-      h1 {
-        font-size: 2.75rem;
-      }
-
-      h2 {
-        font-size: 2.15rem;
-      }
-
-      .eyebrow {
-        font-size: 0.67rem;
-      }
-
-      .hero-logo {
-        width: 185px;
-      }
-
       .hero-photo .photo {
-        aspect-ratio: 4 / 4.8;
+        aspect-ratio: 1 / 1.05;
+        border-radius: 24px;
       }
 
-      .swap-principle-large {
-        font-size: 2.25rem !important;
+      /* How to visit */
+      .how-to-visit-section {
+        padding: 58px 0 48px;
       }
 
-      .playdate-price strong {
-        font-size: 3.1rem;
+      .how-to-visit-section::before {
+        width: 145px;
+        height: 140px;
+        left: -75px;
+        top: -20px;
       }
 
-      .price strong {
-        font-size: 2.8rem;
+      .how-to-visit-section::after {
+        width: 140px;
+        height: 130px;
+        right: -70px;
+        top: 20px;
       }
 
-      .closing-section h2 {
-        font-size: 2.15rem;
+      .how-to-visit-section .section-heading {
+        margin-bottom: 30px;
       }
 
-      .price-card-label {
-        font-size: 0.62rem;
+      .how-to-visit-section .section-heading::after {
+        right: 0;
+        top: -24px;
+        font-size: 34px;
       }
 
-      .gift-callout {
-        padding: 1.7rem 1rem;
+      .how-to-visit-section .section-heading h2 {
+        font-size: 34px;
+        line-height: 1.15;
+        letter-spacing: 0;
+      }
+
+      .how-to-visit-section .section-intro {
+        font-size: 17px;
+      }
+
+      .visit-grid {
+        gap: 15px;
+      }
+
+      .visit-card {
+        padding: 22px;
+        border-radius: 27px;
+      }
+
+      .visit-card-top {
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .visit-illustration {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+        font-size: 36px;
+      }
+
+      .visit-label {
+        font-size: 13px;
+        line-height: 1.4;
+      }
+
+      .visit-card h3 {
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      .visit-card p {
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .visit-card-photo {
+        height: 190px;
+      }
+
+      .pass-photo {
+        height: 170px;
+      }
+
+
+      .visit-button {
+        min-height: 50px;
+        font-size: 16px;
+      }
+
+      .visit-note {
+        padding: 18px;
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px;
+        border-radius: 22px;
+      }
+
+      .visit-note-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 25px;
+      }
+
+      .visit-note strong {
+        font-size: 16px;
+      }
+
+      .visit-note p {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      /* Features */
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-card:last-child {
+        grid-column: auto;
+        width: 100%;
+      }
+
+      .feature-card h3 {
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      .feature-card p {
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      /* Location */
+      .location-image-card {
+        min-height: 300px;
+        border-radius: 24px;
+      }
+
+      .location-details span,
+      .location-detail span {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .location-detail strong {
+        font-size: 17px;
+      }
+
+      /* Gallery */
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 180px;
+        gap: 10px;
+      }
+
+      .gallery-large {
+        grid-row: span 2;
+      }
+
+      .gallery-wide {
+        grid-column: 1 / -1;
+      }
+
+      .gallery-caption p {
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      /* Buttons */
+      .button {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      /* Final call to action */
+      .final-cta {
+        padding: 68px 0;
+      }
+
+      .final-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .final-actions .button {
+        width: 100%;
+      }
+
+      /* Footer */
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 38px 0;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
       }
     }
 
 
-    /* ---------------------------------------------------------
-       WAVE — OUTSIDE THE MEDIA QUERY
-       --------------------------------------------------------- */
-
-    .wave {
-      display: block;
-      width: 100%;
-      margin: -1px 0;
-      padding: 0;
-      overflow: hidden;
-      font-size: 0;
-      line-height: 0;
-    }
-
-    .wave svg {
-      display: block;
-      width: 100%;
-      height: 70px;
-      margin: 0;
-      padding: 0;
-    }
   `
 }
-},{}]},{},[2]);
+},{}]},{},[1]);

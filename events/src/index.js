@@ -63,7 +63,7 @@ function page () {
             class="brand"
             href="https://swapandplaywharfedale.co.uk/"
           >
-            Swap & Play
+            Back to Swap & Play
           </a>
 
         </div>
