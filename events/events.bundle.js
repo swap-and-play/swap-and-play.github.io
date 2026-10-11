@@ -79,79 +79,79 @@ module.exports = [
     bookingUrl: '#'
   },
 
-  {
-    slug: 'tuesday-social-play-13-october-morning',
-    title: 'Tuesday Social Play',
-    date: '2026-10-13',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: 'https://buy.stripe.com/3cI6oG2VQcvvc81gEt0Ba0l'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-13-october-morning',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-10-13',
+  //   start: '09:30',
+  //   end: '11:30',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: 'https://buy.stripe.com/3cI6oG2VQcvvc81gEt0Ba0l'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
-  {
-    slug: 'tuesday-social-play-13-october-afternoon',
-    title: 'Tuesday Social Play',
-    date: '2026-10-13',
-    start: '13:00',
-    end: '15:00',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: 'https://buy.stripe.com/5kQeVcfIC6772xrgEt0Ba0m'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-13-october-afternoon',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-10-13',
+  //   start: '13:00',
+  //   end: '15:00',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: 'https://buy.stripe.com/5kQeVcfIC6772xrgEt0Ba0m'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
   {
     slug: 'wednesday-open-play-14-october',
@@ -226,78 +226,80 @@ module.exports = [
   },
 
   {
-    slug: 'tuesday-social-play-20-october-morning',
-    title: 'Tuesday Social Play',
-    date: '2026-10-20',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: 'https://buy.stripe.com/cNi3cu2VQ2UV3BvfAp0Ba0n'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
-
-  {
-    slug: 'tuesday-social-play-20-october-afternoon',
-    title: 'Tuesday Social Play',
-    date: '2026-10-20',
+    slug: 'halloween-special-19-october',
+    title: 'Halloween Pop-Up',
+    date: '2026-10-19',
     start: '13:00',
     end: '15:00',
     prices: [
       {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: 'https://buy.stripe.com/7sY14m2VQ1QR9ZTbk90Ba0o'
+        label: 'Members & pass holders',
+        price: '£8',
+        bookingUrl: 'https://number-train-otley-ilkley.classforkids.io/info/119'
       },
       {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+        label: 'Non-members',
+        price: '£12',
+        bookingUrl: 'https://number-train-otley-ilkley.classforkids.io/info/120'
       }
     ],
     images: [
+      './assets/numbertrain.jpg',
+      './assets/numbertrain1.jpg',
+      './assets/numbertrain2.jpg',
+      './assets/numbertrain3.jpg',
       './assets/swapandplay1.jpg',
       './assets/swapandplay2.jpg',
       './assets/swapandplay3.jpg',
       './assets/swapandplay4.jpg'
     ],
     description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+      'Two hours of fun: 1h of Number train + 1h of stay and play',
     details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
+      'Music, Movement, Making and Play, all with a Maths twist',
+      'Class suitable for agest 2-5+',
+      'Younger siblings welcome',
+      'Price is per family not per child'
     ],
     bookingUrl: '#'
   },
+
+  // {
+  //   slug: 'tuesday-social-play-20-october-afternoon',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-10-20',
+  //   start: '13:00',
+  //   end: '15:00',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: 'https://buy.stripe.com/7sY14m2VQ1QR9ZTbk90Ba0o'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
   {
     slug: 'wednesday-open-play-21-october',
@@ -371,79 +373,79 @@ module.exports = [
     bookingUrl: '#'
   },
 
-  {
-    slug: 'tuesday-social-play-27-october-morning',
-    title: 'Tuesday Social Play',
-    date: '2026-10-27',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: 'https://buy.stripe.com/00w8wOfIC3YZ8VP5ZP0Ba0p'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-27-october-morning',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-10-27',
+  //   start: '09:30',
+  //   end: '11:30',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: 'https://buy.stripe.com/00w8wOfIC3YZ8VP5ZP0Ba0p'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
-  {
-    slug: 'tuesday-social-play-27-october-afternoon',
-    title: 'Tuesday Social Play',
-    date: '2026-10-27',
-    start: '13:00',
-    end: '15:00',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: 'https://buy.stripe.com/5kQ3cuaoibrr9ZTgEt0Ba0q'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-27-october-afternoon',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-10-27',
+  //   start: '13:00',
+  //   end: '15:00',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: 'https://buy.stripe.com/5kQ3cuaoibrr9ZTgEt0Ba0q'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
   {
     slug: 'wednesday-open-play-28-october',
@@ -478,79 +480,79 @@ module.exports = [
     bookingUrl: '#'
   },
 
-  {
-    slug: 'tuesday-social-play-3-november-morning',
-    title: 'Tuesday Social Play',
-    date: '2026-11-03',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: '#'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-3-november-morning',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-11-03',
+  //   start: '09:30',
+  //   end: '11:30',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: '#'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
-  {
-    slug: 'tuesday-social-play-3-november-afternoon',
-    title: 'Tuesday Social Play',
-    date: '2026-11-03',
-    start: '13:00',
-    end: '15:00',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: '#'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-3-november-afternoon',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-11-03',
+  //   start: '13:00',
+  //   end: '15:00',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: '#'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
   {
     slug: 'wednesday-open-play-4-november',
@@ -585,79 +587,79 @@ module.exports = [
     bookingUrl: '#'
   },
 
-  {
-    slug: 'tuesday-social-play-10-november-morning',
-    title: 'Tuesday Social Play',
-    date: '2026-11-10',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: '#'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-10-november-morning',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-11-10',
+  //   start: '09:30',
+  //   end: '11:30',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: '#'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
-  {
-    slug: 'tuesday-social-play-10-november-afternoon',
-    title: 'Tuesday Social Play',
-    date: '2026-11-10',
-    start: '13:00',
-    end: '15:00',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: '#'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-10-november-afternoon',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-11-10',
+  //   start: '13:00',
+  //   end: '15:00',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: '#'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
   {
     slug: 'wednesday-open-play-11-november',
@@ -692,79 +694,79 @@ module.exports = [
     bookingUrl: '#'
   },
 
-  {
-    slug: 'tuesday-social-play-17-november-morning',
-    title: 'Tuesday Social Play',
-    date: '2026-11-17',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: '#'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-17-november-morning',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-11-17',
+  //   start: '09:30',
+  //   end: '11:30',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: '#'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
-  {
-    slug: 'tuesday-social-play-17-november-afternoon',
-    title: 'Tuesday Social Play',
-    date: '2026-11-17',
-    start: '13:00',
-    end: '15:00',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: '#'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-17-november-afternoon',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-11-17',
+  //   start: '13:00',
+  //   end: '15:00',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: '#'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
   {
     slug: 'wednesday-open-play-18-november',
@@ -799,79 +801,79 @@ module.exports = [
     bookingUrl: '#'
   },
 
-  {
-    slug: 'tuesday-social-play-24-november-morning',
-    title: 'Tuesday Social Play',
-    date: '2026-11-24',
-    start: '09:30',
-    end: '11:30',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: '#'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-24-november-morning',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-11-24',
+  //   start: '09:30',
+  //   end: '11:30',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: '#'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
-  {
-    slug: 'tuesday-social-play-24-november-afternoon',
-    title: 'Tuesday Social Play',
-    date: '2026-11-24',
-    start: '13:00',
-    end: '15:00',
-    prices: [
-      {
-        label: 'Drop-in',
-        price: '£6',
-        bookingUrl: '#'
-      },
-      {
-        label: '5-visit pass',
-        price: '£25',
-        bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
-      }
-    ],
-    images: [
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay2.jpg',
-      './assets/swapandplay3.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
-    details: [
-      'A relaxed, social play session',
-      'Meet and chat with other local families',
-      'Clean, shoe-free play space',
-      'Play and explore at your own pace',
-      'Tea & coffee included',
-      'Suitable for babies, toddlers and preschoolers'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'tuesday-social-play-24-november-afternoon',
+  //   title: 'Tuesday Social Play',
+  //   date: '2026-11-24',
+  //   start: '13:00',
+  //   end: '15:00',
+  //   prices: [
+  //     {
+  //       label: 'Drop-in',
+  //       price: '£6',
+  //       bookingUrl: '#'
+  //     },
+  //     {
+  //       label: '5-visit pass',
+  //       price: '£25',
+  //       bookingUrl: 'https://buy.stripe.com/fZu6oGcwqeDDb3X0Fv0Ba0r'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay2.jpg',
+  //     './assets/swapandplay3.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A drop-in social play session for little ones and their grown-ups — come along knowing other local families will be there.',
+  //   details: [
+  //     'A relaxed, social play session',
+  //     'Meet and chat with other local families',
+  //     'Clean, shoe-free play space',
+  //     'Play and explore at your own pace',
+  //     'Tea & coffee included',
+  //     'Suitable for babies, toddlers and preschoolers'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
   {
     slug: 'wednesday-open-play-25-november',
