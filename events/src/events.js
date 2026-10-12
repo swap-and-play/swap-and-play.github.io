@@ -1,7 +1,7 @@
 module.exports = [
   {
     slug: 'wednesday-open-play-7-october',
-    title: 'Wednesday Open Play',
+    title: 'Wednesday Open Play 🧸',
     date: '2026-10-07',
     start: '10:00',
     end: '12:00',
@@ -34,7 +34,7 @@ module.exports = [
 
   {
     slug: 'hartbeeps-9-october',
-    title: 'Hartbeeps + Stay & Play',
+    title: 'Hartbeeps + Stay & Play 🎵',
     date: '2026-10-09',
     start: '09:30',
     end: '11:30',
@@ -147,7 +147,7 @@ module.exports = [
 
   {
     slug: 'wednesday-open-play-14-october',
-    title: 'Wednesday Open Play',
+    title: 'Wednesday Open Play 🧸',
     date: '2026-10-14',
     start: '10:00',
     end: '12:00',
@@ -180,7 +180,7 @@ module.exports = [
 
   {
     slug: 'hartbeeps-16-october',
-    title: 'Hartbeeps + Stay & Play',
+    title: 'Hartbeeps + Stay & Play 🎵',
     date: '2026-10-16',
     start: '09:30',
     end: '11:30',
@@ -219,7 +219,7 @@ module.exports = [
 
   {
     slug: 'halloween-special-19-october',
-    title: 'Halloween Pop-Up',
+    title: 'Halloween Pop-Up 🚂',
     date: '2026-10-19',
     start: '13:00',
     end: '15:00',
@@ -295,7 +295,7 @@ module.exports = [
 
   {
     slug: 'wednesday-open-play-21-october',
-    title: 'Wednesday Open Play',
+    title: 'Wednesday Open Play 🧸',
     date: '2026-10-21',
     start: '10:00',
     end: '12:00',
@@ -325,10 +325,9 @@ module.exports = [
     buttonLabel: 'Register',
     bookingUrl: '#'
   },
-
   {
     slug: 'hartbeeps-23-october',
-    title: 'Hartbeeps + Stay & Play',
+    title: 'Hartbeeps + Stay & Play 🎵',
     date: '2026-10-23',
     start: '09:30',
     end: '11:30',
@@ -441,7 +440,7 @@ module.exports = [
 
   {
     slug: 'wednesday-open-play-28-october',
-    title: 'Wednesday Open Play',
+    title: 'Wednesday Open Play 🧸',
     date: '2026-10-28',
     start: '10:00',
     end: '12:00',
@@ -467,6 +466,40 @@ module.exports = [
       'Play and explore at your own pace',
       'Tea & coffee included',
       'Suitable for babies, toddlers and preschoolers'
+    ],
+    buttonLabel: 'Register',
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'halloween-family-craft-workshop-29-october',
+    title: 'Halloween Family Craft Workshop 🎃',
+    date: '2026-10-29',
+    start: '14:30',
+    end: '16:30',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: '£2',
+        bookingUrl: 'https://buy.stripe.com/00wfZg7c62UVeg9dsh0Ba0u'
+      },
+      {
+        label: 'Non-members',
+        price: '£7',
+        bookingUrl: 'https://buy.stripe.com/bJe8wOfIC9jj9ZT1Jz0Ba0t'
+      }
+    ],
+    images: [
+      './assets/little-autumn-creators.jpg'
+    ],
+    description:
+      'A two-hour autumn craft and play session at Swap & Play Wharfedale',
+    details: [
+      `Get creative this Halloween at Swap and Play! 
+      Join us for a fun, hands-on crafting session for under-5s and their families, using natural treasures like sticks and leaves alongside ribbons, pipe cleaners, paint and glue.
+      Together, you can make spooky skeletons, magical wands, friendly ghosts and spider webs to take home. A playful, creative way to celebrate Halloween with little ones!
+      The session will be led by our very own member, Leah Millthorne.
+      `
     ],
     buttonLabel: 'Register',
     bookingUrl: '#'
@@ -548,7 +581,7 @@ module.exports = [
 
   {
     slug: 'wednesday-open-play-4-november',
-    title: 'Wednesday Open Play',
+    title: 'Wednesday Open Play 🧸',
     date: '2026-11-04',
     start: '10:00',
     end: '12:00',
@@ -655,7 +688,7 @@ module.exports = [
 
   {
     slug: 'wednesday-open-play-11-november',
-    title: 'Wednesday Open Play',
+    title: 'Wednesday Open Play 🧸',
     date: '2026-11-11',
     start: '10:00',
     end: '12:00',
@@ -762,7 +795,7 @@ module.exports = [
 
   {
     slug: 'wednesday-open-play-18-november',
-    title: 'Wednesday Open Play',
+    title: 'Wednesday Open Play 🧸',
     date: '2026-11-18',
     start: '10:00',
     end: '12:00',
@@ -869,7 +902,7 @@ module.exports = [
 
   {
     slug: 'wednesday-open-play-25-november',
-    title: 'Wednesday Open Play',
+    title: 'Wednesday Open Play 🧸',
     date: '2026-11-25',
     start: '10:00',
     end: '12:00',

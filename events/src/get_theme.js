@@ -197,10 +197,9 @@ function get_theme () {
       color: var(--blue);
 
       font-size: clamp(3.4rem, 5vw, 5.2rem);
-      font-weight: 700;
-      line-height: 0.94;
-
-      letter-spacing: -0.045em;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      line-height: 1.08;
     }
 
 
