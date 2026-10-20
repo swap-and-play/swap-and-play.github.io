@@ -256,43 +256,43 @@ module.exports = [
     bookingUrl: '#'
   },
 
-  {
-    slug: 'move_and_nourish-20-october',
-    title: 'Move & Nourish 🍃',
-    date: '2026-10-20',
-    start: '13:00',
-    end: '15:00',
-    prices: [
-      {
-        label: 'Members and Pass Holders',
-        price: '£8',
-        bookingUrl: 'https://buy.stripe.com/28E5kCdAubrr4Fzdsh0Ba0v'
-      },
-      {
-        label: 'Non-members',
-        price: '£13',
-        bookingUrl: 'https://buy.stripe.com/eVqcN4fIC3YZgohag50Ba0w'
-      }
-    ],
-    images: [
-      './assets/move&nourish.jpg',
-      './assets/swapandplay1.jpg',
-      './assets/swapandplay4.jpg'
-    ],
-    description:
-      'A feel-good wellbeing session for mums, with gentle movement, nourishing food ideas and stay & play.',
-    details: [
-      'Take a little time for yourself while spending time with your little one. Join us for a relaxed, friendly wellbeing session designed especially for mums and their children.',
-      '🍃 Move: Enjoy feel-good movement to help you reconnect with your body and boost your energy. No fitness experience needed!',
-      '🥑 Nourish: Discover simple, nutritious snack ideas and practical healthy-living tips that fit into busy family life, with easy food demonstrations.',
-      '☕ Stay & Play: After the first hour, stay for another hour of relaxed play and conversation while your little ones explore and you connect with other local mums.',
-      '🍎 Nutritious snacks, tea and coffee included.',
-      '👶 Children are welcome throughout the session, so there is no need to arrange childcare.',
-      '💛 A friendly, informal space to recharge, pick up practical ideas and meet other mums.',
-      '🎟️ Limited to just 5 spots, so everyone can enjoy a more personal experience.'
-    ],
-    bookingUrl: '#'
-  },
+  // {
+  //   slug: 'move_and_nourish-20-october',
+  //   title: 'Move & Nourish 🍃',
+  //   date: '2026-10-20',
+  //   start: '13:00',
+  //   end: '15:00',
+  //   prices: [
+  //     {
+  //       label: 'Members and Pass Holders',
+  //       price: '£8',
+  //       bookingUrl: 'https://buy.stripe.com/28E5kCdAubrr4Fzdsh0Ba0v'
+  //     },
+  //     {
+  //       label: 'Non-members',
+  //       price: '£13',
+  //       bookingUrl: 'https://buy.stripe.com/eVqcN4fIC3YZgohag50Ba0w'
+  //     }
+  //   ],
+  //   images: [
+  //     './assets/move&nourish.jpg',
+  //     './assets/swapandplay1.jpg',
+  //     './assets/swapandplay4.jpg'
+  //   ],
+  //   description:
+  //     'A feel-good wellbeing session for mums, with gentle movement, nourishing food ideas and stay & play.',
+  //   details: [
+  //     'Take a little time for yourself while spending time with your little one. Join us for a relaxed, friendly wellbeing session designed especially for mums and their children.',
+  //     '🍃 Move: Enjoy feel-good movement to help you reconnect with your body and boost your energy. No fitness experience needed!',
+  //     '🥑 Nourish: Discover simple, nutritious snack ideas and practical healthy-living tips that fit into busy family life, with easy food demonstrations.',
+  //     '☕ Stay & Play: After the first hour, stay for another hour of relaxed play and conversation while your little ones explore and you connect with other local mums.',
+  //     '🍎 Nutritious snacks, tea and coffee included.',
+  //     '👶 Children are welcome throughout the session, so there is no need to arrange childcare.',
+  //     '💛 A friendly, informal space to recharge, pick up practical ideas and meet other mums.',
+  //     '🎟️ Limited to just 5 spots, so everyone can enjoy a more personal experience.'
+  //   ],
+  //   bookingUrl: '#'
+  // },
 
   {
     slug: 'wednesday-open-play-21-october',
