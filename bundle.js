@@ -51,17 +51,17 @@ const get_theme = require('get_theme')
 const DAY_PASS_PAYMENT_URL =
   'https://buy.stripe.com/5kQ14m8ga9jj0pjdsh0Ba05'
 
-const WEEK_PASS_PAYMENT_URL =
-  'https://buy.stripe.com/4gM9ASbsmeDDeg95ZP0Ba00'
+const TWO_WEEK_PASS_PAYMENT_URL =
+  'https://buy.stripe.com/7sYfZgcwqbrr5JDgEt0Ba0z'
 
 const MEMBERSHIP_PAYMENT_URL =
-  'https://buy.stripe.com/cNi9AS3ZU9jj4Fzewl0Ba08'
+  'https://buy.stripe.com/28EaEW53Ybrr4Fzewl0Ba0y'
 
 const GOOGLE_MAPS_URL =
   'https://maps.app.goo.gl/xPGPfSGdbXFYjEog6'
 
 const GIFT_A_MONTH_URL = 
-  'https://buy.stripe.com/cNifZg0NI7bb0pjag50Ba09'
+  'https://buy.stripe.com/4gM9AS1RMcvv6NHfAp0Ba0A'
 
 function page (cb) {
   const el = document.createElement('div')
@@ -246,11 +246,11 @@ function page (cb) {
                   </a>
 
                   <a class="mini-pass"
-                    href="${WEEK_PASS_PAYMENT_URL}"
+                    href="${TWO_WEEK_PASS_PAYMENT_URL}"
                     target="_blank"
                     rel="noopener noreferrer">
-                    <strong>7-Day Pass</strong>
-                    <span>£15</span>
+                    <strong>14-Day Pass</strong>
+                    <span>£25</span>
                   </a>
 
               </article>
@@ -272,7 +272,7 @@ function page (cb) {
                 </p>
 
                 <div class="membership-price">
-                  <strong>£35</strong>
+                  <strong>£45</strong>
                   <span>/ month</span>
                 </div>
 
