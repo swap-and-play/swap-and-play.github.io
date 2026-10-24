@@ -499,13 +499,15 @@ module.exports = [
       }
     ],
     images: [
-      './assets/little-autumn-creators.jpg'
+      './assets/leah1.jpeg',
+      './assets/leah3.jpeg',
+      './assets/leah2.jpeg',
     ],
     description:
       'A two-hour autumn craft and play session at Swap & Play Wharfedale',
     details: [
       `Get creative this Halloween at Swap and Play! 
-      Join us for a fun, hands-on crafting session for under-5s and their families, using natural treasures like sticks and leaves alongside ribbons, pipe cleaners, paint and glue.
+      If you too want your fridge to look this magnificent, you can join us for a fun, hands-on crafting session for under-5s and their families, using natural treasures like sticks and leaves alongside ribbons, pipe cleaners, paint and glue.
       Together, you can make spooky skeletons, magical wands, friendly ghosts and spider webs to take home. A playful, creative way to celebrate Halloween with little ones!
       The session will be led by our very own member, Leah Millthorne.
       `
@@ -722,6 +724,48 @@ module.exports = [
       'Registration required',
       'Play and explore at your own pace',
       'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    buttonLabel: 'Register',
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'pre-christmas-big-swap-14-november',
+    title: 'Pre-Christmas Big Swap Event 🎄',
+    date: '2026-11-14',
+    start: '14:00',
+    end: '17:00',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: 'Free',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfA4ptNQ33j8F12qqUoUhorLA9QCLYVUmvmSy8t7YkKzI0vDA/viewform?usp=publish-editor'
+      },
+      {
+        label: 'Non-members',
+        price: '£8',
+        bookingUrl: 'https://buy.stripe.com/3cI4gy0NI8ff5JDdsh0Ba0B'
+      }
+    ],
+    images: [
+      './assets/bigswap1.jpg',
+      './assets/bigswap2.jpg',
+      './assets/bigswap3.jpg',
+      './assets/bigswap4.jpg'
+    ],
+    description: `Bring along your outgrown children’s clothes (<5 years), toys and books, and swap them for something new to your family.
+
+    It’s a great way to pass on things your little ones no longer need, discover some new favourites, and make sustainable choices ahead of Christmas. ♻️
+
+    Please make sure all items are clean, complete and in good working order, ready for another family to enjoy.
+
+    Browse and swap clothes, toys and books, enjoy a cup of tea or coffee and a slice of cake as your little ones play. 
+    Come along, find some treasures and be part of our local swapping community! 💛`,
+    details: [
+      '🎟️ Limited to 12 families to keep the event comfortable and enjoyable for everyone.',
+      'Your ticket covers up to 2 adults and and all siblings.',
+      'Tea & coffee & cake included',
       'Suitable for babies, toddlers and preschoolers'
     ],
     buttonLabel: 'Register',
