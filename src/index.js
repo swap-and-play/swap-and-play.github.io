@@ -162,7 +162,7 @@ function page (cb) {
                 </p>
 
                 <img class="visit-card-photo"
-                     src="events/assets/hartbeeps4.jpg"
+                     src="./assets/events.jpg"
                      alt="A little one enjoying play at Swap & Play">
 
                 <a class="visit-button visit-button-blue" href="/events">
@@ -235,6 +235,7 @@ function page (cb) {
                   <li>Open every day, 6am–9pm</li>
                   <li>One free guest family each month</li>
                   <li>Community Wardrobe included</li>
+                  <li>No long contracts, cancel anytime</li>
                 </ul>
 
                 <a class="visit-button visit-button-pink"
