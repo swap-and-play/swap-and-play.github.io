@@ -1000,11 +1000,12 @@ module.exports = [
       './assets/swapandplay1.jpg',
     ],
     description:
-      'Two hours of relaxed afternoon play for families with children aged 0–5, with tea or coffee for grown-ups and a little treat included.',
+      'Two hours of relaxed play with tea/coffee for grown-ups and a snack for the little ones.',
     details: [
       'Two hours of play and exploring at your own pace',
+      'For families with children aged 0–5',
       'Tea & coffee included',
-      '🧁 A snack for your little one included',
+      '🧁 A snack for your little ones included',
       'Access to the swap room',
       'Suitable for babies, toddlers and preschoolers'
     ],
@@ -1035,11 +1036,12 @@ module.exports = [
       './assets/swapandplay1.jpg',
     ],
     description:
-      'Two hours of relaxed afternoon play for families with children aged 0–5, with tea or coffee for grown-ups and a little treat included.',
+      'Two hours of relaxed play with tea/coffee for grown-ups and a snack for the little ones.',
     details: [
       'Two hours of play and exploring at your own pace',
+      'For families with children aged 0–5',
       'Tea & coffee included',
-      '🧁 A snack for your little one included',
+      '🧁 A snack for your little ones included',
       'Access to the swap room',
       'Suitable for babies, toddlers and preschoolers'
     ],
@@ -1070,11 +1072,12 @@ module.exports = [
       './assets/swapandplay1.jpg',
     ],
     description:
-      'Two hours of relaxed afternoon play for families with children aged 0–5, with tea or coffee for grown-ups and a little treat included.',
+      'Two hours of relaxed play with tea/coffee for grown-ups and a snack for the little ones.',
     details: [
       'Two hours of play and exploring at your own pace',
+      'For families with children aged 0–5',
       'Tea & coffee included',
-      '🧁 A snack for your little one included',
+      '🧁 A snack for your little ones included',
       'Access to the swap room',
       'Suitable for babies, toddlers and preschoolers'
     ],
@@ -1105,11 +1108,12 @@ module.exports = [
       './assets/swapandplay1.jpg',
     ],
     description:
-      'Two hours of relaxed afternoon play for families with children aged 0–5, with tea or coffee for grown-ups and a little treat included.',
+      'Two hours of relaxed play with tea/coffee for grown-ups and a snack for the little ones.',
     details: [
       'Two hours of play and exploring at your own pace',
+      'For families with children aged 0–5',
       'Tea & coffee included',
-      '🧁 A snack for your little one included',
+      '🧁 A snack for your little ones included',
       'Access to the swap room',
       'Suitable for babies, toddlers and preschoolers'
     ],
