@@ -976,5 +976,144 @@ module.exports = [
     ],
     buttonLabel: 'Register',
     bookingUrl: '#'
+  },
+  {
+    slug: 'swap-and-play-deal-5-november',
+    title: 'Swap & Play Deal ☕🧁',
+    date: '2026-11-05',
+    start: '15:00',
+    end: '17:00',
+    prices: [
+      {
+        label: 'Play pass (members)',
+        price: 'Free',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScK__dFJzgwvo-jfnnXnpIkEBvzXGWZzYTU_a9flEI0JlQXYA/viewform?usp=header'
+      },
+      {
+        label: 'Play pass (non-members)',
+        price: '£10',
+        bookingUrl: 'https://buy.stripe.com/14AfZg1RM9jj4Fz87X0Ba0C'
+      },
+    ],
+    images: [
+      './assets/social.jpg',
+      './assets/swapandplay1.jpg',
+    ],
+    description:
+      'Two hours of relaxed afternoon play for families with children aged 0–5, with tea or coffee for grown-ups and a little treat included.',
+    details: [
+      'Two hours of play and exploring at your own pace',
+      'Tea & coffee included',
+      '🧁 A snack for your little one included',
+      'Access to the swap room',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    buttonLabel: 'Book',
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'swap-and-play-deal-12-november',
+    title: 'Swap & Play Deal ☕🧁',
+    date: '2026-11-12',
+    start: '15:00',
+    end: '17:00',
+    prices: [
+      {
+        label: 'Play pass (members)',
+        price: 'Free',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScK__dFJzgwvo-jfnnXnpIkEBvzXGWZzYTU_a9flEI0JlQXYA/viewform?usp=header'
+      },
+      {
+        label: 'Play pass (non-members)',
+        price: '£10',
+        bookingUrl: 'https://buy.stripe.com/14AfZg1RM9jj4Fz87X0Ba0C'
+      },
+    ],
+    images: [
+      './assets/social.jpg',
+      './assets/swapandplay1.jpg',
+    ],
+    description:
+      'Two hours of relaxed afternoon play for families with children aged 0–5, with tea or coffee for grown-ups and a little treat included.',
+    details: [
+      'Two hours of play and exploring at your own pace',
+      'Tea & coffee included',
+      '🧁 A snack for your little one included',
+      'Access to the swap room',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    buttonLabel: 'Book',
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'swap-and-play-deal-19-november',
+    title: 'Swap & Play Deal ☕🧁',
+    date: '2026-11-19',
+    start: '15:00',
+    end: '17:00',
+    prices: [
+      {
+        label: 'Play pass (members)',
+        price: 'Free',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScK__dFJzgwvo-jfnnXnpIkEBvzXGWZzYTU_a9flEI0JlQXYA/viewform?usp=header'
+      },
+      {
+        label: 'Play pass (non-members)',
+        price: '£10',
+        bookingUrl: 'https://buy.stripe.com/14AfZg1RM9jj4Fz87X0Ba0C'
+      },
+    ],
+    images: [
+      './assets/social.jpg',
+      './assets/swapandplay1.jpg',
+    ],
+    description:
+      'Two hours of relaxed afternoon play for families with children aged 0–5, with tea or coffee for grown-ups and a little treat included.',
+    details: [
+      'Two hours of play and exploring at your own pace',
+      'Tea & coffee included',
+      '🧁 A snack for your little one included',
+      'Access to the swap room',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    buttonLabel: 'Book',
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'swap-and-play-deal-26-november',
+    title: 'Swap & Play Deal ☕🧁',
+    date: '2026-11-26',
+    start: '15:00',
+    end: '17:00',
+    prices: [
+      {
+        label: 'Play pass (members)',
+        price: 'Free',
+        bookingUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScK__dFJzgwvo-jfnnXnpIkEBvzXGWZzYTU_a9flEI0JlQXYA/viewform?usp=header'
+      },
+      {
+        label: 'Play pass (non-members)',
+        price: '£10',
+        bookingUrl: 'https://buy.stripe.com/14AfZg1RM9jj4Fz87X0Ba0C'
+      },
+    ],
+    images: [
+      './assets/social.jpg',
+      './assets/swapandplay1.jpg',
+    ],
+    description:
+      'Two hours of relaxed afternoon play for families with children aged 0–5, with tea or coffee for grown-ups and a little treat included.',
+    details: [
+      'Two hours of play and exploring at your own pace',
+      'Tea & coffee included',
+      '🧁 A snack for your little one included',
+      'Access to the swap room',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    buttonLabel: 'Book',
+    bookingUrl: '#'
   }
 ];
