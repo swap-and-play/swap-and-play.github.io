@@ -978,7 +978,8 @@ module.exports = [
       './assets/bigswap1.jpg',
       './assets/bigswap2.jpg',
       './assets/bigswap3.jpg',
-      './assets/bigswap4.jpg'
+      './assets/bigswap4.jpg',
+      '../../assets/map.png'
     ],
     description: `Bring along your outgrown children’s clothes (<5 years), toys and books, and swap them for something new to your family.
 
