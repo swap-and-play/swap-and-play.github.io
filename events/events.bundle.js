@@ -79,6 +79,240 @@ module.exports = [
     bookingUrl: '#'
   },
 
+  {
+    slug: 'hartbeeps-13-november',
+    title: 'Hartbeeps + Stay & Play 🎵',
+    date: '2026-11-13',
+    start: '09:30',
+    end: '11:30',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: '£8',
+        bookingUrl: 'https://buy.stripe.com/28EdR81RMgLLeg91Jz0Ba0E'
+      },
+      {
+        label: 'Non-members',
+        price: '£12',
+        bookingUrl: 'https://buy.stripe.com/00w4gy682cvv1tn4VL0Ba0F'
+      }
+    ],
+    images: [
+      './assets/hartbeeps1.jpg',
+      './assets/hartbeeps2.jpg',
+      './assets/hartbeeps3.jpg',
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+    description:
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
+    details: [
+      '1 hour of professional Hartbeeps entertainment',
+      '1 hour of stay & play afterwards',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'hartbeeps-20-november',
+    title: 'Hartbeeps + Stay & Play 🎵',
+    date: '2026-11-20',
+    start: '09:30',
+    end: '11:30',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: '£8',
+        bookingUrl: 'https://buy.stripe.com/aFa5kCcwqcvveg9dsh0Ba0H'
+      },
+      {
+        label: 'Non-members',
+        price: '£12',
+        bookingUrl: 'https://buy.stripe.com/7sY7sKgMG5334Fz1Jz0Ba0G'
+      }
+    ],
+    images: [
+      './assets/hartbeeps1.jpg',
+      './assets/hartbeeps2.jpg',
+      './assets/hartbeeps3.jpg',
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+    description:
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
+    details: [
+      '1 hour of professional Hartbeeps entertainment',
+      '1 hour of stay & play afterwards',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'hartbeeps-27-november',
+    title: 'Hartbeeps + Stay & Play 🎵',
+    date: '2026-11-27',
+    start: '09:30',
+    end: '11:30',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: '£8',
+        bookingUrl: ''
+      },
+      {
+        label: 'Non-members',
+        price: '£12',
+        bookingUrl: ''
+      }
+    ],
+    images: [
+      './assets/hartbeeps1.jpg',
+      './assets/hartbeeps2.jpg',
+      './assets/hartbeeps3.jpg',
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+    description:
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
+    details: [
+      '1 hour of professional Hartbeeps entertainment',
+      '1 hour of stay & play afterwards',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'hartbeeps-4-december',
+    title: 'Hartbeeps + Stay & Play 🎵',
+    date: '2026-12-04',
+    start: '09:30',
+    end: '11:30',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: '£8',
+        bookingUrl: ''
+      },
+      {
+        label: 'Non-members',
+        price: '£12',
+        bookingUrl: ''
+      }
+    ],
+    images: [
+      './assets/hartbeeps1.jpg',
+      './assets/hartbeeps2.jpg',
+      './assets/hartbeeps3.jpg',
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+    description:
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
+    details: [
+      '1 hour of professional Hartbeeps entertainment',
+      '1 hour of stay & play afterwards',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'hartbeeps-11-december',
+    title: 'Hartbeeps + Stay & Play 🎵',
+    date: '2026-12-11',
+    start: '09:30',
+    end: '11:30',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: '£8',
+        bookingUrl: ''
+      },
+      {
+        label: 'Non-members',
+        price: '£12',
+        bookingUrl: ''
+      }
+    ],
+    images: [
+      './assets/hartbeeps1.jpg',
+      './assets/hartbeeps2.jpg',
+      './assets/hartbeeps3.jpg',
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+    description:
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
+    details: [
+      '1 hour of professional Hartbeeps entertainment',
+      '1 hour of stay & play afterwards',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    bookingUrl: '#'
+  },
+
+  {
+    slug: 'hartbeeps-18-december',
+    title: 'Hartbeeps + Stay & Play 🎵',
+    date: '2026-12-18',
+    start: '09:30',
+    end: '11:30',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: '£8',
+        bookingUrl: ''
+      },
+      {
+        label: 'Non-members',
+        price: '£12',
+        bookingUrl: ''
+      }
+    ],
+    images: [
+      './assets/hartbeeps1.jpg',
+      './assets/hartbeeps2.jpg',
+      './assets/hartbeeps3.jpg',
+      './assets/hartbeeps4.jpg',
+      './assets/swapandplay1.jpg',
+      './assets/swapandplay2.jpg',
+      './assets/swapandplay3.jpg',
+      './assets/swapandplay4.jpg'
+    ],
+    description:
+      'Two hours of fun: a Hartbeeps session followed by one hour of Stay & Play at Swap & Play.',
+    details: [
+      '1 hour of professional Hartbeeps entertainment',
+      '1 hour of stay & play afterwards',
+      'Tea & coffee included',
+      'Suitable for babies, toddlers and preschoolers'
+    ],
+    bookingUrl: '#'
+  },
+
   // {
   //   slug: 'tuesday-social-play-13-october-morning',
   //   title: 'Tuesday Social Play',
@@ -745,7 +979,7 @@ module.exports = [
       {
         label: 'Non-members',
         price: '£6',
-        bookingUrl: 'https://buy.stripe.com/3cI4gy0NI8ff5JDdsh0Ba0B'
+        bookingUrl: 'https://buy.stripe.com/14AeVcbsm0MNgoh3RH0Ba0D'
       }
     ],
     images: [
@@ -758,12 +992,9 @@ module.exports = [
 
     It’s a great way to pass on things your little ones no longer need, discover some new favourites, and make sustainable choices ahead of Christmas. ♻️
 
-    Please make sure all items are clean, complete and in good working order, ready for another family to enjoy.
-
-    Browse and swap clothes, toys and books, enjoy a cup of tea or coffee and a slice of cake as your little ones play. 
-    Come along, find some treasures and be part of our local swapping community! 💛`,
+    Come along and be part of our local swapping community! 💛`,
     details: [
-      '🎟️ Limited to 12 families to keep the event comfortable and enjoyable for everyone.',
+      '🎟️ Limited spots available.',
       'Your ticket covers up to 2 adults and and all siblings.',
       'Tea & coffee & cake included',
       'Suitable for babies, toddlers and preschoolers'
