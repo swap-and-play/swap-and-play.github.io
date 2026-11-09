@@ -231,10 +231,10 @@ function page (cb) {
                 </div>
 
                 <ul class="visit-list">
-                  <li>Unlimited visits for your household</li>
-                  <li>Open every day, 6am–9pm</li>
-                  <li>One free guest family each month</li>
-                  <li>Community Wardrobe included</li>
+                  <li>Unlimited visits during opening hours</li>
+                  <li>Bring one guest family for free on every visit, subject to capacity.</li>
+                  <li>Access to our play spaces and swap shop.</li>
+                  <li>Reduced prices on selected events and activities.</li>
                   <li>No long contracts, cancel anytime</li>
                 </ul>
 
@@ -254,11 +254,11 @@ function page (cb) {
               <div>
                 <p class="gift-note">
                   <strong>Looking for a gift?</strong>
-                  You can gift a month of Swap &amp; Play
+                  
                   <a class="gift-inline-link"
                     href="${GIFT_A_MONTH_URL}"
                     target="_blank"
-                    rel="noopener noreferrer">for another family →</a>
+                    rel="noopener noreferrer">You can gift a month of Swap &amp; Play for another family →</a>
                 </p>
               </div>
               </div>
