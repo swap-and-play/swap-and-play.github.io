@@ -608,6 +608,7 @@ function page () {
 
             <!-- BOOKING OPTIONS -->
 
+            ${prices.some(item => item.bookingUrl) ? `
             <div class="booking-card">
 
               <div class="booking-prices">
@@ -626,14 +627,16 @@ function page () {
                           ${esc(item.price)}
                         </div>
 
-                        <a
-                          class="primary-button"
-                          href="${attr(item.bookingUrl)}"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          ${event.buttonLabel || 'Book'}
-                        </a>
+                        ${item.bookingUrl ? `
+                          <a
+                            class="primary-button"
+                            href="${attr(item.bookingUrl)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            ${event.buttonLabel || 'Book'}
+                          </a>
+                        ` : ''}
 
                       </div>
                     `
@@ -643,6 +646,7 @@ function page () {
               </div>
 
             </div>
+          ` : ''}
 
           </div>
 

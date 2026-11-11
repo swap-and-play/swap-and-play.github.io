@@ -958,7 +958,7 @@ module.exports = [
 
   {
     slug: 'pre-christmas-big-swap-14-november',
-    title: 'Pre-Christmas Big Swap Event 🎄',
+    title: 'The Big Swap Event ♻️',
     date: '2026-11-14',
     start: '14:00',
     end: '17:00',
@@ -1209,6 +1209,72 @@ module.exports = [
     buttonLabel: 'Register',
     bookingUrl: '#'
   },
+  {
+    slug: 'moorfield-playdate-20-november',
+    title: 'Moorfield Nursery Playdate 🌈',
+    date: '2026-11-20',
+    start: '14:30',
+    end: '17:30',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: 'Free',
+      },
+      {
+        label: 'Non-members',
+        price: '£5',
+      }
+    ],
+    images: [
+      './assets/moorfield.png',
+      './assets/swapandplay-empty.jpg',
+      './assets/swapandplay-empty-2.jpg',
+      './assets/tea-pretendplay.jpg',
+    ],
+    description:
+      'An afternoon of play, connection and fun for Moorfield Nursery families at Swap & Play. Come along, meet other families and let the little ones play and explore in our welcoming space.',
+    details: [
+      'Organised by Nancy for Moorfield Nursery families',
+      'Swap & Play members and pass holders are welcome to join and enjoy the space as usual',
+      'Play and explore at your own pace',
+      'Refreshments and snacks included',
+      'Registration for Moorfield Nursery families is arranged directly with Nancy',
+    ],
+  },
+  {
+    slug: 'hickory-house-playdate-21-november',
+    title: 'Hickory House Nursery Playdate 🌈',
+    date: '2026-11-21',
+    start: '10:00',
+    end: '12:00',
+    prices: [
+      {
+        label: 'Members & pass holders',
+        price: 'Free',
+      },
+      {
+        label: 'Non-members',
+        price: '£5',
+      }
+    ],
+    images: [
+      './assets/hickory.jpg',
+      './assets/swapandplay-empty.jpg',
+      './assets/swapandplay-empty-2.jpg',
+      './assets/tea-pretendplay.jpg',
+    ],
+    description:
+      'An afternoon of play, connection and fun for Hickory House Nursery families at Swap & Play. Come along, meet other families and let the little ones play and explore in our welcoming space.',
+    details: [
+      'Organised by Hickory House staff for their families',
+      'Swap & Play members and pass holders are welcome to join and enjoy the space as usual',
+      'Play and explore at your own pace',
+      'Refreshments and snacks included',
+      'Registration for Hickory House Nursery families is arranged directly with their staff',
+    ],
+  },
+
+
   // {
   //   slug: 'swap-and-play-deal-5-november',
   //   title: 'Swap & Play Deal ☕🧁',
