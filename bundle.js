@@ -135,7 +135,7 @@ function page (cb) {
                 <span>0–5 years</span>
                 <span>Open every day</span>
                 <span>6am–9pm</span>
-                <span>Just behind Booths</span>
+                <span>Ilkley</span>
               </div>
 
               <div class="hero-actions">
@@ -231,11 +231,6 @@ function page (cb) {
                   in when it suits your family.
                 </p>
 
-                <img class="visit-card-photo pass-photo"
-                src="./assets/dad-toddler.jpg"
-                alt="A welcoming play space for little ones">
-
-
                 <div class="pass-options">
                   <a class="mini-pass"
                     href="${DAY_PASS_PAYMENT_URL}"
@@ -252,7 +247,12 @@ function page (cb) {
                     <strong>14-Day Pass</strong>
                     <span>£25</span>
                   </a>
+                </div>
 
+
+                <img class="visit-card-photo pass-photo"
+                src="./assets/dad-toddler.jpg"
+                alt="A welcoming play space for little ones">
               </article>
 
               <!-- MEMBERSHIP -->
