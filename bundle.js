@@ -712,7 +712,7 @@ function page (cb) {
               rel="noopener noreferrer">
               Events
             </a>
-            <a href="#location">Find us</a>
+            <a href="#location">Find us</ a>
             <a href="#gallery">Gallery</a>
           </div>
 
