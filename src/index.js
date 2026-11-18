@@ -15,7 +15,7 @@ const GOOGLE_MAPS_URL =
   'https://maps.app.goo.gl/xPGPfSGdbXFYjEog6'
 
 const GIFT_A_MONTH_URL = 
-  'https://buy.stripe.com/4gM9AS1RMcvv6NHfAp0Ba0A'
+  'https://swapandplaywharfedale.co.uk/gift'
 
 function page (cb) {
   const el = document.createElement('div')
